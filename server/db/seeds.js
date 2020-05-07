@@ -1,19 +1,17 @@
-use art_hub
-use film_hub
-use fashion_hub
-use music_hub
+use popArt_Hub
 db.dropDatabase();
 
-db.arts.insertMany([
+
+db.artists.insertMany([
   {
-    artist: "art1"
+    artist: "art1test"
   },
   {
     artist: "art2"
   }
 ])
 
-db.film.insertMany([
+db.films.insertMany([
   {
     film: "movie1"
   },
@@ -22,7 +20,7 @@ db.film.insertMany([
   }
 ])
 
-db.fashion.insertMany([
+db.designers.insertMany([
   {
     design: "design1"
   },
@@ -31,7 +29,7 @@ db.fashion.insertMany([
   }
 ])
 
-db.music.insertMany([
+db.albums.insertMany([
   {
     band: "Beatles",
 	description: "The 1967 album cover for Sgt. Pepper’s Lonely Hearts Club Band was made by Peter Blake. The concept was for the four Beatles themselves to appear in costume as Sgt. Pepper’s Lonely Hearts Club Band, surrounded by a gathering of influential people as if they had just performed a concert. A total of 58 different people are depicted on the final artwork.",
