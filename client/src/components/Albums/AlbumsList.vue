@@ -12,7 +12,7 @@
 <script>
 
 import AlbumsListItem from './AlbumsListItem.vue'
-import AlbumsService from '@/services/AlbumsService.js'
+import AlbumsServices from '@/services/AlbumsServices.js'
 
 export default {
   name: 'AlbumsList',
@@ -22,7 +22,7 @@ export default {
     }
   },
   mounted(){
-    AlbumsService.getAlbums()
+    AlbumsServices.getAlbums()
     .then(albums => this.albums = albums)
   },
   components: {

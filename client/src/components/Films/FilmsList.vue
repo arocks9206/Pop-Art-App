@@ -11,8 +11,9 @@
 
 <script>
 
-import FilmsListItem from '@/components/FilmsListItem.vue'
+
 import FilmsService from '@/services/FilmsService.js'
+import FilmsListItem from './FilmsListItem.vue'
 
 export default {
   name: 'FilmsList',

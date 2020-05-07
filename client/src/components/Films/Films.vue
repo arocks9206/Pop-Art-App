@@ -5,7 +5,7 @@
 <script>
 
 import {eventBus} from '@/main.js';
-import FilmsList from '@/components/FilmsList.vue'
+import FilmsList from './FilmsList.vue'
 
 export default {
   name: 'Films',

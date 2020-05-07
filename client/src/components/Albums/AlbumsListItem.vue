@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <h2>{{album.band}}</h2>
+    <h2>{{album.album}}</h2>
 
 
   </div>
@@ -10,7 +10,7 @@
 <script>
 
 export default {
-  name: 'AlbumListItem',
+  name: 'AlbumsListItem',
   props: ['album']
   // methods: {
   //
