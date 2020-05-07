@@ -1,16 +1,10 @@
 <template lang="html">
 <section>
-  <h1>SHORT HISTORY OF POP ART</h1>
-<p>Pop Art is an art movement that emerged in the 1950s and
-  flourished until the mid-1970s in America and Britain, that
-  drew inspiration from popular and commercial culture. Some
-  of the movement’s most identifiable artists include Andy Warhol,
-   Roy Lichtenstein, and Robert Rauschenberg. Pop Art had influenced
-   many areas such as the visual arts, music, film, and fashion.</p>
 
 
-   <Artists></Artists>
-   <Films></Films>
+   <router-view></router-view>
+
+
 
 
 </section>
@@ -19,10 +13,11 @@
 
 <script>
 
-import Films from '@/components/Films.vue'
-import FilmsList from '@/components/FilmsList.vue'
+import Films from '@/components/Films/Films.vue'
+import FilmsList from '@/components/Films/FilmsList.vue'
 import Artists from '@/components/Artists/Artists.vue'
 import ArtistsList from '@/components/Artists/ArtistsList.vue'
+import ArtistsListItem from '@/components/Artists/ArtistsListItem.vue'
 
 
 export default {

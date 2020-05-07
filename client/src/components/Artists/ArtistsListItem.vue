@@ -3,6 +3,7 @@
     <h2>{{artist.artistName}}</h2>
 
 
+
   </div>
 
 </template>

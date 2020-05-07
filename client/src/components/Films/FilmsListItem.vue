@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <h2>{{film.title}}</h2>
+    <img :src="film.images[0].URL" width="300px">
 
   </div>
 
