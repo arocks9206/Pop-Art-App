@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
     <ArtistsListItem v-for="(artist, index) in artists"
-                    :key="index",
+                    :key="index"
                     :artist="artist">
     </ArtistsListItem>
 
@@ -11,18 +11,19 @@
 
 <script>
 
-import ArtistsListItem from '@/components/ArtistsListItem.vue'
+import ArtistsListItem from './ArtistsListItem.vue'
 import ArtistsService from '@/services/ArtistsService.js'
 
 export default {
   name: 'ArtistsList',
   data(){
-    return {
+    return{
       artists: []
     }
   },
   mounted(){
     ArtistsService.getArtists()
+    .then(artists => this.artists = artists)
   },
   components: {
     ArtistsListItem

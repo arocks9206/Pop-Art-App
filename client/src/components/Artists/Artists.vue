@@ -1,28 +1,18 @@
 <template lang="html">
-  <div>
-    <ArtistsList></ArtistList>
-  </div>
-
+  <ArtistsList></ArtistsList>
 </template>
 
 <script>
 
 import {eventBus} from '@/main.js';
-import ArtistsList from '@/components/ArtistsList.vue';
+import ArtistsList from './ArtistsList.vue'
 
 export default {
   name: 'Artists',
-  data(){
-    return {
-
-    }
-  },
-  mounted(){
-
-  },
   components: {
     ArtistsList
   }
+
 }
 </script>
 

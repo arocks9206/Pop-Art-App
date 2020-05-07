@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
     <FilmsListItem v-for="(film, index) in films"
-                    :key="index",
+                    :key="index"
                     :film="film">
     </FilmsListItem>
 
@@ -11,7 +11,7 @@
 
 <script>
 
-import FilmsListItem from '@/components/FilmListItem.vue'
+import FilmsListItem from '@/components/FilmsListItem.vue'
 import FilmsService from '@/services/FilmsService.js'
 
 export default {
@@ -23,6 +23,7 @@ export default {
   },
   mounted(){
     FilmsService.getFilms()
+    .then(films => this.films = films)
   },
   components: {
     FilmsListItem

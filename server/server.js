@@ -10,7 +10,7 @@ app.use(cors())
 
 MongoClient.connect('mongodb://localhost:27017')
 .then((client) => {
-  const db = client.db('popArt_Hub');
+  const db = client.db('popArt_hub');
   const artistsCollection = db.collection('artists');
   const artistsRouter = createRouter(artistsCollection);
   app.use('/api/artists', artistsRouter);
@@ -20,7 +20,7 @@ MongoClient.connect('mongodb://localhost:27017')
   const filmsRouter = createRouter(filmsCollection);
   app.use('/api/films', filmsRouter);
 
-    const designersCollection = db.collection('designers');
+  const designersCollection = db.collection('designers');
     const designersRouter = createRouter(designersCollection);
     app.use('/api/designers', designersRouter);
 

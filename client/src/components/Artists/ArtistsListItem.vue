@@ -1,17 +1,20 @@
 <template lang="html">
   <div>
+    <h2>{{artist.artistName}}</h2>
+    
 
   </div>
 
 </template>
 
 <script>
-export default {
-  name: 'AlbumsListItem',
-  props: ['album'],
-  methods: {
 
-  }
+export default {
+  name: 'ArtistListItem',
+  props: ['artist']
+  // methods: {
+  //
+  // }
 }
 </script>
 

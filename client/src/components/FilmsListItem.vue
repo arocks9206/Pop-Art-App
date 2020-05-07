@@ -9,11 +9,11 @@
 <script>
 
 export default {
-  name: 'FilmsListItem'
-  props: ['film'],
-  methods: {
-    
-  }
+  name: 'FilmsListItem',
+  props: ['film']
+  // methods: {
+  //
+  // }
 }
 </script>
 
