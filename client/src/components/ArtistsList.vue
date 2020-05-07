@@ -1,15 +1,19 @@
 <template lang="html">
   <div>
-    <ArtistListItem v-for="(artist, index) in artists"
+    <ArtistsListItem v-for="(artist, index) in artists"
                     :key="index",
                     :artist="artist">
-    </ArtistListItem>
+    </ArtistsListItem>
 
   </div>
 
 </template>
 
 <script>
+
+import ArtistsListItem from '@/components/ArtistsListItem.vue'
+import ArtistsService from '@/services/ArtistsService.js'
+
 export default {
   name: 'ArtistsList',
   data(){
@@ -21,7 +25,7 @@ export default {
     ArtistsService.getArtists()
   },
   components: {
-    ArtistListItem
+    ArtistsListItem
   }
 }
 </script>

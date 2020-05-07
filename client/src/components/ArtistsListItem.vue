@@ -12,10 +12,10 @@
 import {eventBus} from '@/main.js'
 
 export default {
-  name: 'ArtistListItem',
+  name: 'ArtistsListItem',
   props: ['artist'],
   methods: {
-    
+
     }
   }
 }
