@@ -10,40 +10,24 @@ app.use(cors())
 
 MongoClient.connect('mongodb://localhost:27017')
 .then((client) => {
-  const db = client.db('art_hub');
-  const artsCollection = db.collection('arts');
-  const artsRouter = createRouter(artsCollection);
-  app.use('/api/artist', artsRouter);
+  const db = client.db('popArt_Hub');
+  const artistsCollection = db.collection('artists');
+  const artistsRouter = createRouter(artistsCollection);
+  app.use('/api/artists', artistsRouter);
 
-})
-.catch(console.error);
 
-MongoClient.connect('mongodb://localhost:27017')
-.then((client) => {
-  const db = client.db('film_hub');
-  const filmCollection = db.collection('film');
-  const filmRouter = createRouter(filmCollection);
-  app.use('/api/film', filmRouter);
+  const filmsCollection = db.collection('films');
+  const filmsRouter = createRouter(filmsCollection);
+  app.use('/api/films', filmsRouter);
 
-})
-.catch(console.error);
+    const designersCollection = db.collection('designers');
+    const designersRouter = createRouter(designersCollection);
+    app.use('/api/designers', designersRouter);
 
-MongoClient.connect('mongodb://localhost:27017')
-.then((client) => {
-  const db = client.db('fashion_hub');
-  const fashionCollection = db.collection('fashion');
-  const fashionRouter = createRouter(fashionCollection);
-  app.use('/api/fashion', fashionRouter);
+      const albumsCollection = db.collection('albums');
+      const albumsRouter = createRouter(albumsCollection);
+      app.use('/api/albums', albumsRouter);
 
-})
-.catch(console.error);
-
-MongoClient.connect('mongodb://localhost:27017')
-.then((client) => {
-  const db = client.db('music_hub');
-  const musicCollection = db.collection('music');
-  const musicRouter = createRouter(musicCollection);
-  app.use('/api/music', musicRouter);
 
 })
 .catch(console.error);
