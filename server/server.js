@@ -21,12 +21,12 @@ MongoClient.connect('mongodb://localhost:27017')
   app.use('/api/films', filmsRouter);
 
   const designersCollection = db.collection('designers');
-    const designersRouter = createRouter(designersCollection);
+  const designersRouter = createRouter(designersCollection);
     app.use('/api/designers', designersRouter);
 
-      const albumsCollection = db.collection('albums');
-      const albumsRouter = createRouter(albumsCollection);
-      app.use('/api/albums', albumsRouter);
+  const albumsCollection = db.collection('albums');
+  const albumsRouter = createRouter(albumsCollection);
+  app.use('/api/albums', albumsRouter);
 
 
 })
