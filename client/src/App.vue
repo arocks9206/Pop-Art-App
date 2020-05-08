@@ -11,7 +11,7 @@
 
    <Artists></Artists>
    <Films></Films>
-   <Albums></Albums>
+  <Albums></Albums>
 
 
 
@@ -43,4 +43,5 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
 </style>
