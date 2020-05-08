@@ -23,6 +23,12 @@ export default {
 h2:hover {
   cursor: pointer;
 }
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
 .album {
   background-color: #BFDBF7;
      border: 5px solid black;
@@ -31,28 +37,19 @@ h2:hover {
      margin: 20px;
      height: 20vw;
      width: 20vw;
-}
-
-.container {
-  position: relative;
-  width: 50%;
-}
-
-.album {
   opacity: 1;
   display: block;
-  transition: .5s ease;
+  transition: 1s ease;
   backface-visibility: hidden;
 }
 
 .middle {
-  transition: .5s ease;
+  transition: 1s ease;
   opacity: 0;
   position: absolute;
   top: 50%;
   left: 43%;
   transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   text-align: center;
 }
 
