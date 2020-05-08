@@ -17,14 +17,17 @@
 <div>
   <p>The influence of Warhol’s filmmaking can be found in both the Hollywood mainstream film, which took from his work a “gritty street-life realism, sexual explicitness, and on-the-edge performances,” and in experimental film, which “reworked his long-take, fixed-camera aesthetic into what came to be known as structural film.” </p>
 
-  <h3>{{films.title}}</h3>
-  <img :src="films.images[0].URL" width="400pxs">
 
-</div></div>
-
+  <img :src="films.images[0].URL" width="300px">
+  <h3>{{films.title}}, {{films.year}}</h3>
 
 
 </div>
+</div>
+
+
+
+
 
 <router-link to="/roylicht">Next to Roy Lichtenstein</router-link>
 
@@ -56,7 +59,7 @@ export default {
     .then(data => {
       this.artistInfo = data[0];
       this.artWorks = data[1].artWorks;
-      this.films = data[2];
+      this.films = data[2].films;
     })
 
   }
