@@ -13,6 +13,11 @@
    <Films></Films>
   <Albums></Albums>
 
+  <img class ="lozad" src="https://images.unsplash.com/photo-1588767904389-0dd859d11a2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+   alt="test">
+
+
+
 
 
 </section>
@@ -29,6 +34,7 @@ import Albums from '@/components/Albums/Albums.vue'
 import AlbumsList from '@/components/Albums/AlbumsList.vue'
 
 
+
 export default {
   name: 'App',
   components: {
@@ -40,6 +46,7 @@ export default {
     AlbumsList,
   }
 }
+
 </script>
 
 <style lang="css" scoped>
