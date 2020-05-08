@@ -44,17 +44,19 @@ h2:hover {
 }
 
 .middle {
-  transition: 1s ease;
+  transition: 0.5s ease;
   opacity: 0;
   position: absolute;
   top: 50%;
   left: 43%;
   transform: translate(-50%, -50%);
   text-align: center;
+  width: 75%;
+  height: 80;
 }
 
 .container:hover .album {
-  opacity: 0.3;
+  opacity: 0.1;
 }
 
 .container:hover .middle {
@@ -62,9 +64,10 @@ h2:hover {
 }
 
 .text {
-  color: red;
+  color: black;
+
   background: lightgrey;
-  font-size: 12px;
-  padding: 2px 2px;
+  font-size: 17px;
+  padding: 1px;
 }
 </style>
