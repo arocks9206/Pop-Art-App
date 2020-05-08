@@ -1,20 +1,15 @@
 <template lang="html">
+
   <div>
-
-
-
+    <img :src="artwork.imageURL" width="500px">
   </div>
 
 </template>
 
 <script>
-
 export default {
-  name: 'DesignerListItem',
-  props: ['designer']
-  // methods: {
-  //
-  // }
+  name: 'AndyWarholArtListItem',
+  props: ['artwork']
 }
 </script>
 
