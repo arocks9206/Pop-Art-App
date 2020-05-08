@@ -1,7 +1,7 @@
-const baseURL = "http://localhost:3000/api/albums/"
+const baseURL = "http://localhost:3000/api/roylicht/"
 
 export default {
-  getAlbums(){
+  getData(){
     return fetch(baseURL)
     .then(res => res.json())
   }

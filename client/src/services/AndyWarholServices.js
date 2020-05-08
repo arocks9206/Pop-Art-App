@@ -1,7 +1,7 @@
-const baseURL = "http://localhost:3000/api/designers/"
+const baseURL = "http://localhost:3000/api/andywarhol/"
 
 export default {
-  getDesigners(){
+  getData(){
     return fetch(baseURL)
     .then(res => res.json())
   }
