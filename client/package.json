@@ -9,6 +9,7 @@
   "dependencies": {
     "core-js": "^3.6.4",
     "vue": "^2.6.11",
+    "vue-scrollview": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.3.0",
