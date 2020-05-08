@@ -13,6 +13,7 @@
 
 <RoyLichtSculptureList :sculptures="sculptures"></RoyLichtSculptureList>
 
+<router-link to="/artists">Other Key Artists</router-link>
 
   </section>
 
