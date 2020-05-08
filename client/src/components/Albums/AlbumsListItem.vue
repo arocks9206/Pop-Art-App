@@ -37,6 +37,7 @@ h2:hover {
      margin: 20px;
      height: 20vw;
      width: 20vw;
+     /* use all of below for the transition */
   opacity: 1;
   display: block;
   transition: 1s ease;
