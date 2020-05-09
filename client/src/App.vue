@@ -1,7 +1,16 @@
 <template>
-  <section class="scroll-markers">
-    <div class="scroll-container">
 
+  <section class="scroll-markers">
+    <div class="">
+      <Timeline
+          :timeline-items="dataTimeline"
+          :message-when-no-items="messageWhenNoItems"
+          :unique-year="true"
+          :show-day-and-month="true"
+          order="desc"
+        />
+      </div>
+    <div class="scroll-container">
       <Example-start
         v-if="currentlyShowing === 'first'"
         title="Scroll Markers Example"
@@ -75,6 +84,7 @@ import ArtistsList from '@/components/Artists/ArtistsList.vue'
 import Albums from '@/components/Albums/Albums.vue'
 import AlbumsList from '@/components/Albums/AlbumsList.vue'
 import { $scrollview } from 'vue-scrollview'
+import Timeline from 'timeline-vuejs'
 
 
 
@@ -90,6 +100,7 @@ export default {
     ArtistsList,
     Albums,
     AlbumsList,
+    Timeline,
   },
   props: {
     visible: {
@@ -101,7 +112,42 @@ export default {
         markers: ['first', 'second', 'third', 'fourth', 'fifth', 'sixth'],
         debug: false,
         currentlyShowing: 'first',
+        messageWhenNoItems: "There arent items",
+    dataTimeline: [
+      {
+        from: new Date(2020, 5, 22),
+        title: "Lockdown",
+        showDayAndMonth: true,
+        description:
+          "testings but as much as we want here"
+      },
+      {
+        from: new Date(2018, 7, 15),
+        title: "Can have it just showing months",
+        description:
+          "Jan starts at month 0"
+      },
+      {
+        from: new Date(2010, 11),
+        title: "Name",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde."
+      },
+      {
+        from: new Date(2018, 7, 19),
+        title: "dates",
+        showDayAndMonth: true,
+        description:
+          "We can sort by ascending or descending dates"
+      },
+      {
+        from: new Date(2010, 1),
+        title: "Name",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde."
       }
+    ]
+  }
     },
     methods: {
       markerVisible(name) {

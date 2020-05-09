@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import ScrollView from 'vue-scrollview'
+import '../node_modules/timeline-vuejs/dist/timeline-vuejs.css'
 
 Vue.use(ScrollView)
 Vue.config.productionTip = false
