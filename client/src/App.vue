@@ -119,6 +119,7 @@ export default {
 </script>
 
 <style scoped>
+/* code for the scroll */
 .scroll-container {
   position: fixed;
   top: 0;
@@ -147,14 +148,13 @@ export default {
   transform: translateX(-50%);
 }
 
-
+/* code below for the picture transition */
 .container {
   position: relative;
   width: 50%;
 }
 
 .mainimg {
-     /* use all of below for the transition */
   opacity: 1;
   display: block;
   transition: 1s ease;
