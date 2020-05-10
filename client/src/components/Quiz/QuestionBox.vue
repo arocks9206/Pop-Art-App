@@ -1,25 +1,37 @@
 <template lang="html">
 <div>
-  <div>
-  {{currentQuestion.text}}
-    </div>
 
-    <p class="list-item" v-for="(response, index) in currentQuestion.responses"
+
+  <v-card-title style="font-size:1.5em">
+  {{currentQuestion.text}}
+  </v-card-title>
+
+
+
+
+      <v-card-text
+        class="list-item justify-center" v-for="(response, index) in currentQuestion.responses"
        :response="response"
        :index="index"
        @click="selectResponse(response)"
        :class="responseClass(response)"
+       style="font-size:1.2em"
        >
        {{response.text}}
-     </p>
+     </v-card-text>
 
-    <button type="button"
+
+
+<v-card-actions>
+    <v-btn type="button"
             @click="submitAnswer"
             :disabled="!selectedResponse || answered"
             >
-            Submit</button>
-    <button @click="next">Next</button>
-
+            Submit</v-btn>
+    <v-btn @click="next"
+           type="button"
+           :disabled="!answered">Next</v-btn>
+  </v-card-actions>
 
 </div>
 </template>

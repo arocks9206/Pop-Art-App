@@ -1,10 +1,20 @@
 <template lang="html">
-  <div>
+
+<div>
+  <v-layout>
+    <v-flex xs12 sm6 offset-sm3>
+      <v-card >
+
+
+
 
     <Header
       :numCorrect="numCorrect"
       :numTotal="numTotal"
     ></Header>
+
+
+
 
     <QuestionBox
       v-if="questions.length"
@@ -15,7 +25,11 @@
 
 
 
-  </div>
+  </v-card>
+      </v-flex>
+    </v-layout>
+
+</div>
 
 </template>
 
