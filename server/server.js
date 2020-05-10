@@ -11,23 +11,18 @@ app.use(cors())
 MongoClient.connect('mongodb://localhost:27017')
 .then((client) => {
   const db = client.db('popArt_Hub');
-  const artistsCollection = db.collection('artists');
-  const artistsRouter = createRouter(artistsCollection);
-  app.use('/api/artists', artistsRouter);
 
+const artistsCollection = db.collection('artists');
+const artistsRouter = createRouter(artistsCollection);
+app.use('/api/artists', artistsRouter);
 
-  const roylichtCollection = db.collection('roylicht');
-  const roylichtRouter = createRouter(roylichtCollection);
-  app.use('/api/roylicht', roylichtRouter);
+const artworksCollection = db.collection('artworks');
+const artworksRouter = createRouter(artworksCollection);
+app.use('/api/artworks', artworksRouter);
 
-  const andywarholCollection = db.collection('andywarhol');
-  const andywarholRouter = createRouter(andywarholCollection);
-    app.use('/api/andywarhol', andywarholRouter);
-
-
-    const quizCollection = db.collection('quiz');
-    const quizRouter = createRouter(quizCollection);
-    app.use('/api/quiz', quizRouter);
+const quizCollection = db.collection('quiz');
+const quizRouter = createRouter(quizCollection);
+app.use('/api/quiz', quizRouter);
 
 
 

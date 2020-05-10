@@ -27,11 +27,13 @@ export default {
 <style lang="css" scoped>
 img {
   border-style: solid;
+  width: 300px;
 }
 
 .list {
   display: flex;
-  justify-content: center;
-  flex-direction: row;
+  justify-content: space-around;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 </style>
