@@ -17,10 +17,22 @@ db.andywarhol.insertMany([
         imageURL: "http://www.sothebys.com/content/dam/sothebys-pages/auction-sales-slides/2018/03/l18160_df_warhol3.jpg"
       },
       {
-        artTitle: "Marilyn x 100",
+        artTitle: "Marilyn Diptych",
         yearCreated: 1962,
         medium: "Screenprint ink and synthetic polymer paint on canvas",
-        imageURL: "https://6d49d47bd32a151032ae-907965fc79c9900a93c12efeb23103bd.ssl.cf1.rackcdn.com/artworks/andy_warhol_1.jpg"
+        imageURL: "https://upload.wikimedia.org/wikipedia/en/8/87/Marilyndiptych.jpg"
+      },
+      {
+        artTitle: "Triple Elvis",
+        yearCreated: 1963,
+        medium: "Screenprint ink and synthetic polymer paint on canvas",
+        imageURL: "https://upload.wikimedia.org/wikipedia/en/5/58/Andy_Warhol_Triple_Elvis.jpg"
+      },
+      {
+        artTitle: "Brillo Soap Pads Boxes",
+        yearCreated: 1964,
+        medium: "Acrylic, silkscreen, plywood",
+        imageURL: "https://images.nortonsimon.org/fcgi-bin/iipsrv.fcgi?IIIF=P1969144001-100.ptif/full/!400,600/0/default.jpg"
       }
     ]
   },

@@ -10,8 +10,7 @@
 
 
 
-      <AndyWarholArtList class="list" :artWorks="artWorks">
-      </AndyWarholArtList>
+      <AndyWarholArtList class="list" :artWorks="artWorks"></AndyWarholArtList>
 
       <div class="film-content">
         <div>
@@ -21,16 +20,8 @@
             <img :src="films.images[0].URL" width="300px">
           </div>
 
-          <div class="film-caption">
-            <h5>{{films.title}}, {{films.year}}</h5>
-          </div>
-
         </div>
       </div>
-
-
-
-
 
       <router-link to="/roylicht"><button>Next To Roy Lichtenstein</button></router-link>
 
@@ -74,7 +65,7 @@ export default {
 <style lang="css" scoped>
 
 section {
-  background-image: url('/assets/background_2.jpg');
+  background-image: url('../../assets/background_2.jpg');
   background-size: cover;
   background-attachment: scroll;
 }
@@ -102,6 +93,7 @@ img {
 .list {
   display: flex;
   flex-direction: row;
+  width: 900px;
 }
 
 .film-content {
@@ -125,14 +117,6 @@ img {
 }
 
 .film-image{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  font-family: Century Gothic;
-}
-
-.film-caption {
   display: flex;
   align-items: center;
   justify-content: center;

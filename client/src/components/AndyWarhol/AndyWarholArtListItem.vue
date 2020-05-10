@@ -1,7 +1,7 @@
 <template lang="html">
 
   <div>
-    <img :src="artwork.imageURL" width="500px">
+    <img :src="artwork.imageURL" width="250px">
   </div>
 
 </template>
