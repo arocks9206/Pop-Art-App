@@ -22,6 +22,10 @@ export default {
 </script>
 
 <style lang="css" scoped>
+img {
+  border-style: solid;
+}
+
 .list {
   display: flex;
   justify-content: center;
