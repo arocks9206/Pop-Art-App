@@ -90,21 +90,17 @@ db.roylicht.insertMany([
         medium: "Oil and synthetic polymer paint on canvas",
         imageURL: "https://upload.wikimedia.org/wikipedia/en/d/df/Roy_Lichtenstein_Drowning_Girl.jpg"
       },
-    ]
-  },
-  {
-    sculptures: [
       {
-        artTitle: "Head with Black Shadow",
-        yearCreated: "1966",
-        medium: "Glazed Ceramic",
-        imageURL:"https://www.imageduplicator.com/sat/sat_big_image.php?image_name=images/works/0189_01.jpg"
+        artTitle: "Brushstroke",
+        yearCreated: 1965,
+        medium: "Screenprint on paper",
+        imageURL: "https://www.tate.org.uk/art/images/work/P/P07/P07354_10.jpg"
       },
       {
-        artTitle: "Barcelona Head",
-        yearCreated: "1992",
-        medium: "Concrete and ceramic",
-        imageURL:"https://www.imageduplicator.com/sat/sat_big_image.php?image_name=images/works/1402_01.jpg"
+        artTitle: "Explosion",
+        yearCreated: 1965,
+        medium: "Lithograph on paper",
+        imageURL: "https://www.tate.org.uk/art/images/work/P/P01/P01796_10.jpg"
       }
     ]
   }
@@ -120,13 +116,13 @@ db.artists.insertMany([
         artTitle: "Retroactive I",
         yearCreated: 1963,
         medium: "Oil and silkscreen ink on canvas",
-        imageURL: "https://www.rauschenbergfoundation.org/art/artwork/retroactive-i"
+        imageURL: "https://d32dm0rphc51dk.cloudfront.net/OTI4BZ2Mq_hLCGJoaGZWdQ/large.jpg"
       },
       {
-        artTitle: "Storyline I (Reels [B+C])",
+        artTitle: "Storyline II (Reels [B+C])",
         yearCreated: 1968,
         medium: "Lithograph",
-        imageURL: "https://www.rauschenbergfoundation.org/art/artwork/storyline-i-reels-bc"
+        imageURL: "https://www.wright20.com/items/index/2000/494_0_modern_and_contemporary_art_november_2003_robert_rauschenberg_b_1925_storyline_ii_second_plate_from_the_series_reel_b_c__wright_auction.jpg?t=1517385980"
       }
     ]
   },
