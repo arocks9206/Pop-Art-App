@@ -45,7 +45,7 @@
 
 <script>
 
-import AndyWarholServices from '@/services/AndyWarholServices.js';
+// import AndyWarholServices from '@/services/AndyWarholServices.js';
 import AndyWarholArtList from './AndyWarholArtList.vue';
 import AndyWarholArtListItem from './AndyWarholArtListItem.vue';
 import AndyWarholHeader from "../headers/AndyWarholHeader.vue";

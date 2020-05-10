@@ -14,7 +14,12 @@ const router = new VueRouter({
   routes: [
     { path: '/', component: Overview },
     { path: '/andywarhol', component: AndyWarhol },
-    { path: '/roylicht', component: RoyLicht},
+    {
+      path: '/roylicht',
+      component: RoyLicht,
+      name: 'RoyLicht',
+      props: true
+    },
     { path: '/artists', component: Artists },
     { path: '/quiz/:id', component: Quiz, params: { id: 'id'} }
     // { path: '/designers', component: Designers}

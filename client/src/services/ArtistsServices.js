@@ -1,4 +1,4 @@
-const baseURL = "http://localhost:3000/api/andywarhol/"
+const baseURL = "http://localhost:3000/api/artists/"
 
 export default {
   getData(){

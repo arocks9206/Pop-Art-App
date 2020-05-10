@@ -5,8 +5,11 @@
                          :index="index"
                          class="list">
     </AndyWarholArtListItem>
+
   </div>
 </template>
+
+<img :src="artWorks[index]">
 
 <script>
 

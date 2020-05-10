@@ -55,7 +55,11 @@
 </div>
 
 
-<router-link to="/andywarhol"><button>Next To Andy Warhol</button></router-link>
+<router-link :to="{
+  name: 'RoyLicht',
+  params: { artistName: 'Roy Lichtenstein'}
+                  }"
+                  ><button>Next To Lesson 2: Roy Licthenstein</button></router-link>
 
 
 </section>
@@ -67,6 +71,7 @@ import OverviewHeader from "./headers/OverviewHeader.vue";
 
 export default {
   name: 'Overview',
+  props: ['artistName'],
   components: {
     "overview-header": OverviewHeader
   }

@@ -1,4 +1,4 @@
-const baseURL = "http://localhost:3000/api/roylicht/"
+const baseURL = "http://localhost:3000/api/artworks/"
 
 export default {
   getData(){

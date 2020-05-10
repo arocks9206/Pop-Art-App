@@ -9,7 +9,7 @@
 </div>
 
 
-<RoyLichtArtList :paintings="paintings"></RoyLichtArtList>
+<RoyLichtArtList :paintings="artworks"></RoyLichtArtList>
 
 <RoyLichtSculptureList :sculptures="sculptures"></RoyLichtSculptureList>
 
@@ -21,7 +21,12 @@
 
 <script>
 
-import RoyLichtServices from '@/services/RoyLichtServices'
+
+import ArtistsServices from '@/services/ArtistsServices';
+import ArtworksServices from '@/services/ArtworksServices';
+
+
+// import RoyLichtServices from '@/services/RoyLichtServices'
 import RoyLichtArtList from './RoyLichtArtList.vue';
 import RoyLichtArtListItem from './RoyLichtArtListItem';
 import RoyLichtSculptureList from './RoyLichtSculptureList';
@@ -37,20 +42,31 @@ export default {
   },
   data(){
     return {
-      paintings: [],
-      sculptures: [],
-      artistInfo: {}
+      artworks: null,
+      bio: null
     }
   },
     mounted(){
-      RoyLichtServices.getData()
-      .then(data => {
-        this.artistInfo = data[0];
-        this.paintings = data[1].paintings;
-        this.sculptures = data[2].sculptures;
+      ArtistsServices.getData()
+      .then(artistData => this.bio = artistData.filter(a => a.name === this.$route.params.artistName))
+
+      ArtworksServices.getData()
+      .then(artworkData => {
+        this.artworks = artworkData.filter(x => x.artist === this.$route.params.artistName)
       })
-    }
+
+
+
+      // RoyLichtServices.getData()
+      // .then(data => {
+      //   this.artistInfo = data[0];
+      //   this.paintings = data[1].paintings;
+      //   this.sculptures = data[2].sculptures;
+
+
   }
+}
+
 
 </script>
 
