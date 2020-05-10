@@ -28,14 +28,8 @@
           :show-day-and-month="true"
           order="ascd"
         />
-        <div class="container">
           <img class="image2"src="https://blog.artsper.com/wp-content/uploads/2018/01/f3908d3bd5fed6b27c9fd4c637078086-eduardo-paolozzi-south-london.jpg" alt="">
-            <div class="middle">
-              <p class="text">Independent Group members; Nigel Henderson, Eduardo Paolozzi, Alison and Peter Smithson</p>
-            </div>
-        </div>
     </div>
-
 
       <div class="image">
         <Timeline
@@ -218,7 +212,6 @@ export default {
   border: solid black;
   margin-top: 80px;
   opacity: 1;
-  display: block;
   transition: 1s ease;
   backface-visibility: hidden;
 }
@@ -239,29 +232,7 @@ export default {
   margin-top: 50px;
 }
 
-.middle{
-  transition: 0.5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 110%;
-  left: 63%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 25%;
-  height: 80;
-}
 
-.container:hover .middle {
-  opacity: 2;
-}
-
-.text {
-  color: black;
-
-  background: lightgrey;
-  font-size: 17px;
-  padding: 1px;
-}
 
 
 
