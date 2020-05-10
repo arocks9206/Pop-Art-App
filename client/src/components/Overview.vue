@@ -17,7 +17,7 @@
 
  <div class="intro-image">
    <div>
-     <img src="../assets/lichtenstein_brushstroke.jpg" width="600px">
+     <img src="../assets/in the car_roy licht.jpg" width="600px">
    </div>
  </div>
 
