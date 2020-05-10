@@ -16,7 +16,7 @@ const router = new VueRouter({
     { path: '/andywarhol', component: AndyWarhol },
     { path: '/roylicht', component: RoyLicht},
     { path: '/artists', component: Artists },
-    { path: '/quiz', component: Quiz }
+    { path: '/quiz/:id', component: Quiz, params: { id: 'id'} }
     // { path: '/designers', component: Designers}
   ]
 })

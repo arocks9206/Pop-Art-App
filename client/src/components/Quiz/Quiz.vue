@@ -49,9 +49,9 @@ export default {
     }
   },
   mounted(){
-    fetch('http://localhost:3000/api/quiz')
+    fetch(`http://localhost:3000/api/quiz/${this.$route.params.id}`)
     .then(res => res.json())
-    .then(data => this.questions = data[0].questions);
+    .then(data => this.questions = data.questions);
 
     eventBus.$on('is-correct', (isCorrect) => {
       if (isCorrect) { this.numCorrect++ };

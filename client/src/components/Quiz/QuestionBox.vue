@@ -16,7 +16,7 @@
               :index="index"
               @click="selectResponse(response)"
               :class="responseClass(response)">
-                        <img :src="response.text">
+                        
                         {{response.text}}
         </b-list-group-item>
       </b-list-group>
