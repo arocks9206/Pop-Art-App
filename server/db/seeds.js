@@ -70,7 +70,7 @@ db.roylicht.insertMany([
         artTitle: "Whaam!",
         yearCreated: 1963,
         medium: "Acrylic and oil paint on canvas",
-        imageURL: "https://www.imageduplicator.com/sat/sat_big_image.php?image_name=images/works/0137_01.jpg"
+        imageURL: "https://www.tate.org.uk/art/images/work/T/T00/T00897_10.jpg"
       },
       {
         artTitle: "Drowning Girl",

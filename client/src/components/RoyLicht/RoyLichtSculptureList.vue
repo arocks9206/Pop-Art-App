@@ -9,7 +9,9 @@
 </template>
 
 <script>
+
 import RoyLichtSculptureListItem from './RoyLichtSculptureListItem.vue'
+
 export default {
   name: 'RoyLichtSculptureList',
   props: ['sculptures'],

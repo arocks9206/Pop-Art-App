@@ -16,7 +16,7 @@
       <div class="film-content">
         <div>
           <h4>The influence of Warhol’s filmmaking can be found in both the Hollywood mainstream film, which took from his work a “gritty street-life realism, sexual explicitness, and on-the-edge performances,” and in experimental film, which “reworked his long-take, fixed-camera aesthetic into what came to be known as structural film.” </h4>
-
+          
           <div class="film-image">
             <img :src="films.images[0].URL" width="300px">
           </div>
@@ -27,10 +27,6 @@
 
         </div>
       </div>
-
-
-
-
 
       <router-link to="/roylicht"><button>Next To Roy Lichtenstein</button></router-link>
 
