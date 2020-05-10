@@ -1,6 +1,6 @@
 <template lang="html">
   <section>
-    <div class="intro-container">
+    <!-- <div class="intro-container">
   <div>
   <h1>ANDY WARHOL</h1>
 
@@ -23,13 +23,13 @@
 
 
 </div>
-</div>
+</div> -->
 
 
 
 
 
-<router-link to="/roylicht">Next to Roy Lichtenstein</router-link>
+<router-link to="/quiz/part-1">TEST YOUR KNOWLEDGE I</router-link>
 
 
 </section>
