@@ -24,6 +24,10 @@ MongoClient.connect('mongodb://localhost:27017')
   const andywarholRouter = createRouter(andywarholCollection);
     app.use('/api/andywarhol', andywarholRouter);
 
+    const quizCollection = db.collection('quiz');
+    const quizRouter = createRouter(quizCollection);
+    app.use('/api/quiz', quizRouter);
+
 
 
 

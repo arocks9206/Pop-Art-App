@@ -1,37 +1,45 @@
 <template lang="html">
 <div>
 
+  <div class="question-box-container">
+    <b-jumbotron>
+      <template slot="lead">
+        {{currentQuestion.text}}
+      </template>
 
-  <v-card-title style="font-size:1.5em">
-  {{currentQuestion.text}}
-  </v-card-title>
+      <hr class="my-4">
+
+      <b-list-group>
+        <b-list-group-item
+              v-for="(response, index) in currentQuestion.responses"
+              :response="response"
+              :index="index"
+              @click="selectResponse(response)"
+              :class="responseClass(response)">
+                        <img :src="response.text">
+                        {{response.text}}
+        </b-list-group-item>
+      </b-list-group>
+
+      <b-button variant="primary"
+                @click="submitAnswer"
+                :disabled="!selectedResponse || answered"
+                >
+                Submit
+      </b-button>
 
 
 
-
-      <v-card-text
-        class="list-item justify-center" v-for="(response, index) in currentQuestion.responses"
-       :response="response"
-       :index="index"
-       @click="selectResponse(response)"
-       :class="responseClass(response)"
-       style="font-size:1.2em"
-       >
-       {{response.text}}
-     </v-card-text>
+      <b-button @click="next"
+                variant="success"
+                :disabled="!answered"
+                >
+                next
+      </b-button>
 
 
-
-<v-card-actions>
-    <v-btn type="button"
-            @click="submitAnswer"
-            :disabled="!selectedResponse || answered"
-            >
-            Submit</v-btn>
-    <v-btn @click="next"
-           type="button"
-           :disabled="!answered">Next</v-btn>
-  </v-card-actions>
+    </b-jumbotron>
+  </div>
 
 </div>
 </template>
@@ -92,7 +100,7 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.list-item:hover {
+.list-group-item:hover {
   background: #EEE;
   cursor: pointer;
 }
@@ -107,5 +115,9 @@ export default {
 
 .incorrect {
   background-color: red;
+}
+
+.btn {
+  margin: 5px 5px;
 }
 </style>

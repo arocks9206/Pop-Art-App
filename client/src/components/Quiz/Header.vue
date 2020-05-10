@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
     <div class="nav-bar">
-      <p>Counter: {{numCorrect}}/{{numTotal}}</p>
+      <div>Questions: {{currentNum}}/{{totalQuestions}}</div><div> Correct Answers: {{numCorrect}}</div>
     </div>
   </div>
 
@@ -10,9 +10,13 @@
 <script>
 export default {
   name: 'Header',
-  props: [ 'numCorrect', 'numTotal' ]
+  props: [ 'numCorrect', 'currentNum', 'totalQuestions' ]
 }
 </script>
 
 <style lang="css" scoped>
+.nav-bar {
+  display: flex;
+  justify-content: space-around;
+}
 </style>
