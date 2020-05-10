@@ -16,22 +16,16 @@ MongoClient.connect('mongodb://localhost:27017')
   app.use('/api/artists', artistsRouter);
 
 
-  const filmsCollection = db.collection('films');
-  const filmsRouter = createRouter(filmsCollection);
-  app.use('/api/films', filmsRouter);
+  const roylichtCollection = db.collection('roylicht');
+  const roylichtRouter = createRouter(roylichtCollection);
+  app.use('/api/roylicht', roylichtRouter);
 
-  const designersCollection = db.collection('designers');
-  const designersRouter = createRouter(designersCollection);
-    app.use('/api/designers', designersRouter);
-
-  const albumsCollection = db.collection('albums');
-  const albumsRouter = createRouter(albumsCollection);
-  app.use('/api/albums', albumsRouter);
-
+  const andywarholCollection = db.collection('andywarhol');
+  const andywarholRouter = createRouter(andywarholCollection);
+    app.use('/api/andywarhol', andywarholRouter);
 
 })
 .catch(console.error);
-
 
 app.listen(3000, function () {
   console.log(`Listening on port ${ this.address().port }`);

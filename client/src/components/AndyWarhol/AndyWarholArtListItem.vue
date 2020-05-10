@@ -14,4 +14,9 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+img {
+  border-style: solid;
+}
+
 </style>

@@ -9,10 +9,11 @@
 </div>
 
 
-<RoyLichtArtList></RoyLichtArtList>
+<RoyLichtArtList :paintings="paintings"></RoyLichtArtList>
 
-<RoyLichtSculptureList></RoyLichtSculptureList>
+<RoyLichtSculptureList :sculptures="sculptures"></RoyLichtSculptureList>
 
+<router-link to="/artists">Other Key Artists</router-link>
 
   </section>
 
@@ -24,15 +25,21 @@ import RoyLichtServices from '@/services/RoyLichtServices'
 import RoyLichtArtList from './RoyLichtArtList.vue';
 import RoyLichtArtListItem from './RoyLichtArtListItem';
 import RoyLichtSculptureList from './RoyLichtSculptureList';
-import RoyLichtSchulptureListItem from './RoyLichtSculptureListItem'
+import RoyLichtSculptureListItem from './RoyLichtSculptureListItem'
 
 export default {
   name: 'RoyLicht',
+  components: {
+    RoyLichtArtList,
+    RoyLichtArtListItem,
+    RoyLichtSculptureList,
+    RoyLichtSculptureListItem
+  },
   data(){
     return {
       paintings: [],
       sculptures: [],
-      artistInfo: null
+      artistInfo: {}
     }
   },
     mounted(){
@@ -48,4 +55,40 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.intro-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-container h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.intro-container h3 {
+  margin: 100px;
+  font-size: 40px;
+  text-align: justify;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+}
+
+.film-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.film-content div {
+  width: 900px;
+}
+
+.film-content p {
+  font-size: 30px;
+  text-align: justify;
+}
 </style>
