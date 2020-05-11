@@ -15,12 +15,20 @@
     </div>
   </div>
 
- <div class="intro-image">
-     <img class= "main" src="../assets/in the car_roy licht.jpg" width="600px">
-     <div class="middle">
-       <p class="hovertxt">test</p>
-     </div>
- </div>
+<div class="intro-image">
+  <div class="container">
+    <img src="../assets/in the car_roy licht.jpg" alt="Avatar" class="image" style="width:100%">
+      <div class="middle">
+        <div class="text">
+          <h1>“In The Car”</h1>
+          <h3>Roy Lichtenstein</h3>
+          <h5>1963</h5>
+          <h6>Oil and magna on canvas</h6>
+          <p>This painting is one of a series from the early 1960s in which Lichtenstein deals with the theme of romance. He would paint his works on a monumental scale, much enlarged from his original source material of comic-strip illustrations. This work is based on an image from the comic Girls' Romances.</p>
+        </div>
+      </div>
+  </div>
+</div>
 
 <div class="content-container-one">
   <div>
@@ -37,8 +45,17 @@
 </div>
 
 <div class="image-two">
-  <div>
-    <img src="../assets/andy-micket.jpg" width="600px">
+  <div class="container">
+    <img src="../assets/andy-micket.jpg" alt="Avatar" class="image" style="width:100%">
+      <div class="middle">
+        <div class="text">
+          <h1>“Quadrant Mickey Mouse”</h1>
+          <h3>Andy Warhol</h3>
+          <h5>1981</h5>
+          <h6>Synthetic polymer and silkscreen inks on canvas</h6>
+          <p>This image of the Disney character Mickey Mouse belongs to a portfolio of ten screenprints called 'Myths' published in 1981. The series is based on characters from American Popular culture which have become icons, defining different generations.</p>
+        </div>
+      </div>
   </div>
 </div>
 
@@ -50,15 +67,16 @@
 </div>
 
 <div class="image-three">
-  <div>
-    <img src="../assets/warhol_chelsea_girls.jpg" width="600px">
-  </div>
-</div>
-
-      <div class="container">
-  <img src="https://images.unsplash.com/photo-1519731506190-f37737f13a75?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="Avatar" class="image" style="width:100%">
-  <div class="middle">
-    <div class="text">Doggo</div>
+  <div class="container">
+    <img src="../assets/warhol_chelsea_girls.jpg" alt="Avatar" class="image" style="width:100%">
+      <div class="middle">
+        <div class="text">
+          <h1> “Film Still from Chelsea Girl”</h1>
+          <h3>Andy Warhol</h3>
+          <h5>1967</h5>
+          <p>Lacking a formal narrative, Warhol's art house classic follows various residents of the Chelsea Hotel in 1966 New York City,presented in a split screen with a single audio track in conjunction with one side of screen.</p>
+        </div>
+      </div>
   </div>
 </div>
 
@@ -202,6 +220,12 @@ img {
 .container {
   position: relative;
   width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Century Gothic;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .image {
@@ -235,8 +259,9 @@ img {
 .text {
   background: black;
   color: white;
-  font-size: 30px;
+  font-size: 20px;
   padding: 16px 32px;
+  width: 500px;
 }
 
 </style>
