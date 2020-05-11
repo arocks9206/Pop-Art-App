@@ -10,28 +10,28 @@ app.use(cors())
 
 MongoClient.connect('mongodb://localhost:27017')
 .then((client) => {
-  const db = client.db('popArt_hub');
-  const artistsCollection = db.collection('artists');
-  const artistsRouter = createRouter(artistsCollection);
-  app.use('/api/artists', artistsRouter);
+  const db = client.db('popArt_Hub');
 
+const artistsCollection = db.collection('artists');
+const artistsRouter = createRouter(artistsCollection);
+app.use('/api/artists', artistsRouter);
 
-  const filmsCollection = db.collection('films');
-  const filmsRouter = createRouter(filmsCollection);
-  app.use('/api/films', filmsRouter);
+const keyartistsCollection = db.collection('keyartists');
+const keyartistsRouter = createRouter(keyartistsCollection);
+app.use('/api/keyartists', keyartistsRouter);
 
-  const designersCollection = db.collection('designers');
-    const designersRouter = createRouter(designersCollection);
-    app.use('/api/designers', designersRouter);
+const artworksCollection = db.collection('artworks');
+const artworksRouter = createRouter(artworksCollection);
+app.use('/api/artworks', artworksRouter);
 
-      const albumsCollection = db.collection('albums');
-      const albumsRouter = createRouter(albumsCollection);
-      app.use('/api/albums', albumsRouter);
+const quizCollection = db.collection('quiz');
+const quizRouter = createRouter(quizCollection);
+app.use('/api/quiz', quizRouter);
+
 
 
 })
 .catch(console.error);
-
 
 app.listen(3000, function () {
   console.log(`Listening on port ${ this.address().port }`);

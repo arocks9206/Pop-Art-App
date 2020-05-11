@@ -1,20 +1,15 @@
 <template lang="html">
+
   <div>
-    <h2>{{artist.artistName}}</h2>
-
-
+    <img :src="artwork.imageURL" width="500px">
   </div>
 
 </template>
 
 <script>
-
 export default {
-  name: 'ArtistListItem',
-  props: ['artist']
-  // methods: {
-  //
-  // }
+  name: 'ArtistsListItem',
+  props: ['artwork']
 }
 </script>
 
