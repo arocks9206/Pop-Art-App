@@ -13,11 +13,45 @@
       <h3>{{artist.shortBio}}</h3>
     </div>
 
-    <div class="art-images">
+    <!-- <div class="art-images">
       <div v-for="(artwork, index) in artworks"
            :artwork="artwork"
            :index="index">
           <img :src="artwork.imageURL" width="200px">
+      </div>
+    </div> -->
+
+      <!-- <div class="art-images"
+            v-for="(artwork, index) in artworks"
+           :artwork="artwork"
+           :index="index">
+      <div class="container">
+        <img class="image":src="artwork.imageURL" style="width:200px">
+          <div class="middle">
+            <div class="text">
+              <h5> {{artwork.title}}</h5>
+              <h6>{{artwork.artist}}</h6>
+              <h6>{{artwork.year}}</h6>
+              <h7>{{artwork.medium}}</h7>
+              <p>{{artwork.description}}</p>
+            </div>
+          </div>
+        </div>
+    </div> -->
+
+    <div class="container"
+          v-for="(artwork, index) in artworks"
+         :artwork="artwork"
+         :index="index">
+      <img class="image":src="artwork.imageURL" style="width:80%">
+        <div class="middle">
+          <div class="text">
+              <h5> {{artwork.title}}</h5>
+              <h6>{{artwork.artist}}</h6>
+              <h6>{{artwork.year}}</h6>
+              <h7>{{artwork.medium}}</h7>
+              <p>{{artwork.description}}</p>
+          </div>
       </div>
     </div>
 
@@ -99,13 +133,13 @@ img {
   border-style: solid;
 }
 
-.art-images{
+/* .art-images{
   display: flex;
   align-items: center;
   justify-content: center;
   justify-content: space-around;
   margin-bottom: 20px;
-}
+} */
 
 .container {
   position: relative;
@@ -116,6 +150,7 @@ img {
   font-family: Century Gothic;
   margin-bottom: 20px;
   padding: 5px;
+  justify-content: space-around;
 }
 
 .image {

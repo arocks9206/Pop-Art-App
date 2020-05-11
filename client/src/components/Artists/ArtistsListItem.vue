@@ -1,16 +1,13 @@
 <template lang="html">
 
-  <!-- <div>
-    <img :src="artwork.imageURL" width="500px">
-  </div> -->
   <div class="container">
     <img class="image":src="artwork.imageURL" style="width:100%">
       <div class="middle">
         <div class="text">
-          <h3> {{artwork.title}}</h3>
-          <h3>{{artwork.artist}}</h3>
-          <h5>{{artwork.year}}</h5>
-          <h6>{{artwork.medium}}</h6>
+          <h5> {{artwork.title}}</h5>
+          <h6>{{artwork.artist}}</h6>
+          <h6>{{artwork.year}}</h6>
+          <h7>{{artwork.medium}}</h7>
           <p>{{artwork.description}}</p>
         </div>
       </div>
@@ -68,7 +65,7 @@ export default {
 .text {
   background: black;
   color: white;
-  font-size: 12px;
+  font-size: 14px;
   padding: 16px 32px;
   width: 400px;
 }
