@@ -255,7 +255,7 @@ export default {
   height: auto;
   width: 260px;
   border: solid black;
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 .image2{
