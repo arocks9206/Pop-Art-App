@@ -153,7 +153,8 @@ db.artworks.insertMany([
       category: "painting",
       year: 1963,
       medium: "Oil and silkscreen ink on canvas",
-      imageURL: "https://www.rauschenbergfoundation.org/sites/default/files/styles/artwork_fullsize/public/images_artwork/64.006.jpg"
+      imageURL: "https://www.rauschenbergfoundation.org/sites/default/files/styles/artwork_fullsize/public/images_artwork/64.006.jpg",
+      description: "Retroactive I. In 1963, Robert Rauschenberg painted 'Retroactive I' using oil and silkscreen ink on a canvas. ... Kennedy is added to the painting as the main focus to reflect the encouraging promise for America's future and its fortitude."
   },
 
   {
@@ -162,7 +163,8 @@ db.artworks.insertMany([
     category: "painting",
     year: 1968,
     medium: "Lithograph",
-    imageURL: "https://www.rauschenbergfoundation.org/sites/default/files/styles/artwork_fullsize/public/images_artwork/68.E004.jpg"
+    imageURL: "https://www.rauschenbergfoundation.org/sites/default/files/styles/artwork_fullsize/public/images_artwork/68.E004.jpg",
+    description: "This series of color lithographs was published by Gemini G.E.L., Los Angeles. [B +C] refers to the American outlaws Bonnie and Clyde who were the subject of an eponymous movie released the previous year. Imagery for the series is derived from stills from the film."
   },
 
   {
@@ -171,7 +173,8 @@ db.artworks.insertMany([
     category: "painting",
     year: 1956,
     medium: "Collage",
-    imageURL: "https://upload.wikimedia.org/wikipedia/en/f/ff/Hamilton-appealing2.jpg"
+    imageURL: "https://upload.wikimedia.org/wikipedia/en/f/ff/Hamilton-appealing2.jpg",
+    description: "Just what is it that makes today's homes so different, so appealing? is a collage by English artist Richard Hamilton. It measures 10.25 in × 9.75 in. The work is now in the collection of the Kunsthalle Tübingen, Tübingen, Germany. It was the first work of pop art to achieve iconic status."
   },
 
   {
@@ -180,7 +183,8 @@ db.artworks.insertMany([
     category: "painting",
     year: 1965,
     medium: "Screenprint on paper",
-    imageURL: "https://www.tate.org.uk/art/images/work/P/P04/P04251_10.jpg"
+    imageURL: "https://www.tate.org.uk/art/images/work/P/P04/P04251_10.jpg",
+    description: "Summary. My Marilyn is a print derived from photographs of the screen actress Marilyn Monroe (1926–62) that the artist saw in Town magazine, in November 1962, not long after her death that August. ... Marilyn Monroe demanded that the results of photographic sessions be submitted to her for vetting before publication."
   },
 
   {
@@ -189,7 +193,8 @@ db.artworks.insertMany([
     category: "painting",
     year :1967,
     medium: "Print, collage",
-    imageURL: "https://upload.wikimedia.org/wikipedia/en/5/50/Sgt._Pepper%27s_Lonely_Hearts_Club_Band.jpg"
+    imageURL: "https://upload.wikimedia.org/wikipedia/en/5/50/Sgt._Pepper%27s_Lonely_Hearts_Club_Band.jpg",
+    description: "Blake painted several album sleeves. He designed the sleeve for Sgt. Pepper's Lonely Hearts Club Band with his wife Jann Haworth, the American-born artist whom he married in 1963 and divorced in 1979. The Sgt. Pepper's sleeve has become an iconic work of pop art, much imitated and Blake's best-known work. Producing the collage necessitated the construction of a set with cut-out photographs and objects, such as flowers, centred on a drum (sold in auction in 2008) with the title of the album. Blake has subsequently complained about the one-off fee he received for the design (£200[5][6]), with no subsequent royalties."
   },
 
   {
@@ -198,7 +203,8 @@ db.artworks.insertMany([
       cateogry: "painting",
       year: 1961,
       medium: "Oil paint on board",
-      imageURL: "https://www.tate.org.uk/art/images/work/T/T02/T02406_10.jpg"
+      imageURL: "https://www.tate.org.uk/art/images/work/T/T02/T02406_10.jpg",
+      description: "Self-Portrait with Badges is a painting that looks both forward and back. While the figure is contemporary with, or rather in advance of popular fashion, it also looks back, in affection, to traditional times and places."
 
   }
 

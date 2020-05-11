@@ -1,12 +1,12 @@
 <template lang="html">
-<<<<<<< HEAD
+<!-- <<<<<<< HEAD
 <section class="background">
 
 
   <div class="image">
-=======
+======= -->
 <section>
->>>>>>> develop
+<!-- >>>>>>> develop -->
 
   <div class="header">
     <TimelineHeader title="POP ART TIMELINE"/>
@@ -217,9 +217,6 @@ export default {
 
 <style lang="css" scoped>
 
-<<<<<<< HEAD
-
-=======
 .timeline-container {
   display: flex;
   align-items: center;
@@ -256,7 +253,6 @@ export default {
   margin-bottom: 20px;
   padding: 5px;
 }
->>>>>>> develop
 .image{
   display: flex;
   justify-content: center;

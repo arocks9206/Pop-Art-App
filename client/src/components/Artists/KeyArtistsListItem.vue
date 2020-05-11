@@ -23,8 +23,8 @@
           <div class="text">
               <h5> {{artwork.title}}</h5>
               <h6>{{artwork.artist}}</h6>
-              <h6>{{artwork.year}}</h6>
               <h7>{{artwork.medium}}</h7>
+              <h6>{{artwork.year}}</h6>
               <p>{{artwork.description}}</p>
           </div>
       </div>
@@ -159,7 +159,7 @@ img {
 .text {
   background: black;
   color: white;
-  font-size: 20px;
+  font-size: 16px;
   padding: 16px 32px;
   width: 500px;
 }

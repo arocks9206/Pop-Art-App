@@ -6,8 +6,8 @@
         <div class="text">
           <h5> {{artwork.title}}</h5>
           <h6>{{artwork.artist}}</h6>
-          <h6>{{artwork.year}}</h6>
           <h7>{{artwork.medium}}</h7>
+          <h6>{{artwork.year}}</h6>
           <p>{{artwork.description}}</p>
         </div>
       </div>
@@ -25,7 +25,7 @@ export default {
 <style lang="css" scoped>
 .container {
   position: relative;
-  width: 50%;
+  width: 65%;
   display: flex;
   align-items: center;
   justify-content: center;
