@@ -16,9 +16,10 @@
   </div>
 
  <div class="intro-image">
-   <div>
-     <img src="../assets/in the car_roy licht.jpg" width="600px">
-   </div>
+     <img class= "main" src="../assets/in the car_roy licht.jpg" width="600px">
+     <div class="middle">
+       <p class="hovertxt">test</p>
+     </div>
  </div>
 
 <div class="content-container-one">
@@ -51,6 +52,13 @@
 <div class="image-three">
   <div>
     <img src="../assets/warhol_chelsea_girls.jpg" width="600px">
+  </div>
+</div>
+
+      <div class="container">
+  <img src="https://images.unsplash.com/photo-1519731506190-f37737f13a75?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="Avatar" class="image" style="width:100%">
+  <div class="middle">
+    <div class="text">Doggo</div>
   </div>
 </div>
 
@@ -190,5 +198,45 @@ img {
   justify-content: center;
 }
 
+/* hover effect css */
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background: black;
+  color: white;
+  font-size: 30px;
+  padding: 16px 32px;
+}
 
 </style>

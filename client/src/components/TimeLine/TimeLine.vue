@@ -1,6 +1,5 @@
 <template lang="html">
 <section>
-  
 <p>Just as with any other art movement, many key events took place during the development of pop art that changed the course of the movement forever. As a highly influential movement even to this day, it's important to examine these key events and understand how they helped shape fine art at the time.</p>
   <div class="image">
 
