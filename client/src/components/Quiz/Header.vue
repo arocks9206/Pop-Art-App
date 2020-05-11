@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
     <div class="nav-bar">
-      <div>Questions: {{currentNum}}/{{totalQuestions}}</div><div> Correct Answers: {{numCorrect}}</div>
+      <div>Questions: {{currentNum}}/{{totalQuestions}}</div><div> Correct Answers: {{numCorrect}}/{{totalQuestions}}</div>
     </div>
   </div>
 

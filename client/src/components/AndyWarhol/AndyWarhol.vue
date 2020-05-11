@@ -2,7 +2,7 @@
   <section>
       <div class="intro-container">
         <div>
-          <andywarhol-header title="ANDY WARHOL"/>
+          <!-- <andywarhol-header title="ANDY WARHOL"/> -->
 
           <h3>{{artistInfo.artistBio}}</h3>
         </div>
@@ -43,14 +43,14 @@
 // import AndyWarholServices from '@/services/AndyWarholServices.js';
 import AndyWarholArtList from './AndyWarholArtList.vue';
 import AndyWarholArtListItem from './AndyWarholArtListItem.vue';
-import AndyWarholHeader from "../headers/AndyWarholHeader.vue";
+// import AndyWarholHeader from "../headers/AndyWarholHeader.vue";
 
 export default {
   name: 'AndyWarhol',
   components: {
     AndyWarholArtList,
     AndyWarholArtListItem,
-    "andywarhol-header": AndyWarholHeader
+    // "andywarhol-header": AndyWarholHeader
   },
   data(){
     return {

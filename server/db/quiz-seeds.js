@@ -3,7 +3,6 @@ db.dropDatabase();
 
 db.quiz.insertMany([
   {
-    _id: "part-1",
     questions: [
        {
           text: "What band was Andy Warhol involved with in the 1960?",
@@ -59,7 +58,6 @@ db.quiz.insertMany([
      },
 
      {
-       _id: "part-2",
        questions: [
          {
 

@@ -14,12 +14,15 @@
               v-for="(response, index) in currentQuestion.responses"
               :response="response"
               :index="index"
-              @click="selectResponse(response)"
+              @click.prevent="selectResponse(response)"
               :class="responseClass(response)">
-                        
+
                         {{response.text}}
         </b-list-group-item>
       </b-list-group>
+
+
+
 
       <b-button variant="primary"
                 @click="submitAnswer"
@@ -37,6 +40,11 @@
                 next
       </b-button>
 
+      <b-button v-if="finishQuiz">
+        Finish Quiz
+      </b-button>
+
+
 
     </b-jumbotron>
   </div>
@@ -52,7 +60,8 @@ export default {
   name: 'QuestionBox',
   props: {
     currentQuestion: Object,
-    next: Function
+    next: Function,
+    finishQuiz: Boolean
   },
   data(){
     return {

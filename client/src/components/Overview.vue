@@ -55,11 +55,8 @@
 </div>
 
 
-<router-link :to="{
-  name: 'RoyLicht',
-  params: { artistName: 'Roy Lichtenstein'}
-                  }"
-                  ><button>Next To Lesson 2: Roy Licthenstein</button></router-link>
+<router-link to="/artists/warhol"
+                  ><button>Next To Lesson 1: Andy Warhol</button></router-link>
 
 
 </section>
