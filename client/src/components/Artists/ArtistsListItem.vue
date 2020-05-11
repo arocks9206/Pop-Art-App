@@ -4,10 +4,10 @@
     <img :src="artwork.imageURL" width="500px">
   </div> -->
   <div class="container">
-    <img :src="artwork.imageURL" style="width:100%">
+    <img class="image":src="artwork.imageURL" style="width:100%">
       <div class="middle">
         <div class="text">
-          <h1> {{artwork.title}}</h1>
+          <h3> {{artwork.title}}</h3>
           <h3>{{artwork.artist}}</h3>
           <h5>{{artwork.year}}</h5>
           <h6>{{artwork.medium}}</h6>
@@ -68,8 +68,8 @@ export default {
 .text {
   background: black;
   color: white;
-  font-size: 20px;
+  font-size: 12px;
   padding: 16px 32px;
-  width: 500px;
+  width: 400px;
 }
 </style>
