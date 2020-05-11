@@ -55,6 +55,7 @@ db.artworks.insertMany([
     medium: "Synthetic polymer paint on canvas",
     imageURL: "https://www.moma.org/learn/moma_learning/_assets/www.moma.org/wp/moma_learning/wp-content/uploads/2012/06/Warhol.-Soup-Cans-469x292.jpg",
     description: "Campbell's Soup Cans, which is sometimes referred to as 32 Campbell's Soup  Cans, is a work of art produced between November 1961 and March or April 1962. The individual paintings were produced by a printmaking method—the semi-mechanized screen printing process, using a non-painterly style. Campbell's Soup Cans' reliance on themes from popular culture helped to usher in pop art as a major art movement in the United States.",
+
   },
 
   {

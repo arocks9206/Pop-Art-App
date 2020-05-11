@@ -1,12 +1,5 @@
 <template lang="html">
-<!-- <<<<<<< HEAD
-<section class="background">
-
-
-  <div class="image">
-======= -->
 <section>
-<!-- >>>>>>> develop -->
 
   <div class="header">
     <TimelineHeader title="POP ART TIMELINE"/>
