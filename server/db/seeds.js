@@ -22,23 +22,28 @@ db.artists.insertMany([
       artistImageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Roy_Lichtenstein.jpg/1024px-Roy_Lichtenstein.jpg"
     },
 
-    {
-      name: "Robert Rauschenberg",
-      shortBio: "Robert Rauschenberg was an American painter and graphic artist whose early works anticipated the pop art movement. Rauschenberg is well known for his combines of the 1950s, in which non-traditional materials and objects were employed in various combinations. Rauschenberg was both a painter and a sculptor, and the combines are a combination of the two, but he also worked with photography, printmaking, papermaking and performance.",
-      artistImageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Robert_Rauschenberg_%281968%29.jpg/1024px-Robert_Rauschenberg_%281968%29.jpg"
-    },
+]);
 
-    {
-      name: "Richard Hamilton",
-      shortBio: "Richard Hamilton was an English painter and collage artist. His 1955 exhibition Man, Machine and Motion (Hatton Gallery, Newcastle upon Tyne) and his 1956 collage Just what is it that makes today's homes so different, so appealing?, produced for the This Is Tomorrow exhibition of the Independent Group in London, are considered by critics and historians to be among the earliest works of pop art.",
-      artistImageURL: "https://upload.wikimedia.org/wikipedia/en/8/80/Richard_Hamilton_Artist.jpg"
-    },
+db.keyartists.insertMany([
 
-    {
-      name: "Peter Blake",
-      shortBio: "Peter Blake is an English pop artist, best known for co-creating the sleeve design for the Beatles' album Sgt. Pepper's Lonely Hearts Club Band and for two of the Who's albums. One of the best known British pop artists, Blake is considered to be a prominent figure in the pop art movement.Central to his paintings are his interest in images from popular culture which have infused his collages.",
-      artistImageURL: "https://static.standard.co.uk/s3fs-public/thumbnails/image/2019/02/06/09/peterblake.jpg?width=1368&height=912&fit=bounds&format=pjpg&auto=webp&quality=70"
-    }
+  {
+    name: "Robert Rauschenberg",
+    shortBio: "Robert Rauschenberg was an American painter and graphic artist whose early works anticipated the pop art movement. Rauschenberg is well known for his combines of the 1950s, in which non-traditional materials and objects were employed in various combinations. Rauschenberg was both a painter and a sculptor, and the combines are a combination of the two, but he also worked with photography, printmaking, papermaking and performance.",
+    artistImageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Robert_Rauschenberg_%281968%29.jpg/1024px-Robert_Rauschenberg_%281968%29.jpg"
+  },
+
+  {
+    name: "Richard Hamilton",
+    shortBio: "Richard Hamilton was an English painter and collage artist. His 1955 exhibition Man, Machine and Motion (Hatton Gallery, Newcastle upon Tyne) and his 1956 collage Just what is it that makes today's homes so different, so appealing?, produced for the This Is Tomorrow exhibition of the Independent Group in London, are considered by critics and historians to be among the earliest works of pop art.",
+    artistImageURL: "https://upload.wikimedia.org/wikipedia/en/8/80/Richard_Hamilton_Artist.jpg"
+  },
+
+  {
+    name: "Peter Blake",
+    shortBio: "Peter Blake is an English pop artist, best known for co-creating the sleeve design for the Beatles' album Sgt. Pepper's Lonely Hearts Club Band and for two of the Who's albums. One of the best known British pop artists, Blake is considered to be a prominent figure in the pop art movement.Central to his paintings are his interest in images from popular culture which have infused his collages.",
+    artistImageURL: "https://static.standard.co.uk/s3fs-public/thumbnails/image/2019/02/06/09/peterblake.jpg?width=1368&height=912&fit=bounds&format=pjpg&auto=webp&quality=70"
+  }
+
 ]);
 
 db.artworks.insertMany([
@@ -188,7 +193,7 @@ db.quiz.insertMany([
   {
     testResult: 0
   },
-  
+
   {
     questions: [
        {

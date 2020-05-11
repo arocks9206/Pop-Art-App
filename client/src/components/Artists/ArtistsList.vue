@@ -1,10 +1,10 @@
 <template lang="html">
   <div>
-  <ArtistsListItem v-for="(artwork, index) in artworks"
+            <ArtistsListItem v-for="(artwork, index) in artworks"
                          :artwork="artwork"
                          :index="index"
                          class="list">
-    </ArtistsListItem>
+            </ArtistsListItem>
   </div>
 </template>
 

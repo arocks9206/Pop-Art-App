@@ -22,6 +22,13 @@ export default {
     }
   },
   mounted(){
+    ArtistsServices.getData(){
+      .then(artists => this.artists = artists.filter(x => {
+        (x.name === 'Robert Rauschenberg') ||
+        (x.name === 'Richard Hamilton') ||
+        (x.name === 'Peter Blake')
+      }))
+    }
     ArtistsService.getArtists()
     .then(artists => this.artists = artists)
   },

@@ -16,6 +16,10 @@ const artistsCollection = db.collection('artists');
 const artistsRouter = createRouter(artistsCollection);
 app.use('/api/artists', artistsRouter);
 
+const keyartistsCollection = db.collection('keyartists');
+const keyartistsRouter = createRouter(keyartistsCollection);
+app.use('/api/keyartists', keyartistsRouter);
+
 const artworksCollection = db.collection('artworks');
 const artworksRouter = createRouter(artworksCollection);
 app.use('/api/artworks', artworksRouter);

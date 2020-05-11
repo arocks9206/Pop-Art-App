@@ -40,9 +40,9 @@
                 next
       </b-button>
 
-      <b-button v-if="finishQuiz">
+      <!-- <b-button v-if="finishQuiz">
         Finish Quiz
-      </b-button>
+      </b-button> -->
 
 
 

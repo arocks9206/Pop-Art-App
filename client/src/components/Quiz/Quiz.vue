@@ -21,11 +21,14 @@
               >
         </QuestionBox>
 
+        <!-- <div v-if='resultStage'>
+        </div> -->
+
       </b-col>
     </b-row>
   </b-container>
 
-  <router-link to="/artists/other"><button>Next Lesson</button></router-link>
+  <router-link to="/artists/keyartists"><button>Next Lesson: Three Key Artists</button></router-link>
 
 </div>
 </section>

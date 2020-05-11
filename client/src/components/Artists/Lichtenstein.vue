@@ -18,6 +18,8 @@
 
 
 
+
+
 <div v-if="film" class="film-content">
   <div>
     <h4>{{film.caption}}</h4>
@@ -49,7 +51,7 @@ import ArtistsListItem from './ArtistsListItem.vue'
 
 
 export default {
-  name: 'Warhol',
+  name: 'Lichtenstein',
   components: {
     ArtistsList,
     ArtistsListItem,

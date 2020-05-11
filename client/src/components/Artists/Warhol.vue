@@ -4,15 +4,18 @@
   <div>
     <ArtistsHeader :title="bio.name"/>
 
+    <img :src="bio.artistImageURL" width="600px" />
+
 
   <h3>{{bio.shortBio}}</h3>
 
 
+
 </div>
 </div>
 
 
-<ArtistsList :artworks="artworks" ></ArtistsList>
+<ArtistsList class="list" :artworks="artworks" ></ArtistsList>
 
 
 
@@ -30,6 +33,18 @@
 ></iframe>
   </div>
 </div>
+</div>
+
+<div class="music">
+  <div >
+    <h4>{{music.caption}}</h4>
+  </div>
+</div>
+
+<div class="music-image">
+  <div>
+    <img :src="music.imageURL">
+  </div>
 </div>
 
 <router-link to="/artists/lichtenstein"><button>Next to Roy Lichtenstein</button></router-link>
@@ -60,6 +75,7 @@ export default {
       artworks: null,
       bio: null,
       film: null,
+      music: null
     }
   },
     mounted(){
@@ -70,6 +86,7 @@ export default {
       .then(artworkData => {
           this.artworks = artworkData.filter(x => x.artist === 'Andy Warhol' && x.category === 'painting')
           this.film = artworkData.find(x => x.artist === 'Andy Warhol' && x.category === 'film')
+          this.music = artworkData.find(x => x.artist === 'Andy Warhol' && x.category === 'album cover')
             })
 
 
@@ -110,10 +127,9 @@ img {
 .list {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  width: 900px;
+  align-items: center;
+  justify-content: space-around;
 }
-
 
 
 .film-content {
@@ -144,5 +160,39 @@ img {
   margin-bottom: 20px;
   font-family: Century Gothic;
 }
+
+.music {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-family: Century Gothic;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+.music div {
+  width: 900px;
+}
+.music h4 {
+  font-size: 25px;
+  text-align: justify;
+  border-style: solid;
+  background-color: #F2A28D;
+  opacity: 95%;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+.music-image {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
+img {
+  height: auto;
+  width: 350px;
+  border-style: solid;
+}
+
 
 </style>

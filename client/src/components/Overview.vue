@@ -55,8 +55,8 @@
 </div>
 
 
-<router-link to="/artists/warhol"
-                  ><button>Next To Lesson 1: Andy Warhol</button></router-link>
+<router-link to="/timeline"><button>Next To Lesson 1: Timeline</button></router-link>
+
 
 
 </section>
@@ -65,11 +65,9 @@
 
 <script>
 import OverviewHeader from "./headers/OverviewHeader.vue";
-import TimeLine from "./TimeLine/TimeLine.vue"
 
 export default {
   name: 'Overview',
-  props: ['artistName'],
   components: {
     "overview-header": OverviewHeader
   }
