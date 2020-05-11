@@ -78,13 +78,23 @@ db.artworks.insertMany([
   },
 
   {
-    title: "Skulls",
+    title: "Triple Elvis",
     artist: "Andy Warhol",
     category: "painting",
-    year: 1976,
-    caption: "After he was shot and critically injured in 1968, Warhol became even more obsessed with the theme of death than he had been previously. The skull, a traditional symbol of mortality, is repeated six times, with the impenetrable darkness of the hollow eye sockets echoed in each image. The shadow cast by the skull resembles a baby’s profile, although whether this was intentional is unknown as Warhol did not take the photograph that the screenprint is based on. It seems unlikely, however, that this effective combination of both life and death would escape Warhol’s sharp gaze. In contrast to the sinister subject, the colours are vibrant. Perhaps Warhol is attempting to acknowledge that death is not something to be feared but instead, should be accepted as part of life.",
-    medium: "Acrylic paint and silkscreen on 6 canvases",
-    imageURL: "https://www.artfund.org/gallery/740x500/assets/what-we-do/art-weve-helped-buy/artwork/2008/2008013_Warh_Skull.jpg"
+    year: 1963,
+    medium: "Screenprint ink and synthetic polymer paint on canvas",
+    imageURL: "https://upload.wikimedia.org/wikipedia/en/5/58/Andy_Warhol_Triple_Elvis.jpg",
+    description: "Triple Elvis is a 1963 painting of Elvis Presley by the American artist Andy Warhol. The photographic image of Elvis used by Warhol as a basis for this work, taken from a publicity still from the movie Flaming Star, has become iconic and synonymous with the singer."
+  },
+
+  {
+    title: "Brillo Soap Pads Boxes",
+    artist: "Andy Warhol",
+    category: "painting",
+    year: 1964,
+    medium: "Acrylic, silkscreen, plywood",
+    imageURL: "https://images.nortonsimon.org/fcgi-bin/iipsrv.fcgi?IIIF=P1969144001-100.ptif/full/!400,600/0/default.jpg",
+    description: "Unlike the corrugated cardboard originals represented in 'Brillo', these sculptures are made of wood. By making the cartons non-functional and uprooting them from their ordinary context, Warhol forces us to look at them freshly. They comment on the way that commercial packaging transforms a mundane, household product into a glamorous, desirable commodity. Warhol also focuses our attention on the significance of these objects as representatives of the impersonal, commercialized consumer society in which we live.",
   },
 
   {
@@ -103,7 +113,8 @@ db.artworks.insertMany([
     category: "painting",
     year: 1963,
     medium: "Acrylic and oil paint on canvas",
-    imageURL: "https://www.tate.org.uk/art/images/work/T/T00/T00897_10.jpg"
+    imageURL: "https://www.tate.org.uk/art/images/work/T/T00/T00897_10.jpg",
+    description:"Whaam! is a 1963 diptych painting by the American artist Roy Lichtenstein. ... Lichtenstein conceived the image from several comic-book panels. He transformed his primary source, a panel from a 1962 war comic book, by presenting it as a diptych while altering the relationship of the graphical and narrative elements."
   },
 
   {
@@ -112,7 +123,8 @@ db.artworks.insertMany([
     category: "painting",
     year: 1963,
     medium: "Oil and synthetic polymer paint on canvas",
-    imageURL: "https://upload.wikimedia.org/wikipedia/en/d/df/Roy_Lichtenstein_Drowning_Girl.jpg"
+    imageURL: "https://upload.wikimedia.org/wikipedia/en/d/df/Roy_Lichtenstein_Drowning_Girl.jpg",
+    description: "The painting has been described as a 'masterpiece of melodrama', and is one of the artist's earliest images depicting women in tragic situations, a theme to which he often returned in the mid-1960s. It shows a teary-eyed woman on a turbulent sea. She is emotionally distressed, seemingly from a romance."
   },
 
   {
@@ -121,7 +133,8 @@ db.artworks.insertMany([
     category: "painting",
     year: 1965,
     medium: "Screenprint on paper",
-    imageURL: "https://www.tate.org.uk/art/images/work/P/P07/P07354_10.jpg"
+    imageURL: "https://www.tate.org.uk/art/images/work/P/P07/P07354_10.jpg",
+    description: "In 1965-6 Lichtenstein made a series of paintings depicting enlarged brushstrokes. ... Here Lichtenstein used it to make a direct comment on the elevated content and loaded brushwork of Abstract Expressionism. The brushstroke, as the token of the artist's personal expression, is depersonalised."
   },
 
   {
@@ -130,7 +143,8 @@ db.artworks.insertMany([
     category: "painting",
     year: 1965,
     medium: "Lithograph on paper",
-    imageURL: "https://www.tate.org.uk/art/images/work/P/P01/P01796_10.jpg"
+    imageURL: "https://www.tate.org.uk/art/images/work/P/P01/P01796_10.jpg",
+    description: "Beginning in 1962 Lichtenstein borrowed images of explosions from popular war comics for use in his paintings. The subject embodies the revolutionary nature of Pop art and suggests the very real threat of annihilation by nuclear explosion that was prevalent at that time (the Cuban Missile Crisis occurred in 1962)."
   },
 
   {

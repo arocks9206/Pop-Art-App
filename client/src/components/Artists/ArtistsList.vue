@@ -22,9 +22,5 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.list {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-}
+
 </style>

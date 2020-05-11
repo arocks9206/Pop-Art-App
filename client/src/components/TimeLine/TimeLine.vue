@@ -1,17 +1,38 @@
 <template lang="html">
+<<<<<<< HEAD
 <section class="background">
 
 
   <div class="image">
+=======
+<section>
+>>>>>>> develop
 
-    <Timeline
+  <div class="header">
+    <TimelineHeader title="POP ART TIMELINE"/>
+  </div>
+
+  <div class="opener-container">
+    <h3>
+      Just as with any other art movement, many key events took place during the development of pop art that changed the course of the movement forever. As a highly influential movement even to this day, it's important to examine these key events and understand how they helped shape fine art at the time.
+    </h3>
+  </div>
+
+<div class="timeline-container">
+  <PopArtTimeLine>
+    <div class="image">
+
+
+    <Timeline class="timeline-one"
         :timeline-items="dataTimeline1"
 
         :show-day-and-month="false"
         :unique-year="true"
-        order="ascd"
-      />
-<img class="image1" src="https://upload.wikimedia.org/wikipedia/en/d/d0/I_was_a_Rich_Man%27s_Plaything_1947.jpg" alt="">
+
+        order="desc"
+    />
+    <img class="image1" src="https://www.tate.org.uk/art/images/work/T/T01/T01462_10.jpg" />
+
     </div>
     <br>
     <div class="image">
@@ -73,6 +94,8 @@
 
               </div>
 
+</PopArtTimeLine>
+</div>
 
 
 <router-link to="/artists/warhol"
@@ -84,12 +107,14 @@
 
 <script>
 
-import Timeline from 'timeline-vuejs'
+import Timeline from 'timeline-vuejs';
+import TimelineHeader from '../headers/TimelineHeader.vue';
 
 
 export default {
   name: 'App',
   components: {
+    TimelineHeader
   },
   data() {
     return {
@@ -192,15 +217,56 @@ export default {
 
 <style lang="css" scoped>
 
+<<<<<<< HEAD
 
+=======
+.timeline-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  text-align: justify;
+  border-style: solid;
+  background-color: #F2A28D;
+  opacity: 95%;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.opener-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Century Gothic;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.opener-container div {
+  width: 900px;
+}
+
+.opener-container h3 {
+  margin: 100px;
+  font-size: 30px;
+  text-align: justify;
+  border-style: solid;
+  background-color: #F0CD13;
+  opacity: 95%;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+>>>>>>> develop
 .image{
   display: flex;
   justify-content: center;
 }
 
 .image1{
-  height: 420px;
+  height: auto;
+  width: 260px;
   border: solid black;
+  margin-top: 40px;
 }
 
 .image2{
