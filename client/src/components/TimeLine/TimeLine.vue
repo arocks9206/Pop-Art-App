@@ -1,8 +1,7 @@
 <template lang="html">
 <section>
+  <PopArtTimeLine>
 <p>Just as with any other art movement, many key events took place during the development of pop art that changed the course of the movement forever. As a highly influential movement even to this day, it's important to examine these key events and understand how they helped shape fine art at the time.</p>
-
-
   <div class="image">
 
     <Timeline
@@ -14,13 +13,9 @@
       />
 <img class="image1" src="https://lh3.googleusercontent.com/proxy/Mcx4ioyXOTztah3m9s62TkS9DwdxayBQotjBfZBOcvQo2tMxaKDz-6-1rOxENug-cpNX9tQqcvP3CCAz4qHkNpPdsmSzZSolrZWWaAUtSvV9Q6NWwKi6595PRwivFmesxr8oMSeuMuuHy0wH7WKigbAQSgJH6Lf0QLu1Mw" alt="">
     </div>
-
-
     <br>
-
-
-
     <div class="image">
+
       <Timeline
           :timeline-items="dataTimeline2"
           :message-when-no-items="messageWhenNoItems"
@@ -28,8 +23,9 @@
           :show-day-and-month="true"
           order="ascd"
         />
-          <img class="image2"src="https://blog.artsper.com/wp-content/uploads/2018/01/f3908d3bd5fed6b27c9fd4c637078086-eduardo-paolozzi-south-london.jpg" alt="">
-    </div>
+  <img class="image2" src="https://blog.artsper.com/wp-content/uploads/2018/01/f3908d3bd5fed6b27c9fd4c637078086-eduardo-paolozzi-south-london.jpg" alt="">
+  <!-- <p>Independent Group members; Nigel Henderson, Eduardo Paolozzi, Alison and Peter Smithson</p> -->
+      </div>
 
       <div class="image">
         <Timeline
@@ -78,9 +74,7 @@
 
               </div>
 
-   <router-view></router-view>
-
-
+</PopArtTimeLine>
 
 </section>
 
@@ -88,14 +82,12 @@
 
 <script>
 
-import AndyWarhol from './components/AndyWarhol/AndyWarhol.vue'
 import Timeline from 'timeline-vuejs'
 
 
 export default {
   name: 'App',
   components: {
-    AndyWarhol
   },
   data() {
     return {
@@ -211,9 +203,6 @@ export default {
   height: 230px;
   border: solid black;
   margin-top: 80px;
-  opacity: 1;
-  transition: 1s ease;
-  backface-visibility: hidden;
 }
 
 .image3{
@@ -231,8 +220,6 @@ export default {
   border: solid black;
   margin-top: 50px;
 }
-
-
 
 
 

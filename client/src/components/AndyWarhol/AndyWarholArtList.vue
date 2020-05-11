@@ -30,7 +30,8 @@ img {
 .list {
   display: flex;
   justify-content: space-around;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 </style>
