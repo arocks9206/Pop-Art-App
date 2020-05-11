@@ -1,24 +1,23 @@
 <template lang="html">
 <section>
-  <PopArtTimeLine>
+  
 <p>Just as with any other art movement, many key events took place during the development of pop art that changed the course of the movement forever. As a highly influential movement even to this day, it's important to examine these key events and understand how they helped shape fine art at the time.</p>
   <div class="image">
 
     <Timeline
         :timeline-items="dataTimeline1"
-        :message-when-no-items="messageWhenNoItems"
+
         :show-day-and-month="false"
         :unique-year="true"
-        order="desc"
+        order="ascd"
       />
-<img class="image1" src="https://lh3.googleusercontent.com/proxy/Mcx4ioyXOTztah3m9s62TkS9DwdxayBQotjBfZBOcvQo2tMxaKDz-6-1rOxENug-cpNX9tQqcvP3CCAz4qHkNpPdsmSzZSolrZWWaAUtSvV9Q6NWwKi6595PRwivFmesxr8oMSeuMuuHy0wH7WKigbAQSgJH6Lf0QLu1Mw" alt="">
+<img class="image1" src="https://upload.wikimedia.org/wikipedia/en/d/d0/I_was_a_Rich_Man%27s_Plaything_1947.jpg" alt="">
     </div>
     <br>
     <div class="image">
 
       <Timeline
           :timeline-items="dataTimeline2"
-          :message-when-no-items="messageWhenNoItems"
           :unique-year="true"
           :show-day-and-month="true"
           order="ascd"
@@ -30,7 +29,7 @@
       <div class="image">
         <Timeline
             :timeline-items="dataTimeline3"
-            :message-when-no-items="messageWhenNoItems"
+
             :show-day-and-month="false"
             :unique-year="true"
             order="ascd"
@@ -41,7 +40,7 @@
         <div class="image">
           <Timeline
               :timeline-items="dataTimeline4"
-              :message-when-no-items="messageWhenNoItems"
+
               :show-day-and-month="false"
               :unique-year="true"
               order="ascd"
@@ -52,7 +51,7 @@
           <div class="image">
             <Timeline
                 :timeline-items="dataTimeline5"
-                :message-when-no-items="messageWhenNoItems"
+
                 :show-day-and-month="false"
                 :unique-year="true"
                 order="ascd"
@@ -64,7 +63,7 @@
             <div class="image">
               <Timeline
                   :timeline-items="dataTimeline6"
-                  :message-when-no-items="messageWhenNoItems"
+
                   :show-day-and-month="false"
                   :unique-year="true"
                   order="ascd"
@@ -74,7 +73,7 @@
 
               </div>
 
-</PopArtTimeLine>
+
 
 <router-link to="/artists/warhol"
                   ><button>Next To Lesson 2: Andy Warhol</button></router-link>
@@ -198,7 +197,7 @@ export default {
 }
 
 .image1{
-  height: 190px;
+  height: 420px;
   border: solid black;
 }
 
