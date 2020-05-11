@@ -1,5 +1,5 @@
 <template lang="html">
-  
+
   <section>
       <div class="intro-container">
         <div>
@@ -51,7 +51,7 @@
 import AndyWarholServices from '@/services/AndyWarholServices.js';
 import AndyWarholArtList from './AndyWarholArtList.vue';
 import AndyWarholArtListItem from './AndyWarholArtListItem.vue';
-import AndyWarholHeader from "../headers/AndyWarholHeader.vue";
+  import AndyWarholHeader from "../headers/AndyWarholHeader.vue";
 import WarholMusicList from "./WarholMusicList.vue";
 import WarholMusicListItem from "./WarholMusicListItem.vue";
 
@@ -110,6 +110,8 @@ img {
   align-items: center;
   justify-content: center;
   font-family: Century Gothic;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .intro-container h3 {
@@ -119,6 +121,8 @@ img {
   border-style: solid;
   background-color: #F0CD13;
   opacity: 95%;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .list {
@@ -134,6 +138,8 @@ img {
   justify-content: center;
   margin-bottom: 20px;
   font-family: Century Gothic;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .film-content div {
@@ -146,6 +152,8 @@ img {
   border-style: solid;
   background-color: #1998CB;
   opacity: 95%;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .film-image{
@@ -162,6 +170,8 @@ img {
   justify-content: center;
   margin-bottom: 20px;
   font-family: Century Gothic;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .music div {
@@ -174,6 +184,8 @@ img {
   border-style: solid;
   background-color: #F2A28D;
   opacity: 95%;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .music-image {

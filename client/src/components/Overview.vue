@@ -86,6 +86,8 @@ section {
   align-items: center;
   justify-content: center;
   font-family: Century Gothic;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .intro-container div {
@@ -99,6 +101,8 @@ section {
   border-style: solid;
   background-color: #F0CD13;
   opacity: 95%;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .intro-image {
@@ -137,6 +141,8 @@ img {
   justify-content: center;
   margin-bottom: 20px;
   font-family: Century Gothic;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .content-container-one div {
@@ -149,6 +155,8 @@ img {
   border-style: solid;
   background-color: #1998CB;
   opacity: 95%;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .content-container-two {
@@ -157,6 +165,8 @@ img {
   justify-content: center;
   margin-bottom: 20px;
   font-family: Century Gothic;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .content-container-two div {
@@ -169,6 +179,8 @@ img {
   border-style: solid;
   background-color: #F2A28D;
   opacity: 95%;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .list {
