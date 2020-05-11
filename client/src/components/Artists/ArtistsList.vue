@@ -22,5 +22,19 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 
+.list img {
+  border-style: solid;
+  justify-content: space-between;
+  width: 300px;
+  height: inherit;
+}
 </style>

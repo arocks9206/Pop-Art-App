@@ -1,40 +1,26 @@
 <template lang="html">
   <section>
-    <div class="intro-container">
-  <div>
-    <ArtistsHeader :title="bio.name"/>
+      <div class="intro-container">
+        <div>
+          <ArtistsHeader title="ROY LITCHTENSTEIN"/>
 
+          <div class="intro-image">
+            <img :src="bio.artistImageURL"/>
+          </div>
 
-  <h3>{{bio.shortBio}}</h3>
+          <h2>{{bio.shortBio}}</h2>
+        </div>
+      </div>
 
+      <ArtistsList class="list" :artworks="artworks"></ArtistsList>
 
-</div>
-</div>
+      <div class="long-bio">
+        <h2>{{bio.careerBio}}</h2>
+      </div>
 
+    </div>
 
-<ArtistsList :artworks="artworks" ></ArtistsList>
-
-
-
-
-
-
-
-<div v-if="film" class="film-content">
-  <div>
-    <h4>{{film.caption}}</h4>
-
-    <div class="film-image">
-  <iframe
-  width="560" height="315"
-  aspect="16by9"
-  :src="film.filmURL"
-></iframe>
-  </div>
-</div>
-</div>
-
-<router-link to="/quiz/5eb8fc14db52cbcdbc1f69c0"><button>TEST YOUR KNOWLEDGE I</button></router-link>
+    <router-link to="/quiz/5eb9a67688148ddce05a65c0"><button>POP QUIZ I</button></router-link>
 
   </section>
 
@@ -73,13 +59,8 @@ export default {
           this.artworks = artworkData.filter(x => x.artist === 'Roy Lichtenstein' && x.category === 'painting')
           this.film = artworkData.find(x => x.artist === 'Roy Lichtenstein' && x.category === 'film')
             })
-
-
       }
   }
-
-
-
 </script>
 
 <style lang="css" scoped>
@@ -89,62 +70,76 @@ section {
   background-attachment: scroll;
 }
 
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro-image {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
 img {
+  height: auto;
+  width: 350px;
   border-style: solid;
 }
 
 .intro-container {
+  margin: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: Century Gothic;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
-.intro-container h3 {
-  margin: 100px;
+.intro-container h2 {
+  margin: 50px;
   font-size: 30px;
   text-align: justify;
   border-style: solid;
   background-color: #F0CD13;
   opacity: 95%;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .list {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 900px;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-
-
-.film-content {
+.long-bio{
+  margin: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  margin-top: 100px;
   font-family: Century Gothic;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
-.film-content div {
-  width: 900px;
-}
-
-.film-content h4 {
+.long-bio h2{
   font-size: 25px;
   text-align: justify;
   border-style: solid;
   background-color: #1998CB;
   opacity: 95%;
-}
-
-.film-image{
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-bottom: 20px;
-  font-family: Century Gothic;
+  padding: 5px;
 }
-
 </style>
