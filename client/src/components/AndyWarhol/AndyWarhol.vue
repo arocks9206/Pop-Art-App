@@ -1,106 +1,107 @@
 <template lang="html">
+
   <section>
       <div class="intro-container">
         <div>
-          <ArtistsHeader title="ANDY WARHOL"/>
+          <!-- <andywarhol-header title="ANDY WARHOL"/> -->
 
           <div class="intro-image">
-            <img :src="bio.artistImageURL"/>
+            <div>
+              <img src="../../assets/warhol.jpg" width="600px">
+            </div>
           </div>
 
-          <h3>{{bio.shortBio}}</h3>
+          <h3>{{artistInfo.artistBio}}</h3>
         </div>
       </div>
 
-          <ArtistsList class="list" :artworks="artworks"></ArtistsList>
+      <AndyWarholArtList class="list" :artWorks="artWorks">
+      </AndyWarholArtList>
 
-      <div v-if="film" class="film-content">
+      <div class="film-content">
         <div>
-          <h4>{{film.caption}}</h4>
+          <h4>The influence of Warhol’s filmmaking can be found in both the Hollywood mainstream film, which took from his work a “gritty street-life realism, sexual explicitness, and on-the-edge performances,” and in experimental film, which “reworked his long-take, fixed-camera aesthetic into what came to be known as structural film.” </h4>
 
           <div class="film-image">
-            <iframe
-            width="560" height="315"
-            aspect="16by9"
-            :src="film.filmURL">
-            </iframe>
+            <img :src="films.images[0].URL" width="300px">
           </div>
+
         </div>
       </div>
 
       <div class="music">
         <div >
-          <h4>{{music.caption}}</h4>
+          <h4>{{musicInfluence.description}}</h4>
         </div>
       </div>
 
       <div class="music-image">
         <div>
-          <img :src="music.imageURL">
+          <img src="../../assets/Velvet_Underground_and_Nico.jpg" width="600px">
         </div>
       </div>
 
-      <router-link to="/artists/lichtenstein"><button>Next to Roy Lichtenstein</button></router-link>
+      <router-link to="/roylicht"><button>Next To Roy Lichtenstein</button></router-link>
   </section>
+
 </template>
 
 <script>
 
-
-import ArtistsServices from '@/services/ArtistsServices';
-import ArtworksServices from '@/services/ArtworksServices';
-import ArtistsHeader from '../headers/ArtistsHeader.vue'
-import ArtistsList from './ArtistsList.vue';
-import ArtistsListItem from './ArtistsListItem.vue'
-
+// import AndyWarholServices from '@/services/AndyWarholServices.js';
+import AndyWarholArtList from './AndyWarholArtList.vue';
+import AndyWarholArtListItem from './AndyWarholArtListItem.vue';
+// import AndyWarholHeader from "../headers/AndyWarholHeader.vue";
 
 export default {
-  name: 'Warhol',
+  name: 'AndyWarhol',
   components: {
-    ArtistsList,
-    ArtistsListItem,
-    ArtistsHeader
+    AndyWarholArtList,
+    AndyWarholArtListItem,
+    // "andywarhol-header": AndyWarholHeader
   },
   data(){
     return {
-      artworks: null,
-      bio: null,
-      film: null,
-      music: null
+      films: {},
+      artWorks: {},
+      artistInfo: {},
+      musicInfluence: {}
     }
   },
-    mounted(){
-      ArtistsServices.getData()
-      .then(artistData => this.bio = artistData.find(a => a.name === 'Andy Warhol'))
+  mounted(){
+    AndyWarholServices.getData()
+    .then(data => {
+      this.artistInfo = data[0];
+      this.artWorks = data[1].artWorks;
+      this.films = data[2].films;
+      this.musicInfluence = data[3].musicInfluence;
+    })
 
-      ArtworksServices.getData()
-      .then(artworkData => {
-          this.artworks = artworkData.filter(x => x.artist === 'Andy Warhol' && x.category === 'painting')
-          this.film = artworkData.find(x => x.artist === 'Andy Warhol' && x.category === 'film')
-          this.music = artworkData.find(x => x.artist === 'Andy Warhol' && x.category === 'album cover')
-            })
-
-
-      }
   }
-
-
-
+}
 </script>
 
 <style lang="css" scoped>
+
 section {
   background-image: url('../../assets/background_2.jpg');
   background-size: cover;
   background-attachment: scroll;
 }
 
+.intro-image {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
 img {
+  height: auto;
+  width: 350px;
   border-style: solid;
 }
 
 .intro-container {
-  margin: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -110,7 +111,7 @@ img {
 }
 
 .intro-container h3 {
-  margin: 50px;
+  margin: 100px;
   font-size: 30px;
   text-align: justify;
   border-style: solid;
@@ -120,37 +121,14 @@ img {
   padding: 5px;
 }
 
-.intro-image {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 20px;
-  padding-top: 20px;
-}
-
-img {
-  height: auto;
-  width: 350px;
-  border-style: solid;
-}
-
 .list {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-}
-
-.list img {
-  border-style: solid;
-  justify-content: space-between;
-  width: 300px;
-  height: inherit;
+  justify-content: space-around;
 }
 
 .film-content {
-  margin: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -165,7 +143,6 @@ img {
 }
 
 .film-content h4 {
-  margin: 50px;
   font-size: 25px;
   text-align: justify;
   border-style: solid;
@@ -184,7 +161,6 @@ img {
 }
 
 .music {
-  margin: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -193,9 +169,11 @@ img {
   margin-bottom: 20px;
   padding: 5px;
 }
+
 .music div {
   width: 900px;
 }
+
 .music h4 {
   font-size: 25px;
   text-align: justify;
@@ -205,9 +183,11 @@ img {
   margin-bottom: 20px;
   padding: 5px;
 }
+
 .music-image {
   display: flex;
   justify-content: center;
+  padding-bottom: 100px;
 }
 
 img {
@@ -215,6 +195,7 @@ img {
   width: 350px;
   border-style: solid;
 }
+
 
 
 </style>

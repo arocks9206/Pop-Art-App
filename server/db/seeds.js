@@ -53,8 +53,10 @@ db.artworks.insertMany([
     category: "painting",
     year: 1962,
     medium: "Synthetic polymer paint on canvas",
+
     imageURL: "https://www.moma.org/learn/moma_learning/_assets/www.moma.org/wp/moma_learning/wp-content/uploads/2012/06/Warhol.-Soup-Cans-469x292.jpg",
     description: "Campbell's Soup Cans, which is sometimes referred to as 32 Campbell's Soup  Cans, is a work of art produced between November 1961 and March or April 1962. The individual paintings were produced by a printmaking method—the semi-mechanized screen printing process, using a non-painterly style. Campbell's Soup Cans' reliance on themes from popular culture helped to usher in pop art as a major art movement in the United States.",
+
   },
 
   {
@@ -65,6 +67,7 @@ db.artworks.insertMany([
     medium: "Screenprint ink and synthetic polymer paint on canvas",
     imageURL: "https://6d49d47bd32a151032ae-907965fc79c9900a93c12efeb23103bd.ssl.cf1.rackcdn.com/artworks/andy_warhol_1.jpg",
     description: "Marilyn Monroe died in August 1962, having overdosed on barbiturates. In the following four months, Warhol made more than twenty silkscreen paintings of her, all based on the same publicity photograph from the 1953 film Niagara. Warhol found in Monroe a fusion of two of his consistent themes: death and the cult of celebrity. By repeating the image, he evokes her ubiquitous presence in the media. The contrast of vivid colour with black and white, and the effect of fading in the right panel are suggestive of the star’s mortality.",
+
   },
 
   {
@@ -78,13 +81,21 @@ db.artworks.insertMany([
   },
 
   {
-    title: "Skulls",
+    title: "Triple Elvis",
     artist: "Andy Warhol",
     category: "painting",
-    year: 1976,
-    caption: "After he was shot and critically injured in 1968, Warhol became even more obsessed with the theme of death than he had been previously. The skull, a traditional symbol of mortality, is repeated six times, with the impenetrable darkness of the hollow eye sockets echoed in each image. The shadow cast by the skull resembles a baby’s profile, although whether this was intentional is unknown as Warhol did not take the photograph that the screenprint is based on. It seems unlikely, however, that this effective combination of both life and death would escape Warhol’s sharp gaze. In contrast to the sinister subject, the colours are vibrant. Perhaps Warhol is attempting to acknowledge that death is not something to be feared but instead, should be accepted as part of life.",
-    medium: "Acrylic paint and silkscreen on 6 canvases",
-    imageURL: "https://www.artfund.org/gallery/740x500/assets/what-we-do/art-weve-helped-buy/artwork/2008/2008013_Warh_Skull.jpg"
+    year: 1963,
+    medium: "Screenprint ink and synthetic polymer paint on canvas",
+    imageURL: "https://upload.wikimedia.org/wikipedia/en/5/58/Andy_Warhol_Triple_Elvis.jpg"
+  },
+
+  {
+    title: "Brillo Soap Pads Boxes",
+    artist: "Andy Warhol",
+    category: "painting",
+    year: 1964,
+    medium: "Acrylic, silkscreen, plywood",
+    imageURL: "https://images.nortonsimon.org/fcgi-bin/iipsrv.fcgi?IIIF=P1969144001-100.ptif/full/!400,600/0/default.jpg"
   },
 
   {
