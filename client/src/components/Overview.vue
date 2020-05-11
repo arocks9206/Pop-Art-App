@@ -54,7 +54,6 @@
   </div>
 </div>
 
-
 <router-link to="/andywarhol"><button>Next To Andy Warhol</button></router-link>
 
 
@@ -64,6 +63,7 @@
 
 <script>
 import OverviewHeader from "./headers/OverviewHeader.vue";
+import TimeLine from "./TimeLine/TimeLine.vue"
 
 export default {
   name: 'Overview',
