@@ -1,56 +1,47 @@
 <template lang="html">
   <section>
-    <div class="intro-container">
-  <div>
-    <ArtistsHeader :title="bio.name"/>
+      <div class="intro-container">
+        <div>
+          <ArtistsHeader title="ANDY WARHOL"/>
 
-    <img :src="bio.artistImageURL" width="600px" />
+          <div class="intro-image">
+            <img :src="bio.artistImageURL"/>
+          </div>
 
+          <h3>{{bio.shortBio}}</h3>
+        </div>
+      </div>
 
-  <h3>{{bio.shortBio}}</h3>
+          <ArtistsList class="list" :artworks="artworks"></ArtistsList>
 
+      <div v-if="film" class="film-content">
+        <div>
+          <h4>{{film.caption}}</h4>
 
+          <div class="film-image">
+            <iframe
+            width="560" height="315"
+            aspect="16by9"
+            :src="film.filmURL">
+            </iframe>
+          </div>
+        </div>
+      </div>
 
-</div>
-</div>
+      <div class="music">
+        <div >
+          <h4>{{music.caption}}</h4>
+        </div>
+      </div>
 
+      <div class="music-image">
+        <div>
+          <img :src="music.imageURL">
+        </div>
+      </div>
 
-<ArtistsList class="list" :artworks="artworks" ></ArtistsList>
-
-
-
-
-
-<div v-if="film" class="film-content">
-  <div>
-    <h4>{{film.caption}}</h4>
-
-    <div class="film-image">
-  <iframe
-  width="560" height="315"
-  aspect="16by9"
-  :src="film.filmURL"
-></iframe>
-  </div>
-</div>
-</div>
-
-<div class="music">
-  <div >
-    <h4>{{music.caption}}</h4>
-  </div>
-</div>
-
-<div class="music-image">
-  <div>
-    <img :src="music.imageURL">
-  </div>
-</div>
-
-<router-link to="/artists/lichtenstein"><button>Next to Roy Lichtenstein</button></router-link>
-
+      <router-link to="/artists/lichtenstein"><button>Next to Roy Lichtenstein</button></router-link>
   </section>
-
 </template>
 
 <script>
@@ -109,36 +100,64 @@ img {
 }
 
 .intro-container {
+  margin: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: Century Gothic;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .intro-container h3 {
-  margin: 100px;
+  margin: 50px;
   font-size: 30px;
   text-align: justify;
   border-style: solid;
   background-color: #F0CD13;
   opacity: 95%;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.intro-image {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+img {
+  height: auto;
+  width: 350px;
+  border-style: solid;
 }
 
 .list {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
 }
 
+.list img {
+  border-style: solid;
+  justify-content: space-between;
+  width: 300px;
+  height: inherit;
+}
 
 .film-content {
+  margin: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  margin-top: 100px;
   font-family: Century Gothic;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .film-content div {
@@ -146,11 +165,14 @@ img {
 }
 
 .film-content h4 {
+  margin: 50px;
   font-size: 25px;
   text-align: justify;
   border-style: solid;
   background-color: #1998CB;
   opacity: 95%;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .film-image{
@@ -162,6 +184,7 @@ img {
 }
 
 .music {
+  margin: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -185,7 +208,6 @@ img {
 .music-image {
   display: flex;
   justify-content: center;
-  padding-bottom: 100px;
 }
 
 img {
