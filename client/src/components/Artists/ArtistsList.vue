@@ -1,30 +1,20 @@
 <template lang="html">
   <div>
-    <ArtistsListItem v-for="(artist, index) in artists"
-                    :key="index"
-                    :artist="artist">
-    </ArtistsListItem>
-
+            <ArtistsListItem v-for="(artwork, index) in artworks"
+                         :artwork="artwork"
+                         :index="index"
+                         class="list">
+            </ArtistsListItem>
   </div>
-
 </template>
 
 <script>
 
 import ArtistsListItem from './ArtistsListItem.vue'
-import ArtistsService from '@/services/ArtistsService.js'
 
 export default {
   name: 'ArtistsList',
-  data(){
-    return{
-      artists: []
-    }
-  },
-  mounted(){
-    ArtistsService.getArtists()
-    .then(artists => this.artists = artists)
-  },
+  props: ['artworks'],
   components: {
     ArtistsListItem
   }
@@ -32,4 +22,9 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.list {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
 </style>
