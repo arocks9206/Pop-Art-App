@@ -17,7 +17,7 @@
 
 <div class="intro-image">
   <div class="container">
-    <img src="../assets/in the car_roy licht.jpg" alt="Avatar" class="image" style="width:100%">
+    <img src="../assets/in the car_roy licht.jpg" alt="Art" class="image" style="width:100%">
       <div class="middle">
         <div class="text">
           <h1>“In The Car”</h1>
@@ -46,7 +46,7 @@
 
 <div class="image-two">
   <div class="container">
-    <img src="../assets/andy-micket.jpg" alt="Avatar" class="image" style="width:100%">
+    <img src="../assets/andy-micket.jpg" alt="Art" class="image" style="width:100%">
       <div class="middle">
         <div class="text">
           <h1>“Quadrant Mickey Mouse”</h1>
@@ -68,7 +68,7 @@
 
 <div class="image-three">
   <div class="container">
-    <img src="../assets/warhol_chelsea_girls.jpg" alt="Avatar" class="image" style="width:100%">
+    <img src="../assets/warhol_chelsea_girls.jpg" alt="Art" class="image" style="width:100%">
       <div class="middle">
         <div class="text">
           <h1> “Film Still from Chelsea Girl”</h1>
