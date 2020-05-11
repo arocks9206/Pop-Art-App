@@ -1,16 +1,22 @@
 <template lang="html">
+
   <section>
       <div class="intro-container">
         <div>
           <andywarhol-header title="ANDY WARHOL"/>
 
+          <div class="intro-image">
+            <div>
+              <img src="../../assets/warhol.jpg" width="600px">
+            </div>
+          </div>
+
           <h3>{{artistInfo.artistBio}}</h3>
         </div>
       </div>
 
-
-
-      <AndyWarholArtList class="list" :artWorks="artWorks"></AndyWarholArtList>
+      <AndyWarholArtList class="list" :artWorks="artWorks">
+      </AndyWarholArtList>
 
       <div class="film-content">
         <div>
@@ -23,19 +29,21 @@
         </div>
       </div>
 
+      <div class="music">
+        <div >
+          <h4>{{musicInfluence.description}}</h4>
+        </div>
+      </div>
+
+      <div class="music-image">
+        <div>
+          <img src="../../assets/Velvet_Underground_and_Nico.jpg" width="600px">
+        </div>
+      </div>
+
       <router-link to="/roylicht"><button>Next To Roy Lichtenstein</button></router-link>
+  </section>
 
-</div>
-</div> -->
-
-
-
-
-
-<router-link to="/quiz/part-1">TEST YOUR KNOWLEDGE I</router-link>
-
-
-</section>
 </template>
 
 <script>
@@ -43,20 +51,25 @@
 import AndyWarholServices from '@/services/AndyWarholServices.js';
 import AndyWarholArtList from './AndyWarholArtList.vue';
 import AndyWarholArtListItem from './AndyWarholArtListItem.vue';
-import AndyWarholHeader from "../headers/AndyWarholHeader.vue";
+  import AndyWarholHeader from "../headers/AndyWarholHeader.vue";
+import WarholMusicList from "./WarholMusicList.vue";
+import WarholMusicListItem from "./WarholMusicListItem.vue";
 
 export default {
   name: 'AndyWarhol',
   components: {
     AndyWarholArtList,
     AndyWarholArtListItem,
-    "andywarhol-header": AndyWarholHeader
+    "andywarhol-header": AndyWarholHeader,
+    WarholMusicList,
+    WarholMusicListItem
   },
   data(){
     return {
       films: {},
       artWorks: {},
-      artistInfo: {}
+      artistInfo: {},
+      musicInfluence: {}
     }
   },
   mounted(){
@@ -65,6 +78,7 @@ export default {
       this.artistInfo = data[0];
       this.artWorks = data[1].artWorks;
       this.films = data[2].films;
+      this.musicInfluence = data[3].musicInfluence;
     })
 
   }
@@ -79,7 +93,15 @@ section {
   background-attachment: scroll;
 }
 
+.intro-image {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
 img {
+  height: auto;
+  width: 350px;
   border-style: solid;
 }
 
@@ -88,6 +110,8 @@ img {
   align-items: center;
   justify-content: center;
   font-family: Century Gothic;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .intro-container h3 {
@@ -97,12 +121,15 @@ img {
   border-style: solid;
   background-color: #F0CD13;
   opacity: 95%;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .list {
   display: flex;
   flex-direction: row;
-  width: 900px;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .film-content {
@@ -111,6 +138,8 @@ img {
   justify-content: center;
   margin-bottom: 20px;
   font-family: Century Gothic;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .film-content div {
@@ -123,6 +152,8 @@ img {
   border-style: solid;
   background-color: #1998CB;
   opacity: 95%;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .film-image{
@@ -132,5 +163,43 @@ img {
   margin-bottom: 20px;
   font-family: Century Gothic;
 }
+
+.music {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-family: Century Gothic;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.music div {
+  width: 900px;
+}
+
+.music h4 {
+  font-size: 25px;
+  text-align: justify;
+  border-style: solid;
+  background-color: #F2A28D;
+  opacity: 95%;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.music-image {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
+img {
+  height: auto;
+  width: 350px;
+  border-style: solid;
+}
+
+
 
 </style>
