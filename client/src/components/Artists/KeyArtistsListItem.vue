@@ -13,11 +13,20 @@
       <h3>{{artist.shortBio}}</h3>
     </div>
 
-    <div class="art-images">
-      <div v-for="(artwork, index) in artworks"
-           :artwork="artwork"
-           :index="index">
-          <img :src="artwork.imageURL" width="200px">
+
+    <div class="container"
+          v-for="(artwork, index) in artworks"
+         :artwork="artwork"
+         :index="index">
+      <img class="image":src="artwork.imageURL" style="width:80%">
+        <div class="middle">
+          <div class="text">
+              <h5> {{artwork.title}}</h5>
+              <h6>{{artwork.artist}}</h6>
+              <h7>{{artwork.medium}}</h7>
+              <h6>{{artwork.year}}</h6>
+              <p>{{artwork.description}}</p>
+          </div>
       </div>
     </div>
 
@@ -107,5 +116,52 @@ img {
   margin-bottom: 20px;
 }
 
+.container {
+  position: relative;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Century Gothic;
+  margin-bottom: 20px;
+  padding: 5px;
+  justify-content: space-around;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background: black;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  width: 500px;
+}
 
 </style>
