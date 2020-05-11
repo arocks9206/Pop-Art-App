@@ -1,6 +1,5 @@
 <template lang="html">
 <section>
-  <PopArtTimeLine>
 <p>Just as with any other art movement, many key events took place during the development of pop art that changed the course of the movement forever. As a highly influential movement even to this day, it's important to examine these key events and understand how they helped shape fine art at the time.</p>
   <div class="image">
 
@@ -9,9 +8,9 @@
         :message-when-no-items="messageWhenNoItems"
         :show-day-and-month="false"
         :unique-year="true"
-        order="desc"
+        order="ascd"
       />
-<img class="image1" src="https://lh3.googleusercontent.com/proxy/Mcx4ioyXOTztah3m9s62TkS9DwdxayBQotjBfZBOcvQo2tMxaKDz-6-1rOxENug-cpNX9tQqcvP3CCAz4qHkNpPdsmSzZSolrZWWaAUtSvV9Q6NWwKi6595PRwivFmesxr8oMSeuMuuHy0wH7WKigbAQSgJH6Lf0QLu1Mw" alt="">
+<img class="image1" src="https://upload.wikimedia.org/wikipedia/en/d/d0/I_was_a_Rich_Man%27s_Plaything_1947.jpg" alt="">
     </div>
     <br>
     <div class="image">
@@ -73,11 +72,6 @@
           <!-- While Warhol was on the phone, Solanas took out her pistol and fired at him three times. The first two shots missed. The third hit him in the abdomen, passing through his lungs, spleen, stomach, liver and esophagus. She then shot art critic Mario Amaya, who was hit in the back part of his hip. She then aimed at Warhol’s manager, Fred Hughes, attempting to shoot him in the head, but the pistol jammed. Hughes told her to leave, and she did. Warhol was taken to Columbus-Mother Cabrini Hospital, where he underwent a five hour surgery that saved his life. -->
 
               </div>
-
-</PopArtTimeLine>
-
-<router-link to="/artists/warhol"
-                  ><button>Next To Lesson 2: Andy Warhol</button></router-link>
 
 </section>
 
@@ -198,7 +192,7 @@ export default {
 }
 
 .image1{
-  height: 190px;
+  height: 420px;
   border: solid black;
 }
 

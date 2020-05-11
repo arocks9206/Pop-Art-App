@@ -17,7 +17,7 @@
 
  <div class="intro-image">
    <div>
-     <img src="../assets/in the car_roy licht.jpg" width="600px">
+     <img src="../assets/lichtenstein_brushstroke.jpg" width="600px">
    </div>
  </div>
 
@@ -54,9 +54,7 @@
   </div>
 </div>
 
-
-<router-link to="/timeline"><button>Next To Lesson 1: Timeline</button></router-link>
-
+<router-link to="/andywarhol"><button>Next To Andy Warhol</button></router-link>
 
 
 </section>
@@ -65,6 +63,7 @@
 
 <script>
 import OverviewHeader from "./headers/OverviewHeader.vue";
+import TimeLine from "./TimeLine/TimeLine.vue"
 
 export default {
   name: 'Overview',
@@ -87,8 +86,6 @@ section {
   align-items: center;
   justify-content: center;
   font-family: Century Gothic;
-  margin-bottom: 20px;
-  padding: 5px;
 }
 
 .intro-container div {
@@ -102,8 +99,6 @@ section {
   border-style: solid;
   background-color: #F0CD13;
   opacity: 95%;
-  margin-bottom: 20px;
-  padding: 5px;
 }
 
 .intro-image {
@@ -142,8 +137,6 @@ img {
   justify-content: center;
   margin-bottom: 20px;
   font-family: Century Gothic;
-  margin-bottom: 20px;
-  padding: 5px;
 }
 
 .content-container-one div {
@@ -156,8 +149,6 @@ img {
   border-style: solid;
   background-color: #1998CB;
   opacity: 95%;
-  margin-bottom: 20px;
-  padding: 5px;
 }
 
 .content-container-two {
@@ -166,8 +157,6 @@ img {
   justify-content: center;
   margin-bottom: 20px;
   font-family: Century Gothic;
-  margin-bottom: 20px;
-  padding: 5px;
 }
 
 .content-container-two div {
@@ -180,8 +169,6 @@ img {
   border-style: solid;
   background-color: #F2A28D;
   opacity: 95%;
-  margin-bottom: 20px;
-  padding: 5px;
 }
 
 .list {
