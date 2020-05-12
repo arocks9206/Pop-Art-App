@@ -14,16 +14,29 @@
               >
           </Header>
 
+        <div>
+    <b-alert v-if="resultStage" show variant="success">
+      <h4 class="alert-heading">Well done!</h4>
+      <p>
+        That's the test complete. Your total score is {{testResult}} out of {{questions.length}}.
+      </p>
+      <hr>
+      <p class="mb-0">
+        Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
+      </p>
+    </b-alert>
+
+
         <QuestionBox
               v-if="questions.length"
               :currentQuestion="questions[index]"
               :next="next"
-              :finishQuiz="finishQuiz"
               >
         </QuestionBox>
 
-        <!-- <div v-if='resultStage'>
-        </div> -->
+      </div>
+
+
 
         </b-col>
       </b-row>
@@ -40,6 +53,7 @@ import QuizHeader from "../headers/QuizHeader.vue";
 import QuestionBox from './QuestionBox.vue'
 import {eventBus} from '@/main.js'
 import Header from './Header.vue'
+import QuizServices from '@/services/QuizServices.js'
 
 export default {
   name: 'Quiz',
@@ -49,18 +63,21 @@ export default {
     index: 0,
     numCorrect: 0,
     quizURL: 'http://localhost:3000/api/quiz/',
-    userResult: null,
+    testResult: null,
     resultStage: false
     }
   },
   mounted(){
-    this.getQuestions();
-    this.getUserResult()
+    QuizServices.getQuestions(this.$route.params.id)
+    .then(data => this.questions = data.questions)
+
+    QuizServices.getUserScore()
+    .then(data => this.userScore = data.testResult)
 
     eventBus.$on('is-correct', (isCorrect) => {
       if (isCorrect) {
         this.numCorrect++;
-        this.userResult++;
+        this.testResult++;
       };
     })
   },
@@ -75,9 +92,21 @@ export default {
       .then(res => res.json())
       .then(data => this.userResult = data.testResult)
     },
+
     next(){
-      this.currentNum <= this.totalQuestions ? this.index++ : this.resultStage = true
+      if (this.currentNum < this.questions.length) {
+        this.index++
+      } else {
+        this.resultStage = true;
+        this.saveUserScore()
+      }
+    },
+    saveUserScore(){
+      const updatedScore = { testResult: this.testResult };
+      QuizServices.updateUserScore(updatedScore)
+      .then(score => this.testResult = score.testResult)
     }
+
   },
   components: {
     QuestionBox,
@@ -107,5 +136,10 @@ section {
   background-image: url('../../assets/background_1.jpg');
   background-size: cover;
   background-attachment: scroll;
+}
+
+b-alert {
+  position: absolute;
+  z-index: 999;
 }
 </style>
