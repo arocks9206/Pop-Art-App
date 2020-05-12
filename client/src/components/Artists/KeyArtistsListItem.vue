@@ -18,6 +18,7 @@
            :artwork="artwork"
            :index="index">
           <img :src="artwork.imageURL" width="200px">
+          <button v-if="!artwork.favourite" @click="addToFavourite(artwork)">Add to Favourites</button>
       </div>
     </div>
 
@@ -30,6 +31,7 @@
 <script>
 
 import ArtworksServices from '@/services/ArtworksServices';
+import {eventBus} from '@/main.js'
 
 export default {
   name: 'KeyArtistsListItem',
@@ -37,6 +39,17 @@ export default {
   data(){
     return {
     artworks: []
+    }
+  },
+  methods: {
+    addFavourite(artwork){
+      const updatedArtwork = { favourite: true };
+
+      ArtworksServices.updateArtwork(artwork._id, updatedArtwork)
+      .then(favourite => {
+        let index = this.artworks.findIndex(artwork => artwork._id === favourite._id)
+        this.artworks.splice(index, 1, favourite)
+      })
     }
   },
   mounted() {

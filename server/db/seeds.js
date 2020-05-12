@@ -53,7 +53,8 @@ db.artworks.insertMany([
     category: "painting",
     year: 1962,
     medium: "Synthetic polymer paint on canvas",
-    imageURL: "https://upload.wikimedia.org/wikipedia/en/1/1f/Campbells_Soup_Cans_MOMA.jpg"
+    imageURL: "https://upload.wikimedia.org/wikipedia/en/1/1f/Campbells_Soup_Cans_MOMA.jpg",
+    favourite: false
   },
 
   {
@@ -62,7 +63,8 @@ db.artworks.insertMany([
     category: "painting",
     year: 1962,
     medium: "Screenprint ink and synthetic polymer paint on canvas",
-    imageURL: "https://upload.wikimedia.org/wikipedia/en/8/87/Marilyndiptych.jpg"
+    imageURL: "https://upload.wikimedia.org/wikipedia/en/8/87/Marilyndiptych.jpg",
+    favourite: false
   },
 
   {
@@ -72,7 +74,8 @@ db.artworks.insertMany([
     year: 1967,
     caption: "Many people know that Andy Warhol designed the now-famous banana artwork for The Velvet Underground’s first record, The Velvet Underground & Nico. What some may not know is that Andy Warhol was actually the band’s manager during that time as well. Born out of Warhol’s desire to make art in as many different mediums as possible, he worked with the band to create a strange, cacophonous, distorted record that took on topics that other bands at the time wouldn’t. While the record didn’t sell many copies, it is still considered to be one of the most influential albums in modern rock music.",
     imageURL: "https://upload.wikimedia.org/wikipedia/en/0/0c/Velvet_Underground_and_Nico.jpg",
-    musicVideo: "https://www.youtube.com/watch?v=CGqwy_DQnS4&list=PLBkPWPmDlcDFTYkPNfes6HiKyZLPA242u&index=5"
+    musicVideo: "https://www.youtube.com/watch?v=CGqwy_DQnS4&list=PLBkPWPmDlcDFTYkPNfes6HiKyZLPA242u&index=5",
+    favourite: false
   },
 
   {
@@ -81,7 +84,8 @@ db.artworks.insertMany([
     category: "painting",
     year: 1963,
     medium: "Screenprint ink and synthetic polymer paint on canvas",
-    imageURL: "https://upload.wikimedia.org/wikipedia/en/5/58/Andy_Warhol_Triple_Elvis.jpg"
+    imageURL: "https://upload.wikimedia.org/wikipedia/en/5/58/Andy_Warhol_Triple_Elvis.jpg",
+    favourite: false
   },
 
   {
@@ -90,7 +94,8 @@ db.artworks.insertMany([
     category: "painting",
     year: 1964,
     medium: "Acrylic, silkscreen, plywood",
-    imageURL: "https://images.nortonsimon.org/fcgi-bin/iipsrv.fcgi?IIIF=P1969144001-100.ptif/full/!400,600/0/default.jpg"
+    imageURL: "https://images.nortonsimon.org/fcgi-bin/iipsrv.fcgi?IIIF=P1969144001-100.ptif/full/!400,600/0/default.jpg",
+    favourite: false
   },
 
   {
@@ -100,7 +105,8 @@ db.artworks.insertMany([
     caption: "Empire consists of a single stationary shot of the Empire State Building filmed from 8:06 p.m. to 2:42 a.m., July 25–26, 1964. The eight-hour, five-minute film, which is typically shown in a theater, lacks a traditional narrative or characters. The passage from daylight to darkness becomes the film’s narrative, while the protagonist is the iconic building that was (and is again) the tallest in New York City. Warhol lengthened Empire’s running time by projecting the film at a speed of sixteen frames per second, slower than its shooting speed of twenty-four frames per second, thus making the progression to darkness almost imperceptible. Non-events such as a blinking light at the top of a neighboring building mark the passage of time. According to Warhol, the point of this film—perhaps his most famous and influential cinematic work—is to 'see time go by'.",
     category: 'film',
     filmURL: "https://www.youtube.com/embed/-sSsWj2HWk0",
-    imageURL: "https://upload.wikimedia.org/wikipedia/en/2/24/Empire_Screenshot_Warhol.jpg"
+    imageURL: "https://upload.wikimedia.org/wikipedia/en/2/24/Empire_Screenshot_Warhol.jpg",
+    favourite: false
   },
 
   {
@@ -109,7 +115,8 @@ db.artworks.insertMany([
     category: "painting",
     year: 1963,
     medium: "Acrylic and oil paint on canvas",
-    imageURL: "https://www.tate.org.uk/art/images/work/T/T00/T00897_10.jpg"
+    imageURL: "https://www.tate.org.uk/art/images/work/T/T00/T00897_10.jpg",
+    favourite: false
   },
 
   {
@@ -118,7 +125,8 @@ db.artworks.insertMany([
     category: "painting",
     year: 1963,
     medium: "Oil and synthetic polymer paint on canvas",
-    imageURL: "https://upload.wikimedia.org/wikipedia/en/d/df/Roy_Lichtenstein_Drowning_Girl.jpg"
+    imageURL: "https://upload.wikimedia.org/wikipedia/en/d/df/Roy_Lichtenstein_Drowning_Girl.jpg",
+    favourite: false
   },
 
   {
@@ -127,7 +135,8 @@ db.artworks.insertMany([
     category: "painting",
     year: 1965,
     medium: "Screenprint on paper",
-    imageURL: "https://www.tate.org.uk/art/images/work/P/P07/P07354_10.jpg"
+    imageURL: "https://www.tate.org.uk/art/images/work/P/P07/P07354_10.jpg",
+    favourite: false
   },
 
   {
@@ -136,7 +145,8 @@ db.artworks.insertMany([
     category: "painting",
     year: 1965,
     medium: "Lithograph on paper",
-    imageURL: "https://www.tate.org.uk/art/images/work/P/P01/P01796_10.jpg"
+    imageURL: "https://www.tate.org.uk/art/images/work/P/P01/P01796_10.jpg",
+    favourite: false
   },
 
   {
@@ -145,7 +155,8 @@ db.artworks.insertMany([
       category: "painting",
       year: 1963,
       medium: "Oil and silkscreen ink on canvas",
-      imageURL: "https://www.rauschenbergfoundation.org/sites/default/files/styles/artwork_fullsize/public/images_artwork/64.006.jpg"
+      imageURL: "https://www.rauschenbergfoundation.org/sites/default/files/styles/artwork_fullsize/public/images_artwork/64.006.jpg",
+      favourite: false
   },
 
   {
@@ -154,7 +165,8 @@ db.artworks.insertMany([
     category: "painting",
     year: 1968,
     medium: "Lithograph",
-    imageURL: "https://www.rauschenbergfoundation.org/sites/default/files/styles/artwork_fullsize/public/images_artwork/68.E004.jpg"
+    imageURL: "https://www.rauschenbergfoundation.org/sites/default/files/styles/artwork_fullsize/public/images_artwork/68.E004.jpg",
+    favourite: false
   },
 
   {
@@ -163,7 +175,8 @@ db.artworks.insertMany([
     category: "painting",
     year: 1956,
     medium: "Collage",
-    imageURL: "https://upload.wikimedia.org/wikipedia/en/f/ff/Hamilton-appealing2.jpg"
+    imageURL: "https://upload.wikimedia.org/wikipedia/en/f/ff/Hamilton-appealing2.jpg",
+    favourite: false
   },
 
   {
@@ -172,7 +185,8 @@ db.artworks.insertMany([
     category: "painting",
     year: 1965,
     medium: "Screenprint on paper",
-    imageURL: "https://www.tate.org.uk/art/images/work/P/P04/P04251_10.jpg"
+    imageURL: "https://www.tate.org.uk/art/images/work/P/P04/P04251_10.jpg",
+    favourite: false
   },
 
   {
@@ -181,7 +195,8 @@ db.artworks.insertMany([
     category: "painting",
     year :1967,
     medium: "Print, collage",
-    imageURL: "https://upload.wikimedia.org/wikipedia/en/5/50/Sgt._Pepper%27s_Lonely_Hearts_Club_Band.jpg"
+    imageURL: "https://upload.wikimedia.org/wikipedia/en/5/50/Sgt._Pepper%27s_Lonely_Hearts_Club_Band.jpg",
+    favourite: false
   },
 
   {
@@ -190,7 +205,8 @@ db.artworks.insertMany([
       cateogry: "painting",
       year: 1961,
       medium: "Oil paint on board",
-      imageURL: "https://www.tate.org.uk/art/images/work/T/T02/T02406_10.jpg"
+      imageURL: "https://www.tate.org.uk/art/images/work/T/T02/T02406_10.jpg",
+      favourite: false
 
   }
 
@@ -304,4 +320,4 @@ db.quiz.insertMany([
 
       ]
     }
- ])
+ ]);

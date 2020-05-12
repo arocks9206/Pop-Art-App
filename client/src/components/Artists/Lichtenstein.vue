@@ -48,6 +48,7 @@ import ArtworksServices from '@/services/ArtworksServices';
 import ArtistsHeader from '../headers/ArtistsHeader.vue'
 import ArtistsList from './ArtistsList.vue';
 import ArtistsListItem from './ArtistsListItem.vue'
+import {eventBus} from '@/main.js'
 
 
 export default {
@@ -72,6 +73,11 @@ export default {
       .then(artworkData => {
           this.artworks = artworkData.filter(x => x.artist === 'Roy Lichtenstein' && x.category === 'painting')
           this.film = artworkData.find(x => x.artist === 'Roy Lichtenstein' && x.category === 'film')
+            })
+
+      eventBus.$on('favourites-added', (favourite) => {
+        let index = this.artworks.findIndex(artwork => artwork._id === favourite.id)
+        this.artworks.splice(index, 1, favourite)
             })
 
 
