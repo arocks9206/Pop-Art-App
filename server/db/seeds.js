@@ -61,7 +61,7 @@ db.artworks.insertMany([
     category: "painting",
     year: 1962,
     medium: "Screenprint ink and synthetic polymer paint on canvas",
-    imageURL: "https://6d49d47bd32a151032ae-907965fc79c9900a93c12efeb23103bd.ssl.cf1.rackcdn.com/artworks/andy_warhol_1.jpg",
+    imageURL: "https://d5wt70d4gnm1t.cloudfront.net/media/a-s/articles/3250-840076064929/anatomy-of-an-artwork-marilyn-diptych-1962-by-andy-warhol-900x450-c.jpg",
     description: "Marilyn Monroe died in August 1962, having overdosed on barbiturates. In the following four months, Warhol made more than twenty silkscreen paintings of her, all based on the same publicity photograph from the 1953 film Niagara. Warhol found in Monroe a fusion of two of his consistent themes: death and the cult of celebrity. By repeating the image, he evokes her ubiquitous presence in the media. The contrast of vivid colour with black and white, and the effect of fading in the right panel are suggestive of the star’s mortality.",
   },
 
