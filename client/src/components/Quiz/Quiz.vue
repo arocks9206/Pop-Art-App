@@ -3,26 +3,31 @@
 
   <div class="quiz-container">
 
+    <QuizHeader title="POP QUIZ"/>
+
+
     <b-container class="bx-example-row">
       <b-row>
         <b-col sm="6" offset="3">
-          <QuizHeader title="POP QUIZ"/>
+
           <Header
               :numCorrect="numCorrect"
               :currentNum="currentNum"
               :totalQuestions="questions.length"
+              class="header"
               >
           </Header>
 
+
         <div>
-    <b-alert v-if="resultStage" show variant="success">
+    <b-alert v-if="resultStage" show variant="primary">
       <h4 class="alert-heading">Well done!</h4>
       <p>
         That's the test complete. Your total score is {{testResult}} out of {{questions.length}}.
       </p>
       <hr>
       <p class="mb-0">
-        Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
+        <span @click="resetQuiz" class="reset">Click here if you want to reset your score and try again.</span>
       </p>
     </b-alert>
 
@@ -62,17 +67,16 @@ export default {
     questions: [],
     index: 0,
     numCorrect: 0,
-    quizURL: 'http://localhost:3000/api/quiz/',
     testResult: null,
     resultStage: false
     }
   },
   mounted(){
-    QuizServices.getQuestions(this.$route.params.id)
-    .then(data => this.questions = data.questions)
+    QuizServices.getQuizData()
+    .then(data => data.map(x => {
+      this.questions = x.questions
+    }))
 
-    QuizServices.getUserScore()
-    .then(data => this.userScore = data.testResult)
 
     eventBus.$on('is-correct', (isCorrect) => {
       if (isCorrect) {
@@ -82,30 +86,25 @@ export default {
     })
   },
   methods: {
-    getQuestions(){
-      fetch(this.quizURL + this.$route.params.id)
-      .then(res => res.json())
-      .then(data => this.questions = data.questions)
-    },
-    getUserResult(){
-      fetch(this.quizURL + '5eba684ccc42943fc1fdd1f7')
-      .then(res => res.json())
-      .then(data => this.userResult = data.testResult)
-    },
-
-    next(){
+  next(){
       if (this.currentNum < this.questions.length) {
         this.index++
       } else {
         this.resultStage = true;
-        this.saveUserScore()
       }
     },
-    saveUserScore(){
-      const updatedScore = { testResult: this.testResult };
-      QuizServices.updateUserScore(updatedScore)
-      .then(score => this.testResult = score.testResult)
-    }
+  resetQuiz(){
+    this.index = 0;
+    this.numCorrect = 0;
+    this.testResult = null;
+    this.resultStage = false;
+  }
+    // },
+    // saveUserScore(){
+    //   const updatedScore = { testResult: this.testResult };
+    //   QuizServices.updateUserScore(updatedScore, this.testResult._id)
+    //   .then(score => this.testResult = score.testResult)
+    // }
 
   },
   components: {
@@ -117,13 +116,8 @@ export default {
     currentNum(){
       return this.index+1
     }
-  },
-  watch: {
-    finishQuiz(){
-      if (this.currentNum > this.totalQuestions) { this.finishQuiz = true }
-    }
   }
-  }
+}
 </script>
 
 <style lang="css" scoped>
@@ -155,7 +149,7 @@ button:active {
 }
 
 .quiz-container {
-  margin-top: 60px;
+  /* margin-top: 60px; */
   text-align: center;
 }
 
@@ -168,5 +162,17 @@ section {
 b-alert {
   position: absolute;
   z-index: 999;
+}
+
+.reset {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.header {
+  padding: 5px;
+  border-style: solid;
+  background-color: #1998CB;
+  opacity: 95%;
 }
 </style>

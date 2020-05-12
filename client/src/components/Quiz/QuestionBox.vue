@@ -73,7 +73,6 @@ export default {
   methods: {
     selectResponse(response){
       this.selectedResponse = response;
-      console.log(response);
     },
     responseClass(response){
       let responseClass = ''
