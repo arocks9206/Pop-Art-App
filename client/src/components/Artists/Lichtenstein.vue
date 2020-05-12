@@ -20,7 +20,7 @@
 
     </div>
 
-    <router-link to="/quiz/5eba4ab1ace7ca5832b0b465"><button>POP QUIZ</button></router-link>
+    <router-link to="/quiz/5eba684ccc42943fc1fdd1f7"><button>POP QUIZ</button></router-link>
 
   </section>
 
