@@ -11,10 +11,11 @@
         </select>
       </div>
 
-    <ArtistsList v-show="filteredFavourites"
+    <ArtistsList class="favouriteImages" v-show="filteredFavourites"
                  :artworks="filteredFavourites"></ArtistsList>
 
-      <div v-show="filteredFavourites.length===0">No favourites for this artist</div>
+      <h3 v-show="filteredFavourites.length===0"
+           >No favourites for this artist</h3>
 
   </div>
     <router-link to="/"><button>Home</button></router-link>
@@ -112,5 +113,15 @@ h3 {
   border-style: solid;
   background-color: #1998CB;
   opacity: 95%;
+}
+
+select {
+  font-size: 24px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.favouriteImages {
+  margin-top: 30px;
 }
 </style>

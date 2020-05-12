@@ -28,14 +28,14 @@
               <p>{{artwork.description}}</p>
               <b-button variant="success"
                         v-if="!artwork.favourite"
-                        @click="updateFavourite"
+                        @click="updateFavourite(artwork)"
                         data-toggle="tooltip" data-placement="top" title="Add to Favourites">
               <b-icon icon="heart-fill"
                       variant="danger"
                       class="rounded-circle"></b-icon></b-button>
 
               <b-button v-if="artwork.favourite"
-                      @click="updateFavourite">
+                      @click="updateFavourite(artwork)">
               <b-iconstack font-scale="1.5">
                   <b-icon stacked icon="heart-fill"
                           variant="danger"
@@ -68,14 +68,10 @@ export default {
     }
   },
   methods: {
-    addFavourite(artwork){
-      const updatedArtwork = { favourite: true };
-
-      ArtworksServices.updateArtwork(artwork._id, updatedArtwork)
-      .then(favourite => {
-        let index = this.artworks.findIndex(artwork => artwork._id === favourite._id)
-        this.artworks.splice(index, 1, favourite)
-      })
+    updateFavourite(artwork){
+      artwork.favourite = artwork.favourite ? false : true;
+      const { _id, ...updatedArtwork } = artwork;
+      ArtworksServices.updateArtwork(_id, updatedArtwork)
     }
   },
   mounted() {

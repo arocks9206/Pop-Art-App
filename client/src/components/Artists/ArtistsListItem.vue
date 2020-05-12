@@ -76,6 +76,7 @@ export default {
 }
 
 .image {
+  border-style: solid;
   opacity: 1;
   display: block;
   width: 100%;
