@@ -15,11 +15,20 @@
     </div>
   </div>
 
- <div class="intro-image">
-   <div>
-     <img src="../assets/lichtenstein_brushstroke.jpg" width="600px">
-   </div>
- </div>
+<div class="intro-image">
+  <div class="container">
+    <img src="../assets/in the car_roy licht.jpg" alt="Art" class="image" style="width:100%">
+      <div class="middle">
+        <div class="text">
+          <h1>“In The Car”</h1>
+          <h3>Roy Lichtenstein</h3>
+          <h5>1963</h5>
+          <h6>Oil and magna on canvas</h6>
+          <p>This painting is one of a series from the early 1960s in which Lichtenstein deals with the theme of romance. He would paint his works on a monumental scale, much enlarged from his original source material of comic-strip illustrations. This work is based on an image from the comic Girls' Romances.</p>
+        </div>
+      </div>
+  </div>
+</div>
 
 <div class="content-container-one">
   <div>
@@ -36,8 +45,17 @@
 </div>
 
 <div class="image-two">
-  <div>
-    <img src="../assets/andy-micket.jpg" width="600px">
+  <div class="container">
+    <img src="../assets/andy-micket.jpg" alt="Art" class="image" style="width:100%">
+      <div class="middle">
+        <div class="text">
+          <h1>“Quadrant Mickey Mouse”</h1>
+          <h3>Andy Warhol</h3>
+          <h5>1981</h5>
+          <h6>Synthetic polymer and silkscreen inks on canvas</h6>
+          <p>This image of the Disney character Mickey Mouse belongs to a portfolio of ten screenprints called 'Myths' published in 1981. The series is based on characters from American Popular culture which have become icons, defining different generations.</p>
+        </div>
+      </div>
   </div>
 </div>
 
@@ -49,12 +67,22 @@
 </div>
 
 <div class="image-three">
-  <div>
-    <img src="../assets/warhol_chelsea_girls.jpg" width="600px">
+  <div class="container">
+    <img src="../assets/warhol_chelsea_girls.jpg" alt="Art" class="image" style="width:100%">
+      <div class="middle">
+        <div class="text">
+          <h1> “Film Still from Chelsea Girl”</h1>
+          <h3>Andy Warhol</h3>
+          <h5>1967</h5>
+          <p>Lacking a formal narrative, Warhol's art house classic follows various residents of the Chelsea Hotel in 1966 New York City,presented in a split screen with a single audio track in conjunction with one side of screen.</p>
+        </div>
+      </div>
   </div>
 </div>
 
-<router-link to="/andywarhol"><button>Next To Andy Warhol</button></router-link>
+
+<router-link to="/timeline"><button>Next To Lesson 1: Timeline</button></router-link>
+
 
 
 </section>
@@ -63,7 +91,6 @@
 
 <script>
 import OverviewHeader from "./headers/OverviewHeader.vue";
-import TimeLine from "./TimeLine/TimeLine.vue"
 
 export default {
   name: 'Overview',
@@ -81,11 +108,40 @@ section {
   background-attachment: scroll;
 }
 
+ button {
+  box-shadow:inset 0px 1px 0px 0px #f7c5c0;
+	background:linear-gradient(to bottom, #fc8d83 5%, #e4685d 100%);
+	background-color:#fc8d83;
+	border-radius:6px;
+	border:1px solid #d83526;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
+
+ button:hover {
+   background:linear-gradient(to bottom, #e4685d 5%, #fc8d83 100%);
+	 background-color:#e4685d;
+ }
+
+ button:active {
+   position:relative;
+	 top:1px;
+ }
+
 .intro-container {
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: Century Gothic;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .intro-container div {
@@ -99,6 +155,8 @@ section {
   border-style: solid;
   background-color: #F0CD13;
   opacity: 95%;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .intro-image {
@@ -137,6 +195,8 @@ img {
   justify-content: center;
   margin-bottom: 20px;
   font-family: Century Gothic;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .content-container-one div {
@@ -149,6 +209,8 @@ img {
   border-style: solid;
   background-color: #1998CB;
   opacity: 95%;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .content-container-two {
@@ -157,6 +219,8 @@ img {
   justify-content: center;
   margin-bottom: 20px;
   font-family: Century Gothic;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .content-container-two div {
@@ -169,6 +233,8 @@ img {
   border-style: solid;
   background-color: #F2A28D;
   opacity: 95%;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .list {
@@ -177,5 +243,52 @@ img {
   justify-content: center;
 }
 
+/* hover effect css */
+.container {
+  position: relative;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Century Gothic;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background: black;
+  color: white;
+  font-size: 20px;
+  padding: 16px 32px;
+  width: 500px;
+}
 
 </style>

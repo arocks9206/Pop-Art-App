@@ -1,56 +1,47 @@
 <template lang="html">
   <section>
-    <div class="intro-container">
-  <div>
-    <ArtistsHeader :title="bio.name"/>
+      <div class="intro-container">
+        <div>
+          <ArtistsHeader title="ANDY WARHOL"/>
 
-    <img :src="bio.artistImageURL" width="600px" />
+          <div class="intro-image">
+            <img :src="bio.artistImageURL"/>
+          </div>
 
+          <h2>{{bio.shortBio}}</h2>
+        </div>
+      </div>
 
-  <h3>{{bio.shortBio}}</h3>
+          <ArtistsList class="list" :artworks="artworks"></ArtistsList>
 
+      <div v-if="film" class="film-content">
+        <div>
+          <h2>{{film.caption}}</h2>
 
+          <div class="film-image">
+            <iframe
+            width="560" height="315"
+            aspect="16by9"
+            :src="film.filmURL">
+            </iframe>
+          </div>
+        </div>
+      </div>
 
-</div>
-</div>
+      <div class="music">
+        <div >
+          <h2>{{music.caption}}</h2>
+        </div>
+      </div>
 
+      <div class="music-image">
+        <div>
+          <img :src="music.imageURL">
+        </div>
+      </div>
 
-<ArtistsList class="list" :artworks="artworks" ></ArtistsList>
-
-
-
-
-
-<div v-if="film" class="film-content">
-  <div>
-    <h4>{{film.caption}}</h4>
-
-    <div class="film-image">
-  <iframe
-  width="560" height="315"
-  aspect="16by9"
-  :src="film.filmURL"
-></iframe>
-  </div>
-</div>
-</div>
-
-<div class="music">
-  <div >
-    <h4>{{music.caption}}</h4>
-  </div>
-</div>
-
-<div class="music-image">
-  <div>
-    <img :src="music.imageURL">
-  </div>
-</div>
-
-<router-link to="/artists/lichtenstein"><button>Next to Roy Lichtenstein</button></router-link>
-
+      <router-link to="/artists/lichtenstein"><button>Next to Roy Lichtenstein</button></router-link>
   </section>
-
 </template>
 
 <script>
@@ -61,6 +52,7 @@ import ArtworksServices from '@/services/ArtworksServices';
 import ArtistsHeader from '../headers/ArtistsHeader.vue'
 import ArtistsList from './ArtistsList.vue';
 import ArtistsListItem from './ArtistsListItem.vue'
+import {eventBus} from '@/main.js'
 
 
 export default {
@@ -89,6 +81,11 @@ export default {
           this.music = artworkData.find(x => x.artist === 'Andy Warhol' && x.category === 'album cover')
             })
 
+      eventBus.$on('favourite-added', (favourite) => {
+        let index = this.artworks.findIndex(artwork => artwork._id === favourite._id)
+        this.artworks.splice(index, 1, favourite)
+      })
+
 
       }
   }
@@ -104,53 +101,107 @@ section {
   background-attachment: scroll;
 }
 
-img {
-  border-style: solid;
+button {
+ box-shadow:inset 0px 1px 0px 0px #f7c5c0;
+ background:linear-gradient(to bottom, #fc8d83 5%, #e4685d 100%);
+ background-color:#fc8d83;
+ border-radius:6px;
+ border:1px solid #d83526;
+ display:inline-block;
+ cursor:pointer;
+ color:#ffffff;
+ font-family:Arial;
+ font-size:15px;
+ font-weight:bold;
+ padding:6px 24px;
+ text-decoration:none;
+ text-shadow:0px 1px 0px #b23e35;
+}
+
+button:hover {
+  background:linear-gradient(to bottom, #e4685d 5%, #fc8d83 100%);
+  background-color:#e4685d;
+}
+
+button:active {
+  position:relative;
+  top:1px;
 }
 
 .intro-container {
+  margin: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: Century Gothic;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
-.intro-container h3 {
-  margin: 100px;
+.intro-container h2 {
+  margin: 50px;
   font-size: 30px;
   text-align: justify;
   border-style: solid;
   background-color: #F0CD13;
   opacity: 95%;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.intro-image {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+img {
+  height: auto;
+  width: 350px;
+  border-style: solid;
 }
 
 .list {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
 }
 
+.list img {
+  border-style: solid;
+  justify-content: space-between;
+  width: 300px;
+  height: inherit;
+}
 
 .film-content {
+  margin: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  margin-top: 100px;
   font-family: Century Gothic;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .film-content div {
   width: 900px;
 }
 
-.film-content h4 {
+.film-content h2 {
+  margin: 50px;
   font-size: 25px;
   text-align: justify;
   border-style: solid;
   background-color: #1998CB;
   opacity: 95%;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .film-image{
@@ -162,6 +213,7 @@ img {
 }
 
 .music {
+  margin: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -173,7 +225,7 @@ img {
 .music div {
   width: 900px;
 }
-.music h4 {
+.music h2 {
   font-size: 25px;
   text-align: justify;
   border-style: solid;
@@ -185,7 +237,6 @@ img {
 .music-image {
   display: flex;
   justify-content: center;
-  padding-bottom: 100px;
 }
 
 img {

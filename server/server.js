@@ -28,6 +28,10 @@ const quizCollection = db.collection('quiz');
 const quizRouter = createRouter(quizCollection);
 app.use('/api/quiz', quizRouter);
 
+const favouritesCollection = db.collection('favourites');
+const favouritesRouter = createRouter(favouritesCollection);
+app.use('/api/favourites', favouritesRouter);
+
 
 
 })

@@ -4,8 +4,10 @@ import Warhol from './components/Artists/Warhol.vue';
 import Lichtenstein from './components/Artists/Lichtenstein.vue'
 import Overview from './components/Overview.vue';
 import Quiz from './components/Quiz/Quiz.vue';
-import TimeLine from './components/TimeLine/TimeLine.vue'
-import KeyArtists from './components/Artists/KeyArtists.vue'
+import TimeLine from './components/TimeLine/TimeLine.vue';
+import KeyArtists from './components/Artists/KeyArtists.vue';
+import Favourites from './components/Favourites/Favourites.vue';
+
 
 
 Vue.use(VueRouter);
@@ -18,9 +20,8 @@ const router = new VueRouter({
     { path: '/artists/warhol', component: Warhol },
     { path: '/artists/lichtenstein', component: Lichtenstein},
     { path: '/quiz/:id', component: Quiz, params: { id: 'id'} },
-    { path: '/artists/keyartists', component: KeyArtists }
-
-
+    { path: '/artists/keyartists', component: KeyArtists },
+    { path: '/favourites', component: Favourites }
 
   ]
 })

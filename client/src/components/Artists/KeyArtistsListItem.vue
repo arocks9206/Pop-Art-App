@@ -13,11 +13,38 @@
       <h3>{{artist.shortBio}}</h3>
     </div>
 
-    <div class="art-images">
-      <div v-for="(artwork, index) in artworks"
-           :artwork="artwork"
-           :index="index">
-          <img :src="artwork.imageURL" width="200px">
+
+    <div class="container"
+          v-for="(artwork, index) in artworks"
+         :artwork="artwork"
+         :index="index">
+      <img class="image":src="artwork.imageURL" style="width:80%">
+        <div class="middle">
+          <div class="text">
+              <h5> {{artwork.title}}</h5>
+              <h6>{{artwork.artist}}</h6>
+              <h7>{{artwork.medium}}</h7>
+              <h6>{{artwork.year}}</h6>
+              <p>{{artwork.description}}</p>
+              <b-button variant="success"
+                        v-if="!artwork.favourite"
+                        @click="updateFavourite(artwork)"
+                        data-toggle="tooltip" data-placement="top" title="Add to Favourites">
+              <b-icon icon="heart-fill"
+                      variant="danger"
+                      class="rounded-circle"></b-icon></b-button>
+
+              <b-button v-if="artwork.favourite"
+                      @click="updateFavourite(artwork)">
+              <b-iconstack font-scale="1.5">
+                  <b-icon stacked icon="heart-fill"
+                          variant="danger"
+                          scale="0.75"></b-icon>
+                  <b-icon stacked icon="slash-square"
+                          variant="dark"></b-icon>
+                </b-iconstack>
+                </b-button>
+          </div>
       </div>
     </div>
 
@@ -30,6 +57,7 @@
 <script>
 
 import ArtworksServices from '@/services/ArtworksServices';
+import {eventBus} from '@/main.js'
 
 export default {
   name: 'KeyArtistsListItem',
@@ -37,6 +65,13 @@ export default {
   data(){
     return {
     artworks: []
+    }
+  },
+  methods: {
+    updateFavourite(artwork){
+      artwork.favourite = artwork.favourite ? false : true;
+      const { _id, ...updatedArtwork } = artwork;
+      ArtworksServices.updateArtwork(_id, updatedArtwork)
     }
   },
   mounted() {
@@ -107,5 +142,52 @@ img {
   margin-bottom: 20px;
 }
 
+.container {
+  position: relative;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Century Gothic;
+  margin-bottom: 20px;
+  padding: 5px;
+  justify-content: space-around;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background: black;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  width: 500px;
+}
 
 </style>

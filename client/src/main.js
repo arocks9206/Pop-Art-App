@@ -12,6 +12,7 @@ Vue.config.productionTip = false
 export const eventBus = new Vue()
 
 Vue.use(BootstrapVue)
+Vue.use(IconsPlugin)
 
 new Vue({
   router,

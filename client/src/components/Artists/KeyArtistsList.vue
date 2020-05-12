@@ -22,6 +22,8 @@ export default {
   mounted(){
     KeyArtistsServices.getArtists()
     .then(artists => this.artists = artists)
+
+  
   },
   components: {
     KeyArtistsListItem

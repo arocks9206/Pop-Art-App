@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "andywarhol-header",
+  name: "QuizHeader",
   props: ["title"]
 };
 </script>
