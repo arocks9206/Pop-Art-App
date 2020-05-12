@@ -12,6 +12,9 @@
 </div>
 
 
+
+    <router-link to="/quiz/5eba684ccc42943fc1fdd1f7"><button>POP QUIZ</button></router-link>
+
 <ArtistsList :artworks="artworks" ></ArtistsList>
 
 
@@ -33,8 +36,6 @@
   </div>
 </div>
 </div>
-
-<router-link to="/quiz/5eb8fc14db52cbcdbc1f69c0"><button>TEST YOUR KNOWLEDGE I</button></router-link>
 
   </section>
 

@@ -88,7 +88,7 @@ export default {
       .then(data => this.questions = data.questions)
     },
     getUserResult(){
-      fetch(this.quizURL + '5eba4ab1ace7ca5832b0b465')
+      fetch(this.quizURL + '5eba684ccc42943fc1fdd1f7')
       .then(res => res.json())
       .then(data => this.userResult = data.testResult)
     },
