@@ -16,7 +16,7 @@
       <li class="nav-item active"><a class="nav-link" href="/artists/lichtenstein">Roy Lichtenstein</a></li>
       <li class="nav-item active"><a class="nav-link" href="/artists/keyartists">Other Key Artists</a></li>
       <li class="nav-item active"><a class="nav-link" href="/quiz/5eba684ccc42943fc1fdd1f7">Pop Quiz</a></li>
-      <li class="nav-item active"><a class="nav-link" href="#">Favourites</a></li>
+      <li class="nav-item active"><a class="nav-link" href="/favourites">Favourites</a></li>
       <li class="nav-item active"><a class="nav-link" href="#">Make Your Own Art</a></li>
     </ul>
   </nav>

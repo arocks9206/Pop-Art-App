@@ -1,49 +1,24 @@
 <template lang="html">
   <section>
     <div class="intro-container">
-  <div>
-    <ArtistsHeader :title="bio.name"/>
+      <div>
+        <ArtistsHeader title="ROY LICHTENSTEIN"/>
 
+        <div class="intro-image">
+          <img :src="bio.artistImageURL"/>
+        </div>
 
-  <h3>{{bio.shortBio}}</h3>
+        <h2>{{bio.shortBio}}</h2>
+      </div>
+    </div>
 
-
-</div>
-</div>
-
-
-
+    <ArtistsList :artworks="artworks" ></ArtistsList>
     <router-link to="/quiz/5eba684ccc42943fc1fdd1f7"><button>POP QUIZ</button></router-link>
 
-<ArtistsList :artworks="artworks" ></ArtistsList>
-
-
-
-
-
-
-
-<div v-if="film" class="film-content">
-  <div>
-    <h4>{{film.caption}}</h4>
-
-    <div class="film-image">
-  <iframe
-  width="560" height="315"
-  aspect="16by9"
-  :src="film.filmURL"
-></iframe>
-  </div>
-</div>
-</div>
-
   </section>
-
 </template>
 
 <script>
-
-
 import ArtistsServices from '@/services/ArtistsServices';
 import ArtworksServices from '@/services/ArtworksServices';
 import ArtistsHeader from '../headers/ArtistsHeader.vue'
@@ -96,24 +71,69 @@ section {
   background-attachment: scroll;
 }
 
+button {
+ box-shadow:inset 0px 1px 0px 0px #f7c5c0;
+ background:linear-gradient(to bottom, #fc8d83 5%, #e4685d 100%);
+ background-color:#fc8d83;
+ border-radius:6px;
+ border:1px solid #d83526;
+ display:inline-block;
+ cursor:pointer;
+ color:#ffffff;
+ font-family:Arial;
+ font-size:15px;
+ font-weight:bold;
+ padding:6px 24px;
+ text-decoration:none;
+ text-shadow:0px 1px 0px #b23e35;
+}
+
+button:hover {
+  background:linear-gradient(to bottom, #e4685d 5%, #fc8d83 100%);
+  background-color:#e4685d;
+}
+
+button:active {
+  position:relative;
+  top:1px;
+}
+
 img {
   border-style: solid;
 }
 
 .intro-container {
+  margin: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: Century Gothic;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
-.intro-container h3 {
-  margin: 100px;
+.intro-container h2 {
+  margin: 50px;
   font-size: 30px;
   text-align: justify;
   border-style: solid;
   background-color: #F0CD13;
   opacity: 95%;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.intro-image {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+img {
+  height: auto;
+  width: 350px;
+  border-style: solid;
 }
 
 .list {
