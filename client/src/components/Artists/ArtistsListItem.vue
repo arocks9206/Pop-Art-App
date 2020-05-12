@@ -9,8 +9,29 @@
           <h7>{{artwork.medium}}</h7>
           <h6>{{artwork.year}}</h6>
           <p>{{artwork.description}}</p>
-          <button v-if="!artwork.favourite" @click="updateFavourite">Add to Favourites</button>
-          <button v-if="artwork.favourite" @click="updateFavourite">Remove from Favourites</button>
+
+
+          <b-button variant="success"
+                    v-if="!artwork.favourite"
+                    @click="updateFavourite"
+                    data-toggle="tooltip" data-placement="top" title="Add to Favourites">
+          <b-icon icon="heart-fill"
+                  variant="danger"
+                  class="rounded-circle"></b-icon></b-button>
+
+          <b-button v-if="artwork.favourite"
+                  @click="updateFavourite">
+          <b-iconstack font-scale="1.5">
+              <b-icon stacked icon="heart-fill"
+                      variant="danger"
+                      scale="0.75"></b-icon>
+              <b-icon stacked icon="slash-square"
+                      variant="dark"></b-icon>
+            </b-iconstack>
+            </b-button>
+
+
+
         </div>
       </div>
   </div>

@@ -1,7 +1,7 @@
 <template lang="html">
+  <section>
   <div class="My Favourites">
-
-    <h3>My Favourites</h3>
+        <ArtistsHeader title="FAVOURITE ARTWORKS"/>
 
       <div id="filterInput">
         <h3>Filter Favourites by Artist</h3>
@@ -11,13 +11,14 @@
         </select>
       </div>
 
-    <ArtistsList v-if="filteredFavourites"
+    <ArtistsList v-show="filteredFavourites"
                  :artworks="filteredFavourites"></ArtistsList>
 
-      <div else>No favourites for this artist</div>
+      <div v-show="filteredFavourites.length===0">No favourites for this artist</div>
 
   </div>
 
+</section>
 </template>
 
 <script>
@@ -26,7 +27,8 @@ import ArtworksServices from '@/services/ArtworksServices';
 import ArtistsServices from '@/services/ArtistsServices';
 import ArtistsList from '../Artists/ArtistsList.vue';
 import ArtistsListItem from '../Artists/ArtistsListItem.vue'
-import {eventBus} from '@/main.js'
+import {eventBus} from '@/main.js';
+import ArtistsHeader from '../headers/ArtistsHeader.vue'
 
 export default {
   name: 'Favourites',
@@ -39,7 +41,8 @@ export default {
   },
   components: {
     ArtistsList,
-    ArtistsListItem
+    ArtistsListItem,
+    ArtistsHeader
   },
   mounted(){
     ArtworksServices.getData()
@@ -67,4 +70,10 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+section {
+  background-image: url('../../assets/background_1.jpg');
+  background-size: cover;
+  background-attachment: scroll;
+}
 </style>
