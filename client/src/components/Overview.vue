@@ -17,13 +17,13 @@
 
 <div class="intro-image">
   <div class="container">
-    <img :src="artwork.imageURL" alt="Art" class="image" style="width:100%">
+    <img :src="imageOne.imageURL" alt="Art" class="image" style="width:100%">
       <div class="middle">
         <div class="text">
-          <h1>{{artwork.title}}</h1>
-          <h3>{{artwork.artist}}</h3>
-          <h5>{{artwork.year}}</h5>
-          <p>{{artwork.description}}</p>
+          <h1>{{imageOne.title}}</h1>
+          <h3>{{imageOne.artist}}</h3>
+          <h5>{{imageOne.year}}</h5>
+          <p>{{imageOne.description}}</p>
         </div>
       </div>
   </div>
@@ -45,13 +45,13 @@
 
 <div class="image-two">
   <div class="container">
-    <img :src="artwork.imageURL" alt="Art" class="image" style="width:100%">
+    <img :src="imageTwo.imageURL" alt="Art" class="image" style="width:100%">
       <div class="middle">
         <div class="text">
-          <h1>{{artwork.title}}</h1>
-          <h3>{{artwork.artist}}</h3>
-          <h5>{{artwork.year}}</h5>
-          <p>{{artwork.description}}</p>
+          <h1>{{imageTwo.title}}</h1>
+          <h3>{{imageTwo.artist}}</h3>
+          <h5>{{imageTwo.year}}</h5>
+          <p>{{imageTwo.description}}</p>
         </div>
       </div>
   </div>
@@ -66,13 +66,13 @@
 
 <div class="image-three">
   <div class="container">
-    <img :src="artwork.imageURL" alt="Art" class="image" style="width:100%">
+    <img :src="imageThree.imageURL" alt="Art" class="image" style="width:100%">
       <div class="middle">
         <div class="text">
-          <h1>{{artwork.title}}</h1>
-          <h3>{{artwork.artist}}</h3>
-          <h5>{{artwork.year}}</h5>
-          <p>{{artwork.description}}</p>
+          <h1>{{imageThree.title}}</h1>
+          <h3>{{imageThree.artist}}</h3>
+          <h5>{{imageThree.year}}</h5>
+          <p>{{imageThree.description}}</p>
         </div>
       </div>
   </div>
@@ -86,11 +86,27 @@
 
 <script>
 import IntroHeader from "./headers/IntroHeader.vue";
+import ArtworksServices from '../services/ArtworksServices.js'
 
 export default {
   name: 'Overview',
   components: {
     IntroHeader
+  },
+  data(){
+      return {
+        imageOne: '',
+        imageTwo: '',
+        imageThree: ''
+    }
+  },
+  mounted(){
+    ArtworksServices.getData()
+    .then(artworks => {
+      this.imageOne = artworks.find(x => x.title === 'In The Car')
+      this.imageTwo = artworks.find(x => x.title === 'Quadrant Mickey Mouse')
+      this.imageThree = artworks.find(x => x.title === 'Film Still from Chelsea Girl')
+    })
   }
 }
 </script>
