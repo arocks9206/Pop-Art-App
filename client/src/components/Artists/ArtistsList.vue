@@ -33,10 +33,7 @@ export default {
   align-items: center;
 }
 
-.list img {
+ img {
   border-style: solid;
-  justify-content: space-between;
-  width: 300px;
-  height: inherit;
 }
 </style>

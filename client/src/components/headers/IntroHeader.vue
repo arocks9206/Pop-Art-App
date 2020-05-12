@@ -4,14 +4,14 @@
 
 <script>
 export default {
-  name: "keyartist-header",
+  name: "IntroHeader",
   props: ["title"]
 };
 </script>
 
 <style scoped>
 h1 {
-  font: bold 40px Century Gothic;
+  font: bold 40px Arial;
   color: black;
   text-align: center;
   background-color: #EC3C37;

@@ -93,7 +93,7 @@ export default {
   justify-content: center;
   margin-bottom: 20px;
   padding: 5px;
-  font-family: Century Gothic;
+  font-family: Arial;
 }
 
 .artist-name h2{
@@ -111,7 +111,7 @@ export default {
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  font-family: Century Gothic;
+  font-family: Arial;
   margin-bottom: 20px;
   padding: 5px;
 }
@@ -152,7 +152,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Century Gothic;
+  font-family: Arial;
   margin-bottom: 20px;
   padding: 5px;
   justify-content: space-around;

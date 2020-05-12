@@ -4,7 +4,7 @@
     <div class="intro-container">
 
         <div class="page-intro">
-          <keyartist-header title="KEY ARTISTS TO POP ART MOVEMENT"/>
+          <IntroHeader title="KEY ARTISTS TO POP ART MOVEMENT"/>
           <h2>
             While Andy Warhol and Roy Lichtenstein are among the most popular and recognisable artist of the Pop Art Movement, there are many others that contributed to the vast amount of artwork associated with this movement. Among the other key artist of this movement are Robert Rauschenberg, Richard Hamiliton, and Peter Blake who are known for their significant contributions as well as being considered some of the earliest artists to inform the Pop Art Movement's style and subject matters.
           </h2>
@@ -23,7 +23,7 @@
 
 <script>
 import {eventBus} from '@/main.js';
-import KeyArtistHeader from '../headers/KeyArtistHeader.vue'
+import IntroHeader from '../headers/IntroHeader.vue'
 import KeyArtistsList from './KeyArtistsList.vue'
 import KeyArtistsServices from '@/services/KeyArtistsServices.js';
 import KeyArtistsListItem from './KeyArtistsListItem.vue'
@@ -33,7 +33,7 @@ export default {
   components: {
     KeyArtistsList,
     KeyArtistsListItem,
-    "keyartist-header": KeyArtistHeader
+    IntroHeader
   }
 
 }
@@ -77,7 +77,7 @@ button:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Century Gothic;
+  font-family: Arial;
   margin-bottom: 20px;
   padding: 5px;
 }
