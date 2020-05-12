@@ -70,7 +70,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Century Gothic;
+  font-family: Arial;
   margin-bottom: 20px;
   padding: 5px;
 }

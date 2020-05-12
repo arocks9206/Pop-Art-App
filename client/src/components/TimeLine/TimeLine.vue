@@ -2,7 +2,7 @@
 <section>
 
   <div class="header">
-    <TimelineHeader title="POP ART TIMELINE"/>
+    <IntroHeader title="POP ART TIMELINE"/>
   </div>
 
   <div class="opener-container">
@@ -100,13 +100,13 @@
 <script>
 
 import Timeline from 'timeline-vuejs';
-import TimelineHeader from '../headers/TimelineHeader.vue';
+import IntroHeader from '../headers/IntroHeader.vue';
 
 
 export default {
   name: 'App',
   components: {
-    TimelineHeader
+    IntroHeader
   },
   data() {
     return {
@@ -252,7 +252,7 @@ button:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Century Gothic;
+  font-family: Arial;
   margin-bottom: 20px;
   padding: 5px;
 }

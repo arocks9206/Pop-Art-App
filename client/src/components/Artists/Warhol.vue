@@ -2,7 +2,7 @@
   <section>
       <div class="intro-container">
         <div>
-          <ArtistsHeader title="ANDY WARHOL"/>
+          <IntroHeader title="ANDY WARHOL"/>
 
           <div class="intro-image">
             <img :src="bio.artistImageURL"/>
@@ -49,7 +49,7 @@
 
 import ArtistsServices from '@/services/ArtistsServices';
 import ArtworksServices from '@/services/ArtworksServices';
-import ArtistsHeader from '../headers/ArtistsHeader.vue'
+import IntroHeader from '../headers/IntroHeader.vue'
 import ArtistsList from './ArtistsList.vue';
 import ArtistsListItem from './ArtistsListItem.vue'
 import {eventBus} from '@/main.js'
@@ -60,7 +60,7 @@ export default {
   components: {
     ArtistsList,
     ArtistsListItem,
-    ArtistsHeader
+    IntroHeader
   },
   data(){
     return {
@@ -133,7 +133,7 @@ button:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Century Gothic;
+  font-family: Arial;
   margin-bottom: 20px;
   padding: 5px;
 }
@@ -184,7 +184,7 @@ img {
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  font-family: Century Gothic;
+  font-family: Arial;
   margin-bottom: 20px;
   padding: 5px;
 }
@@ -209,7 +209,7 @@ img {
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  font-family: Century Gothic;
+  font-family: Arial;
 }
 
 .music {
@@ -218,7 +218,7 @@ img {
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  font-family: Century Gothic;
+  font-family: Arial;
   margin-bottom: 20px;
   padding: 5px;
 }
