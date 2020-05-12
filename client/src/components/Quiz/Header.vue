@@ -18,5 +18,6 @@ export default {
 .nav-bar {
   display: flex;
   justify-content: space-around;
+  font-size: 20px;
 }
 </style>

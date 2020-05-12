@@ -316,53 +316,5 @@ db.quiz.insertMany([
           ]
        }
      ]
-     },
-
-     {
-       questions: [
-         {
-
-          text: "In Satellite based communication, VSAT stands for? ",
-          responses: [
-             { text: " Very Small Aperture Terminal", correct: true },
-             { text: "Varying Size Aperture Terminal " },
-             {
-                text: "Very Small Analog Terminal"
-             },
-             { text: "None of the above" }
-          ]
-       },
-       {
-          text: "What is the full form of TCP/IP? ",
-          responses: [
-             { text: "Telephone call protocol / international protocol" },
-             { text: "Transmission control protocol / internet protocol", correct: true },
-             { text: "Transport control protocol / internet protocol " },
-             { text: "None of the above" }
-          ]
-       },
-       {
-          text:
-             "What is the full form of HTML?",
-          responses: [
-             {
-                text: "Hyper text marking language"
-             },
-             { text: "Hyphenation text markup language " },
-             { text: "Hyper text markup language", correct: true },
-             { text: "Hyphenation test marking language" }
-          ]
-       },
-       {
-          text: "\"Yahoo\", \"Infoseek\" and \"Lycos\" are _________?",
-          responses: [
-             { text: "Browsers " },
-             { text: "Search Engines", correct: true },
-             { text: "News Group" },
-             { text: "None of the above" }
-          ]
-        }
-
-      ]
     }
  ]);
