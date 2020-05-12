@@ -1,5 +1,6 @@
 <template lang="html">
 <section>
+
   <div class="header">
     <TimelineHeader title="POP ART TIMELINE"/>
   </div>
@@ -14,21 +15,23 @@
   <PopArtTimeLine>
     <div class="image">
 
+
     <Timeline class="timeline-one"
         :timeline-items="dataTimeline1"
-        :message-when-no-items="messageWhenNoItems"
+
         :show-day-and-month="false"
         :unique-year="true"
+
         order="desc"
     />
     <img class="image1" src="https://www.tate.org.uk/art/images/work/T/T01/T01462_10.jpg" />
+
     </div>
     <br>
     <div class="image">
 
       <Timeline
           :timeline-items="dataTimeline2"
-          :message-when-no-items="messageWhenNoItems"
           :unique-year="true"
           :show-day-and-month="true"
           order="ascd"
@@ -40,7 +43,7 @@
       <div class="image">
         <Timeline
             :timeline-items="dataTimeline3"
-            :message-when-no-items="messageWhenNoItems"
+
             :show-day-and-month="false"
             :unique-year="true"
             order="ascd"
@@ -51,7 +54,7 @@
         <div class="image">
           <Timeline
               :timeline-items="dataTimeline4"
-              :message-when-no-items="messageWhenNoItems"
+
               :show-day-and-month="false"
               :unique-year="true"
               order="ascd"
@@ -62,7 +65,7 @@
           <div class="image">
             <Timeline
                 :timeline-items="dataTimeline5"
-                :message-when-no-items="messageWhenNoItems"
+
                 :show-day-and-month="false"
                 :unique-year="true"
                 order="ascd"
@@ -74,7 +77,7 @@
             <div class="image">
               <Timeline
                   :timeline-items="dataTimeline6"
-                  :message-when-no-items="messageWhenNoItems"
+
                   :show-day-and-month="false"
                   :unique-year="true"
                   order="ascd"
@@ -83,8 +86,10 @@
           <!-- While Warhol was on the phone, Solanas took out her pistol and fired at him three times. The first two shots missed. The third hit him in the abdomen, passing through his lungs, spleen, stomach, liver and esophagus. She then shot art critic Mario Amaya, who was hit in the back part of his hip. She then aimed at Warhol’s manager, Fred Hughes, attempting to shoot him in the head, but the pistol jammed. Hughes told her to leave, and she did. Warhol was taken to Columbus-Mother Cabrini Hospital, where he underwent a five hour surgery that saved his life. -->
 
               </div>
+
 </PopArtTimeLine>
 </div>
+
 
 <router-link to="/artists/warhol"
                   ><button>Next To Lesson 2: Andy Warhol</button></router-link>
