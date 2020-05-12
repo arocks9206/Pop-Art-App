@@ -13,14 +13,6 @@
       <h3>{{artist.shortBio}}</h3>
     </div>
 
-<<<<<<< HEAD
-    <div class="art-images">
-      <div v-for="(artwork, index) in artworks"
-           :artwork="artwork"
-           :index="index">
-          <img :src="artwork.imageURL" width="200px">
-          <button v-if="!artwork.favourite" @click="addToFavourite(artwork)">Add to Favourites</button>
-=======
 
     <div class="container"
           v-for="(artwork, index) in artworks"
@@ -34,9 +26,8 @@
               <h7>{{artwork.medium}}</h7>
               <h6>{{artwork.year}}</h6>
               <p>{{artwork.description}}</p>
-                <button v-if="!artwork.favourite" @click="addToFavourite(artwork)">Add to Favourites</button>
+                <button v-if="!artwork.favourite" @click="addFavourite(artwork)">Add to Favourites</button>
           </div>
->>>>>>> develop
       </div>
     </div>
 

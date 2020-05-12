@@ -1,14 +1,20 @@
 <template lang="html">
   <div class="My Favourites">
 
-    <h3>Your Favourites</h3>
+    <h3>My Favourites</h3>
 
       <div id="filterInput">
         <h3>Filter Favourites by Artist</h3>
-        <input type="text" v-model="filterAmount"/>
+        <select v-model="filterArtist">
+          <option disabled value="">Select Artist</option>
+          <option v-for="artist in favouriteArtists">{{artist}}</option>
+        </select>
       </div>
 
-    <ArtistsList :artworks="favourites"></ArtistsList>
+    <ArtistsList v-if="filteredFavourites"
+                 :artworks="filteredFavourites"></ArtistsList>
+
+      <div else>No favourites for this artist</div>
 
   </div>
 
@@ -17,15 +23,18 @@
 <script>
 
 import ArtworksServices from '@/services/ArtworksServices';
+import ArtistsServices from '@/services/ArtistsServices';
 import ArtistsList from '../Artists/ArtistsList.vue';
 import ArtistsListItem from '../Artists/ArtistsListItem.vue'
+import {eventBus} from '@/main.js'
 
 export default {
   name: 'Favourites',
   data(){
     return {
       favourites: [],
-      filterArtist: ''
+      favouriteArtists: [],
+      filterArtist: ""
     }
   },
   components: {
@@ -34,7 +43,24 @@ export default {
   },
   mounted(){
     ArtworksServices.getData()
-    .then(data => this.favourites = data.filter(a => a.favourite === true))
+    .then(data => {
+      this.favourites = data.filter(a => a.favourite === true)
+      this.favouriteArtists = [...new Set(data.map(a => a.artist))]
+
+      eventBus.$on('favourite-added', (favourite) => {
+        let index = this.favourites.findIndex(fav => fav._id === favourite._id)
+        this.favourites.splice(index, 1)
+      })
+    })
+  },
+  computed: {
+    filteredFavourites(){
+      if (this.filterArtist === ""){
+        return this.favourites
+      } else {
+        return this.favourites.filter(a => a.artist === this.filterArtist)
+      }
+    }
   }
 
 }
