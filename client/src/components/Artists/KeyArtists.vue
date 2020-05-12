@@ -15,6 +15,8 @@
 
       <KeyArtistsList class="list"></KeyArtistsList>
 
+
+
   </section>
 </template>
 
