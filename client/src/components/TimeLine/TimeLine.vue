@@ -91,8 +91,7 @@
 </div>
 
 
-<router-link to="/artists/warhol"
-                  ><button>Next To Lesson 2: Andy Warhol</button></router-link>
+<router-link to="/artists/warhol"><button>Next To Lesson 2: Andy Warhol</button></router-link>
 
 </section>
 

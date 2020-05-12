@@ -9,6 +9,29 @@
           <h7>{{artwork.medium}}</h7>
           <h6>{{artwork.year}}</h6>
           <p>{{artwork.description}}</p>
+
+
+          <b-button variant="success"
+                    v-if="!artwork.favourite"
+                    @click="updateFavourite"
+                    data-toggle="tooltip" data-placement="top" title="Add to Favourites">
+          <b-icon icon="heart-fill"
+                  variant="danger"
+                  class="rounded-circle"></b-icon></b-button>
+
+          <b-button v-if="artwork.favourite"
+                  @click="updateFavourite">
+          <b-iconstack font-scale="1.5">
+              <b-icon stacked icon="heart-fill"
+                      variant="danger"
+                      scale="0.75"></b-icon>
+              <b-icon stacked icon="slash-square"
+                      variant="dark"></b-icon>
+            </b-iconstack>
+            </b-button>
+
+
+
         </div>
       </div>
   </div>
@@ -16,9 +39,27 @@
 </template>
 
 <script>
+import {eventBus} from '@/main.js'
+import ArtworksServices from '@/services/ArtworksServices.js'
+
 export default {
+
+
   name: 'ArtistsListItem',
-  props: ['artwork']
+  props: ['artwork'],
+  data(){
+    return {
+      favourites: []
+    }
+  },
+  methods: {
+    updateFavourite(){
+      const updatedArtwork = { favourite: null };
+      updatedArtwork.favourite = this.artwork.favourite ? false : true
+      ArtworksServices.updateArtwork(this.artwork._id, updatedArtwork)
+      .then(favourite => eventBus.$emit('favourite-added', favourite))
+    }
+  }
 }
 </script>
 
