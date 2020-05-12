@@ -1,19 +1,11 @@
 <template lang="html">
-<section>
-
-
-   <router-view></router-view>
-
-
-
-</section>
-
+  <section>
+    <router-view></router-view>
+  </section>
 </template>
 
 <script>
-
-
-import Timeline from 'timeline-vuejs'
+import Timeline from 'timeline-vuejs';
 
 
 export default {
@@ -22,3 +14,5 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+</style>

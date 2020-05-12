@@ -17,7 +17,7 @@
 
 <div class="intro-image">
   <div class="container">
-    <img src="../assets/in the car_roy licht.jpg" alt="Avatar" class="image" style="width:100%">
+    <img src="../assets/in the car_roy licht.jpg" alt="Art" class="image" style="width:100%">
       <div class="middle">
         <div class="text">
           <h1>“In The Car”</h1>
@@ -46,7 +46,7 @@
 
 <div class="image-two">
   <div class="container">
-    <img src="../assets/andy-micket.jpg" alt="Avatar" class="image" style="width:100%">
+    <img src="../assets/andy-micket.jpg" alt="Art" class="image" style="width:100%">
       <div class="middle">
         <div class="text">
           <h1>“Quadrant Mickey Mouse”</h1>
@@ -68,7 +68,7 @@
 
 <div class="image-three">
   <div class="container">
-    <img src="../assets/warhol_chelsea_girls.jpg" alt="Avatar" class="image" style="width:100%">
+    <img src="../assets/warhol_chelsea_girls.jpg" alt="Art" class="image" style="width:100%">
       <div class="middle">
         <div class="text">
           <h1> “Film Still from Chelsea Girl”</h1>
@@ -107,6 +107,33 @@ section {
   background-size: cover;
   background-attachment: scroll;
 }
+
+ button {
+  box-shadow:inset 0px 1px 0px 0px #f7c5c0;
+	background:linear-gradient(to bottom, #fc8d83 5%, #e4685d 100%);
+	background-color:#fc8d83;
+	border-radius:6px;
+	border:1px solid #d83526;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
+
+ button:hover {
+   background:linear-gradient(to bottom, #e4685d 5%, #fc8d83 100%);
+	 background-color:#e4685d;
+ }
+ 
+ button:active {
+   position:relative;
+	 top:1px;
+ }
 
 .intro-container {
   display: flex;

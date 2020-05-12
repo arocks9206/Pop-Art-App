@@ -15,10 +15,7 @@ db.artists.insertMany([
     {
       name: "Roy Lichtenstein",
       shortBio: "Roy Lichtenstein was an American pop artist. During the 1960s, he became a leading figure in the new art movement among many other artists. His work defined the premise of pop art through parody. Inspired by the comic strip, Lichtenstein produced precise compositions that documented while they parodied, often in a tongue-in-cheek manner. His work was influenced by popular advertising and the comic book style.",
-      careerBio: [
-        "A key figure in the Pop art movement and beyond, Roy Lichtenstein grounded his profoundly inventive career in imitation—beginning by borrowing images from comic books and advertisements in the early 1960s, and eventually encompassing those of everyday objects, artistic styles, and art history itself. Referring to Lichtenstein’s equalizing treatment of the subjects he chose for his art, Richard Hamilton, a fellow Pop artist, wrote in 1968: “Parthenon, Picasso or Polynesian maiden are reduced to the same kind of cliché by the syntax of the print: reproducing a Lichtenstein is like throwing a fish back into water.”",
-        "Lichtenstein's emphasis on methods of mechanical reproduction - particularly through his signature use of Ben-Day dots - highlighted one of the central lessons of Pop art, that all forms of communication, all messages, are filtered through codes or languages. Arguably, he learned his appreciation of the value of codes from his early work, which drew on an eclectic range of modern painting. This appreciation may also have later encouraged him to make work inspired by masterpieces of modern art; in these works he argued that high art and popular art were no different: both rely on code."
-      ],
+      careerBio: "A key figure in the Pop art movement and beyond, Roy Lichtenstein grounded his profoundly inventive career in imitation—beginning by borrowing images from comic books and advertisements in the early 1960s, and eventually encompassing those of everyday objects, artistic styles, and art history itself. Referring to Lichtenstein’s equalizing treatment of the subjects he chose for his art, Richard Hamilton, a fellow Pop artist, wrote in 1968: “Parthenon, Picasso or Polynesian maiden are reduced to the same kind of cliché by the syntax of the print: reproducing a Lichtenstein is like throwing a fish back into water. Lichtenstein's emphasis on methods of mechanical reproduction - particularly through his signature use of Ben-Day dots - highlighted one of the central lessons of Pop art, that all forms of communication, all messages, are filtered through codes or languages. Arguably, he learned his appreciation of the value of codes from his early work, which drew on an eclectic range of modern painting. This appreciation may also have later encouraged him to make work inspired by masterpieces of modern art; in these works he argued that high art and popular art were no different: both rely on code.",
       artistImageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Roy_Lichtenstein.jpg/1024px-Roy_Lichtenstein.jpg"
     },
 
@@ -53,8 +50,10 @@ db.artworks.insertMany([
     category: "painting",
     year: 1962,
     medium: "Synthetic polymer paint on canvas",
-    imageURL: "https://upload.wikimedia.org/wikipedia/en/1/1f/Campbells_Soup_Cans_MOMA.jpg",
+    imageURL: "https://www.moma.org/learn/moma_learning/_assets/www.moma.org/wp/moma_learning/wp-content/uploads/2012/06/Warhol.-Soup-Cans-469x292.jpg",
+    description: "Campbell's Soup Cans, which is sometimes referred to as 32 Campbell's Soup  Cans, is a work of art produced between November 1961 and March or April 1962. The individual paintings were produced by a printmaking method—the semi-mechanized screen printing process, using a non-painterly style. Campbell's Soup Cans' reliance on themes from popular culture helped to usher in pop art as a major art movement in the United States.",
     favourite: false
+
   },
 
   {
@@ -63,7 +62,8 @@ db.artworks.insertMany([
     category: "painting",
     year: 1962,
     medium: "Screenprint ink and synthetic polymer paint on canvas",
-    imageURL: "https://upload.wikimedia.org/wikipedia/en/8/87/Marilyndiptych.jpg",
+    imageURL: "https://6d49d47bd32a151032ae-907965fc79c9900a93c12efeb23103bd.ssl.cf1.rackcdn.com/artworks/andy_warhol_1.jpg",
+    description: "Marilyn Monroe died in August 1962, having overdosed on barbiturates. In the following four months, Warhol made more than twenty silkscreen paintings of her, all based on the same publicity photograph from the 1953 film Niagara. Warhol found in Monroe a fusion of two of his consistent themes: death and the cult of celebrity. By repeating the image, he evokes her ubiquitous presence in the media. The contrast of vivid colour with black and white, and the effect of fading in the right panel are suggestive of the star’s mortality.",
     favourite: false
   },
 
@@ -85,6 +85,7 @@ db.artworks.insertMany([
     year: 1963,
     medium: "Screenprint ink and synthetic polymer paint on canvas",
     imageURL: "https://upload.wikimedia.org/wikipedia/en/5/58/Andy_Warhol_Triple_Elvis.jpg",
+    description: "Triple Elvis is a 1963 painting of Elvis Presley by the American artist Andy Warhol. The photographic image of Elvis used by Warhol as a basis for this work, taken from a publicity still from the movie Flaming Star, has become iconic and synonymous with the singer.",
     favourite: false
   },
 
@@ -95,6 +96,7 @@ db.artworks.insertMany([
     year: 1964,
     medium: "Acrylic, silkscreen, plywood",
     imageURL: "https://images.nortonsimon.org/fcgi-bin/iipsrv.fcgi?IIIF=P1969144001-100.ptif/full/!400,600/0/default.jpg",
+    description: "Unlike the corrugated cardboard originals represented in 'Brillo', these sculptures are made of wood. By making the cartons non-functional and uprooting them from their ordinary context, Warhol forces us to look at them freshly. They comment on the way that commercial packaging transforms a mundane, household product into a glamorous, desirable commodity. Warhol also focuses our attention on the significance of these objects as representatives of the impersonal, commercialized consumer society in which we live.",
     favourite: false
   },
 
@@ -116,6 +118,7 @@ db.artworks.insertMany([
     year: 1963,
     medium: "Acrylic and oil paint on canvas",
     imageURL: "https://www.tate.org.uk/art/images/work/T/T00/T00897_10.jpg",
+    description:"Whaam! is a 1963 diptych painting by the American artist Roy Lichtenstein. ... Lichtenstein conceived the image from several comic-book panels. He transformed his primary source, a panel from a 1962 war comic book, by presenting it as a diptych while altering the relationship of the graphical and narrative elements.",
     favourite: false
   },
 
@@ -126,6 +129,7 @@ db.artworks.insertMany([
     year: 1963,
     medium: "Oil and synthetic polymer paint on canvas",
     imageURL: "https://upload.wikimedia.org/wikipedia/en/d/df/Roy_Lichtenstein_Drowning_Girl.jpg",
+    description: "The painting has been described as a 'masterpiece of melodrama', and is one of the artist's earliest images depicting women in tragic situations, a theme to which he often returned in the mid-1960s. It shows a teary-eyed woman on a turbulent sea. She is emotionally distressed, seemingly from a romance.",
     favourite: false
   },
 
@@ -136,6 +140,7 @@ db.artworks.insertMany([
     year: 1965,
     medium: "Screenprint on paper",
     imageURL: "https://www.tate.org.uk/art/images/work/P/P07/P07354_10.jpg",
+    description: "In 1965-6 Lichtenstein made a series of paintings depicting enlarged brushstrokes. ... Here Lichtenstein used it to make a direct comment on the elevated content and loaded brushwork of Abstract Expressionism. The brushstroke, as the token of the artist's personal expression, is depersonalised.",
     favourite: false
   },
 
@@ -146,6 +151,7 @@ db.artworks.insertMany([
     year: 1965,
     medium: "Lithograph on paper",
     imageURL: "https://www.tate.org.uk/art/images/work/P/P01/P01796_10.jpg",
+    description: "Beginning in 1962 Lichtenstein borrowed images of explosions from popular war comics for use in his paintings. The subject embodies the revolutionary nature of Pop art and suggests the very real threat of annihilation by nuclear explosion that was prevalent at that time (the Cuban Missile Crisis occurred in 1962).",
     favourite: false
   },
 
@@ -156,6 +162,7 @@ db.artworks.insertMany([
       year: 1963,
       medium: "Oil and silkscreen ink on canvas",
       imageURL: "https://www.rauschenbergfoundation.org/sites/default/files/styles/artwork_fullsize/public/images_artwork/64.006.jpg",
+      description: "Retroactive I. In 1963, Robert Rauschenberg painted 'Retroactive I' using oil and silkscreen ink on a canvas. ... Kennedy is added to the painting as the main focus to reflect the encouraging promise for America's future and its fortitude.",
       favourite: false
   },
 
@@ -166,6 +173,7 @@ db.artworks.insertMany([
     year: 1968,
     medium: "Lithograph",
     imageURL: "https://www.rauschenbergfoundation.org/sites/default/files/styles/artwork_fullsize/public/images_artwork/68.E004.jpg",
+    description: "This series of color lithographs was published by Gemini G.E.L., Los Angeles. [B +C] refers to the American outlaws Bonnie and Clyde who were the subject of an eponymous movie released the previous year. Imagery for the series is derived from stills from the film.",
     favourite: false
   },
 
@@ -176,6 +184,7 @@ db.artworks.insertMany([
     year: 1956,
     medium: "Collage",
     imageURL: "https://upload.wikimedia.org/wikipedia/en/f/ff/Hamilton-appealing2.jpg",
+    description: "Just what is it that makes today's homes so different, so appealing? is a collage by English artist Richard Hamilton. It measures 10.25 in × 9.75 in. The work is now in the collection of the Kunsthalle Tübingen, Tübingen, Germany. It was the first work of pop art to achieve iconic status.",
     favourite: false
   },
 
@@ -186,6 +195,7 @@ db.artworks.insertMany([
     year: 1965,
     medium: "Screenprint on paper",
     imageURL: "https://www.tate.org.uk/art/images/work/P/P04/P04251_10.jpg",
+    description: "Summary. My Marilyn is a print derived from photographs of the screen actress Marilyn Monroe (1926–62) that the artist saw in Town magazine, in November 1962, not long after her death that August. ... Marilyn Monroe demanded that the results of photographic sessions be submitted to her for vetting before publication.",
     favourite: false
   },
 
@@ -196,6 +206,7 @@ db.artworks.insertMany([
     year :1967,
     medium: "Print, collage",
     imageURL: "https://upload.wikimedia.org/wikipedia/en/5/50/Sgt._Pepper%27s_Lonely_Hearts_Club_Band.jpg",
+    description: "Blake painted several album sleeves. He designed the sleeve for Sgt. Pepper's Lonely Hearts Club Band with his wife Jann Haworth, the American-born artist whom he married in 1963 and divorced in 1979. The Sgt. Pepper's sleeve has become an iconic work of pop art, much imitated and Blake's best-known work. Producing the collage necessitated the construction of a set with cut-out photographs and objects, such as flowers, centred on a drum (sold in auction in 2008) with the title of the album. Blake has subsequently complained about the one-off fee he received for the design (£200[5][6]), with no subsequent royalties.",
     favourite: false
   },
 
@@ -206,6 +217,7 @@ db.artworks.insertMany([
       year: 1961,
       medium: "Oil paint on board",
       imageURL: "https://www.tate.org.uk/art/images/work/T/T02/T02406_10.jpg",
+      description: "Self-Portrait with Badges is a painting that looks both forward and back. While the figure is contemporary with, or rather in advance of popular fashion, it also looks back, in affection, to traditional times and places.",
       favourite: false
 
   }

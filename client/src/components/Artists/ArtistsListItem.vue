@@ -1,22 +1,18 @@
 <template lang="html">
 
-  <div>
-
-    <div>
-      <div class="container">
-        <img :src="artwork.imageURL" class="image" style="width:100%">
-          <div class="middle">
-            <div class="text">
-              <h1>{{artwork.title}}</h1>
-              <h3>{{artwork.artist}}</h3>
-              <button v-if="!artwork.favourite" @click="addFavourite">Add to Favourites</button>
-            </div>
-          </div>
+  <div class="container">
+    <img class="image":src="artwork.imageURL" style="width:100%">
+      <div class="middle">
+        <div class="text">
+          <h5> {{artwork.title}}</h5>
+          <h6>{{artwork.artist}}</h6>
+          <h7>{{artwork.medium}}</h7>
+          <h6>{{artwork.year}}</h6>
+          <p>{{artwork.description}}</p>
+          <button v-if="!artwork.favourite" @click="addFavourite">Add to Favourites</button>
+        </div>
       </div>
-    </div>
-
-
-</div>
+  </div>
 
 </template>
 
@@ -45,36 +41,24 @@ export default {
 </script>
 
 <style lang="css" scoped>
-
-
-.image-one {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 80px;
-}
-
-.image {
-  opacity: 1;
-  display: block;
-  width: 50%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-
-img {
-  border-style: solid;
-}
-
 .container {
   position: relative;
-  width: 100%;
+  width: 65%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: Century Gothic;
   margin-bottom: 20px;
   padding: 5px;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
 }
 
 .middle {
@@ -88,14 +72,6 @@ img {
   text-align: center;
 }
 
-.text {
-  background: black;
-  color: white;
-  font-size: 20px;
-  padding: 16px 32px;
-  width: 500px;
-}
-
 .container:hover .image {
   opacity: 0.3;
 }
@@ -104,4 +80,11 @@ img {
   opacity: 1;
 }
 
+.text {
+  background: black;
+  color: white;
+  font-size: 14px;
+  padding: 16px 32px;
+  width: 400px;
+}
 </style>

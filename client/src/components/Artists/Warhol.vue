@@ -8,7 +8,7 @@
             <img :src="bio.artistImageURL"/>
           </div>
 
-          <h3>{{bio.shortBio}}</h3>
+          <h2>{{bio.shortBio}}</h2>
         </div>
       </div>
 
@@ -16,7 +16,7 @@
 
       <div v-if="film" class="film-content">
         <div>
-          <h4>{{film.caption}}</h4>
+          <h2>{{film.caption}}</h2>
 
           <div class="film-image">
             <iframe
@@ -30,7 +30,7 @@
 
       <div class="music">
         <div >
-          <h4>{{music.caption}}</h4>
+          <h2>{{music.caption}}</h2>
         </div>
       </div>
 
@@ -101,8 +101,31 @@ section {
   background-attachment: scroll;
 }
 
-img {
-  border-style: solid;
+button {
+ box-shadow:inset 0px 1px 0px 0px #f7c5c0;
+ background:linear-gradient(to bottom, #fc8d83 5%, #e4685d 100%);
+ background-color:#fc8d83;
+ border-radius:6px;
+ border:1px solid #d83526;
+ display:inline-block;
+ cursor:pointer;
+ color:#ffffff;
+ font-family:Arial;
+ font-size:15px;
+ font-weight:bold;
+ padding:6px 24px;
+ text-decoration:none;
+ text-shadow:0px 1px 0px #b23e35;
+}
+
+button:hover {
+  background:linear-gradient(to bottom, #e4685d 5%, #fc8d83 100%);
+  background-color:#e4685d;
+}
+
+button:active {
+  position:relative;
+  top:1px;
 }
 
 .intro-container {
@@ -115,7 +138,7 @@ img {
   padding: 5px;
 }
 
-.intro-container h3 {
+.intro-container h2 {
   margin: 50px;
   font-size: 30px;
   text-align: justify;
@@ -170,7 +193,7 @@ img {
   width: 900px;
 }
 
-.film-content h4 {
+.film-content h2 {
   margin: 50px;
   font-size: 25px;
   text-align: justify;
@@ -202,7 +225,7 @@ img {
 .music div {
   width: 900px;
 }
-.music h4 {
+.music h2 {
   font-size: 25px;
   text-align: justify;
   border-style: solid;
