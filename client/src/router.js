@@ -6,6 +6,7 @@ import Overview from './components/Overview.vue';
 import Quiz from './components/Quiz/Quiz.vue';
 import TimeLine from './components/TimeLine/TimeLine.vue';
 import KeyArtists from './components/Artists/KeyArtists.vue';
+import Favourites from './components/Favourites/Favourites.vue';
 
 
 
