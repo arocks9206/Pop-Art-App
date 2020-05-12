@@ -1,7 +1,7 @@
 <template lang="html">
   <section>
   <div class="My Favourites">
-        <ArtistsHeader title="FAVOURITE ARTWORKS"/>
+        <IntroHeader title="FAVOURITE ARTWORKS"/>
 
       <div id="filterInput">
         <h3>Filter Favourites by Artist</h3>
@@ -17,7 +17,7 @@
       <div v-show="filteredFavourites.length===0">No favourites for this artist</div>
 
   </div>
-
+    <router-link to="/"><button>Home</button></router-link>
 </section>
 </template>
 
@@ -28,7 +28,7 @@ import ArtistsServices from '@/services/ArtistsServices';
 import ArtistsList from '../Artists/ArtistsList.vue';
 import ArtistsListItem from '../Artists/ArtistsListItem.vue'
 import {eventBus} from '@/main.js';
-import ArtistsHeader from '../headers/ArtistsHeader.vue'
+import IntroHeader from '../headers/IntroHeader.vue'
 
 export default {
   name: 'Favourites',
@@ -42,7 +42,7 @@ export default {
   components: {
     ArtistsList,
     ArtistsListItem,
-    ArtistsHeader
+    IntroHeader
   },
   mounted(){
     ArtworksServices.getData()
@@ -70,16 +70,43 @@ export default {
 </script>
 
 <style lang="css" scoped>
-
 section {
   background-image: url('../../assets/background_1.jpg');
   background-size: cover;
   background-attachment: scroll;
 }
 
+button {
+ box-shadow:inset 0px 1px 0px 0px #f7c5c0;
+ background:linear-gradient(to bottom, #fc8d83 5%, #e4685d 100%);
+ background-color:#fc8d83;
+ border-radius:6px;
+ border:1px solid #d83526;
+ display:inline-block;
+ cursor:pointer;
+ color:#ffffff;
+ font-family:Arial;
+ font-size:15px;
+ font-weight:bold;
+ padding:6px 24px;
+ text-decoration:none;
+ text-shadow:0px 1px 0px #b23e35;
+}
+
+button:hover {
+  background:linear-gradient(to bottom, #e4685d 5%, #fc8d83 100%);
+  background-color:#e4685d;
+}
+
+button:active {
+  position:relative;
+  top:1px;
+}
+
 h3 {
   font-size: 25px;
-  text-align: justify;
+  font-family: Arial;
+  text-align: center;
   margin-bottom: 20px;
   padding: 5px;
   border-style: solid;

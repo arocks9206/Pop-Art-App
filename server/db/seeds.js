@@ -112,6 +112,28 @@ db.artworks.insertMany([
   },
 
   {
+    title: "Quadrant Mickey Mouse",
+    artist: "Andy Warhol",
+    category: 'painting',
+    year: 1981,
+    medium: "Synthetic polymer and silkscreen inks on canvas",
+    imageUrl: "https://4.bp.blogspot.com/-gAL7qQ-1FV0/XKeVh7Pa86I/AAAAAAAEmkc/49HN5LLyE6sBIffgYAMF1mYvOCNY2PDOgCLcBGAs/s1600/Andy%2BWarhol%2B-%2BQuadrant%2BMickey%2BMouse%2B%25281981%2529.jpg",
+    caption: "This image of the Disney character Mickey Mouse belongs to a portfolio of ten screenprints called 'Myths' published in 1981. The series is based on characters from American Popular culture which have become icons, defining different generations.",
+    favourite: false
+  },
+
+  {
+    title: "Film Still from Chelsea Girl’",
+    artist: "Andy Warhol",
+    category: 'film',
+    year: 1967,
+    medium: "Synthetic polymer and silkscreen inks on canvas",
+    imageURL: "https://dazedimg-dazedgroup.netdna-ssl.com/900/azure/dazed-prod/1240/0/1240342.jpg",
+    caption: "Lacking a formal narrative, Warhol's art house classic follows various residents of the Chelsea Hotel in 1966 New York City, presented in a split screen with a single audio track in conjunction with one side of screen.",
+    favourite: false
+  },
+
+  {
     title: "Whaam!",
     artist: "Roy Lichtenstein",
     category: "painting",
@@ -152,6 +174,17 @@ db.artworks.insertMany([
     medium: "Lithograph on paper",
     imageURL: "https://www.tate.org.uk/art/images/work/P/P01/P01796_10.jpg",
     description: "Beginning in 1962 Lichtenstein borrowed images of explosions from popular war comics for use in his paintings. The subject embodies the revolutionary nature of Pop art and suggests the very real threat of annihilation by nuclear explosion that was prevalent at that time (the Cuban Missile Crisis occurred in 1962).",
+    favourite: false
+  },
+
+  {
+    title: "In The Car",
+    artist: "Roy Lichtenstein",
+    category: "painting",
+    year: 1963,
+    medium: "Oil and magna on canvas",
+    imageURL: "https://uploads5.wikiart.org/images/roy-lichtenstein/in-the-car-1963(1).jpg",
+    description: "This painting is one of a series from the early 1960s in which Lichtenstein deals with the theme of romance. He would paint his works on a monumental scale, much enlarged from his original source material of comic-strip illustrations. This work is based on an image from the comic Girls' Romances",
     favourite: false
   },
 

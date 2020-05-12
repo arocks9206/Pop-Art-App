@@ -6,7 +6,7 @@
     <b-container class="bx-example-row">
       <b-row>
         <b-col sm="6" offset="3">
-          <QuizHeader title="POP QUIZ"/>
+          <IntroHeader title="POP QUIZ"/>
           <Header
               :numCorrect="numCorrect"
               :currentNum="currentNum"
@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import QuizHeader from "../headers/QuizHeader.vue";
+import IntroHeader from "../headers/IntroHeader.vue";
 import QuestionBox from './QuestionBox.vue'
 import {eventBus} from '@/main.js'
 import Header from './Header.vue'
@@ -111,7 +111,7 @@ export default {
   components: {
     QuestionBox,
     Header,
-    QuizHeader
+    IntroHeader
   },
   computed: {
     currentNum(){

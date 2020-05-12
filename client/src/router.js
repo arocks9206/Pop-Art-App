@@ -22,7 +22,6 @@ const router = new VueRouter({
     { path: '/quiz/:id', component: Quiz, params: { id: 'id'} },
     { path: '/artists/keyartists', component: KeyArtists },
     { path: '/favourites', component: Favourites }
-
   ]
 })
 

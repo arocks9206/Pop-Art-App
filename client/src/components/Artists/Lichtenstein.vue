@@ -2,7 +2,7 @@
   <section>
     <div class="intro-container">
       <div>
-        <ArtistsHeader title="ROY LICHTENSTEIN"/>
+        <IntroHeader title="ROY LICHTENSTEIN"/>
 
         <div class="intro-image">
           <img :src="bio.artistImageURL"/>
@@ -21,7 +21,7 @@
 <script>
 import ArtistsServices from '@/services/ArtistsServices';
 import ArtworksServices from '@/services/ArtworksServices';
-import ArtistsHeader from '../headers/ArtistsHeader.vue'
+import IntroHeader from '../headers/IntroHeader.vue'
 import ArtistsList from './ArtistsList.vue';
 import ArtistsListItem from './ArtistsListItem.vue'
 import {eventBus} from '@/main.js'
@@ -32,7 +32,7 @@ export default {
   components: {
     ArtistsList,
     ArtistsListItem,
-    ArtistsHeader
+    IntroHeader
   },
   data(){
     return {
@@ -107,7 +107,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Century Gothic;
+  font-family: Arial;
   margin-bottom: 20px;
   padding: 5px;
 }
@@ -151,7 +151,7 @@ img {
   justify-content: center;
   margin-bottom: 20px;
   margin-top: 100px;
-  font-family: Century Gothic;
+  font-family: Arial;
 }
 
 .film-content div {
@@ -171,7 +171,7 @@ img {
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  font-family: Century Gothic;
+  font-family: Arial;
 }
 
 </style>

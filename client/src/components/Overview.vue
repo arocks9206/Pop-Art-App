@@ -3,7 +3,7 @@
 
   <div class="intro-container">
     <div>
-      <overview-header title="POP ART 101"/>
+      <IntroHeader title="POP ART 101"/>
       <h3>
         Pop Art is an art movement that emerged in the 1950s and
         flourished until the mid-1970s in America and Britain, that
@@ -17,14 +17,13 @@
 
 <div class="intro-image">
   <div class="container">
-    <img src="../assets/in the car_roy licht.jpg" alt="Art" class="image" style="width:100%">
+    <img :src="artwork.imageURL" alt="Art" class="image" style="width:100%">
       <div class="middle">
         <div class="text">
-          <h1>“In The Car”</h1>
-          <h3>Roy Lichtenstein</h3>
-          <h5>1963</h5>
-          <h6>Oil and magna on canvas</h6>
-          <p>This painting is one of a series from the early 1960s in which Lichtenstein deals with the theme of romance. He would paint his works on a monumental scale, much enlarged from his original source material of comic-strip illustrations. This work is based on an image from the comic Girls' Romances.</p>
+          <h1>{{artwork.title}}</h1>
+          <h3>{{artwork.artist}}</h3>
+          <h5>{{artwork.year}}</h5>
+          <p>{{artwork.description}}</p>
         </div>
       </div>
   </div>
@@ -46,14 +45,13 @@
 
 <div class="image-two">
   <div class="container">
-    <img src="../assets/andy-micket.jpg" alt="Art" class="image" style="width:100%">
+    <img :src="artwork.imageURL" alt="Art" class="image" style="width:100%">
       <div class="middle">
         <div class="text">
-          <h1>“Quadrant Mickey Mouse”</h1>
-          <h3>Andy Warhol</h3>
-          <h5>1981</h5>
-          <h6>Synthetic polymer and silkscreen inks on canvas</h6>
-          <p>This image of the Disney character Mickey Mouse belongs to a portfolio of ten screenprints called 'Myths' published in 1981. The series is based on characters from American Popular culture which have become icons, defining different generations.</p>
+          <h1>{{artwork.title}}</h1>
+          <h3>{{artwork.artist}}</h3>
+          <h5>{{artwork.year}}</h5>
+          <p>{{artwork.description}}</p>
         </div>
       </div>
   </div>
@@ -68,34 +66,31 @@
 
 <div class="image-three">
   <div class="container">
-    <img src="../assets/warhol_chelsea_girls.jpg" alt="Art" class="image" style="width:100%">
+    <img :src="artwork.imageURL" alt="Art" class="image" style="width:100%">
       <div class="middle">
         <div class="text">
-          <h1> “Film Still from Chelsea Girl”</h1>
-          <h3>Andy Warhol</h3>
-          <h5>1967</h5>
-          <p>Lacking a formal narrative, Warhol's art house classic follows various residents of the Chelsea Hotel in 1966 New York City,presented in a split screen with a single audio track in conjunction with one side of screen.</p>
+          <h1>{{artwork.title}}</h1>
+          <h3>{{artwork.artist}}</h3>
+          <h5>{{artwork.year}}</h5>
+          <p>{{artwork.description}}</p>
         </div>
       </div>
   </div>
 </div>
 
-
 <router-link to="/timeline"><button>Next To Lesson 1: Timeline</button></router-link>
-
-
 
 </section>
 
 </template>
 
 <script>
-import OverviewHeader from "./headers/OverviewHeader.vue";
+import IntroHeader from "./headers/IntroHeader.vue";
 
 export default {
   name: 'Overview',
   components: {
-    "overview-header": OverviewHeader
+    IntroHeader
   }
 }
 </script>
@@ -139,7 +134,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Century Gothic;
+  font-family: Arial;
   margin-bottom: 20px;
   padding: 5px;
 }
@@ -194,7 +189,7 @@ img {
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  font-family: Century Gothic;
+  font-family: Arial;
   margin-bottom: 20px;
   padding: 5px;
 }
@@ -218,7 +213,7 @@ img {
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  font-family: Century Gothic;
+  font-family: Arial;
   margin-bottom: 20px;
   padding: 5px;
 }
@@ -250,7 +245,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Century Gothic;
+  font-family: Arial;
   margin-bottom: 20px;
   padding: 5px;
 }
