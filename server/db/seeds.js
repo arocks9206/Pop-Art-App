@@ -182,7 +182,7 @@ db.artworks.insertMany([
     year: 1965,
     medium: "Screenprint on paper",
     imageURL: "https://www.tate.org.uk/art/images/work/P/P04/P04251_10.jpg",
-    description: "Summary. My Marilyn is a print derived from photographs of the screen actress Marilyn Monroe (1926–62) that the artist saw in Town magazine, in November 1962, not long after her death that August. ... Marilyn Monroe demanded that the results of photographic sessions be submitted to her for vetting before publication."
+    description: "My Marilyn is a print derived from photographs of the screen actress Marilyn Monroe (1926–62) that the artist saw in Town magazine, in November 1962, not long after her death that August. ... Marilyn Monroe demanded that the results of photographic sessions be submitted to her for vetting before publication."
   },
 
   {
