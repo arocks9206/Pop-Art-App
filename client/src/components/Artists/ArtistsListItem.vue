@@ -9,6 +9,8 @@
           <h7>{{artwork.medium}}</h7>
           <h6>{{artwork.year}}</h6>
           <p>{{artwork.description}}</p>
+          <button v-if="!artwork.favourite" @click="updateFavourite">Add to Favourites</button>
+          <button v-if="artwork.favourite" @click="updateFavourite">Remove from Favourites</button>
         </div>
       </div>
   </div>
@@ -16,9 +18,27 @@
 </template>
 
 <script>
+import {eventBus} from '@/main.js'
+import ArtworksServices from '@/services/ArtworksServices.js'
+
 export default {
+
+
   name: 'ArtistsListItem',
-  props: ['artwork']
+  props: ['artwork'],
+  data(){
+    return {
+      favourites: []
+    }
+  },
+  methods: {
+    updateFavourite(){
+      const updatedArtwork = { favourite: null };
+      updatedArtwork.favourite = this.artwork.favourite ? false : true
+      ArtworksServices.updateArtwork(this.artwork._id, updatedArtwork)
+      .then(favourite => eventBus.$emit('favourite-added', favourite))
+    }
+  }
 }
 </script>
 

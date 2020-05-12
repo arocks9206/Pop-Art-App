@@ -52,6 +52,7 @@ import ArtworksServices from '@/services/ArtworksServices';
 import ArtistsHeader from '../headers/ArtistsHeader.vue'
 import ArtistsList from './ArtistsList.vue';
 import ArtistsListItem from './ArtistsListItem.vue'
+import {eventBus} from '@/main.js'
 
 
 export default {
@@ -79,6 +80,11 @@ export default {
           this.film = artworkData.find(x => x.artist === 'Andy Warhol' && x.category === 'film')
           this.music = artworkData.find(x => x.artist === 'Andy Warhol' && x.category === 'album cover')
             })
+
+      eventBus.$on('favourite-added', (favourite) => {
+        let index = this.artworks.findIndex(artwork => artwork._id === favourite._id)
+        this.artworks.splice(index, 1, favourite)
+      })
 
 
       }
