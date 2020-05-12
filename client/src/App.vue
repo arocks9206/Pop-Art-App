@@ -1,12 +1,7 @@
 <template lang="html">
-<section>
-
-   <router-view></router-view>
-
-
-
-</section>
-
+  <section>
+    <router-view></router-view>
+  </section>
 </template>
 
 <script>
@@ -19,3 +14,5 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+</style>
