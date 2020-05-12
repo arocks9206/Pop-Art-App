@@ -76,4 +76,14 @@ section {
   background-size: cover;
   background-attachment: scroll;
 }
+
+h3 {
+  font-size: 25px;
+  text-align: justify;
+  margin-bottom: 20px;
+  padding: 5px;
+  border-style: solid;
+  background-color: #1998CB;
+  opacity: 95%;
+}
 </style>
