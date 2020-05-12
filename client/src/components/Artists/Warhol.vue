@@ -8,7 +8,7 @@
             <img :src="bio.artistImageURL"/>
           </div>
 
-          <h3>{{bio.shortBio}}</h3>
+          <h2>{{bio.shortBio}}</h2>
         </div>
       </div>
 
@@ -16,7 +16,7 @@
 
       <div v-if="film" class="film-content">
         <div>
-          <h4>{{film.caption}}</h4>
+          <h2>{{film.caption}}</h2>
 
           <div class="film-image">
             <iframe
@@ -30,7 +30,7 @@
 
       <div class="music">
         <div >
-          <h4>{{music.caption}}</h4>
+          <h2>{{music.caption}}</h2>
         </div>
       </div>
 
@@ -95,10 +95,6 @@ section {
   background-attachment: scroll;
 }
 
-img {
-  border-style: solid;
-}
-
 .intro-container {
   margin: 50px;
   display: flex;
@@ -109,7 +105,7 @@ img {
   padding: 5px;
 }
 
-.intro-container h3 {
+.intro-container h2 {
   margin: 50px;
   font-size: 30px;
   text-align: justify;
@@ -164,7 +160,7 @@ img {
   width: 900px;
 }
 
-.film-content h4 {
+.film-content h2 {
   margin: 50px;
   font-size: 25px;
   text-align: justify;
@@ -196,7 +192,7 @@ img {
 .music div {
   width: 900px;
 }
-.music h4 {
+.music h2 {
   font-size: 25px;
   text-align: justify;
   border-style: solid;
