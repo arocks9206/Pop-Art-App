@@ -72,6 +72,7 @@ export default {
       artwork.favourite = artwork.favourite ? false : true;
       const { _id, ...updatedArtwork } = artwork;
       ArtworksServices.updateArtwork(_id, updatedArtwork)
+      .then(favourite => eventBus.$on('favouite-changed', favourite))
     }
   },
   mounted() {

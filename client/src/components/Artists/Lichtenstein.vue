@@ -13,7 +13,7 @@
     </div>
 
     <ArtistsList :artworks="artworks" ></ArtistsList>
-    <router-link to="/quiz/5eba684ccc42943fc1fdd1f7"><button>POP QUIZ</button></router-link>
+    <router-link to="/quiz/"><button>POP QUIZ</button></router-link>
 
   </section>
 </template>
@@ -51,7 +51,7 @@ export default {
           this.film = artworkData.find(x => x.artist === 'Roy Lichtenstein' && x.category === 'film')
             })
 
-            eventBus.$on('favourite-added', (favourite) => {
+            eventBus.$on('favourite-changed', (favourite) => {
               let index = this.artworks.findIndex(artwork => artwork._id === favourite._id)
               this.artworks.splice(index, 1, favourite)
             })

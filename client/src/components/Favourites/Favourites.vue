@@ -51,7 +51,7 @@ export default {
       this.favourites = data.filter(a => a.favourite === true)
       this.favouriteArtists = [...new Set(data.map(a => a.artist))]
 
-      eventBus.$on('favourite-added', (favourite) => {
+      eventBus.$on('favourite-changed', (favourite) => {
         let index = this.favourites.findIndex(fav => fav._id === favourite._id)
         this.favourites.splice(index, 1)
       })
