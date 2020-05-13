@@ -81,7 +81,7 @@ export default {
           this.music = artworkData.find(x => x.artist === 'Andy Warhol' && x.category === 'album cover')
             })
 
-      eventBus.$on('favourite-added', (favourite) => {
+      eventBus.$on('favourite-changed', (favourite) => {
         let index = this.artworks.findIndex(artwork => artwork._id === favourite._id)
         this.artworks.splice(index, 1, favourite)
       })

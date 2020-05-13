@@ -117,19 +117,19 @@ db.artworks.insertMany([
     category: 'painting',
     year: 1981,
     medium: "Synthetic polymer and silkscreen inks on canvas",
-    imageUrl: "https://4.bp.blogspot.com/-gAL7qQ-1FV0/XKeVh7Pa86I/AAAAAAAEmkc/49HN5LLyE6sBIffgYAMF1mYvOCNY2PDOgCLcBGAs/s1600/Andy%2BWarhol%2B-%2BQuadrant%2BMickey%2BMouse%2B%25281981%2529.jpg",
-    caption: "This image of the Disney character Mickey Mouse belongs to a portfolio of ten screenprints called 'Myths' published in 1981. The series is based on characters from American Popular culture which have become icons, defining different generations.",
+    imageURL: "https://www.christies.com/img/LotImages/2015/NYR/2015_NYR_03740_0020B_000(andy_warhol_quadrant_mickey_mouse).jpg",
+    description: "This image of the Disney character Mickey Mouse belongs to a portfolio of ten screenprints called 'Myths' published in 1981. The series is based on characters from American Popular culture which have become icons, defining different generations.",
     favourite: false
   },
 
   {
-    title: "Film Still from Chelsea Girl’",
+    title: "Film Still from Chelsea Girl",
     artist: "Andy Warhol",
     category: 'film',
     year: 1967,
     medium: "Synthetic polymer and silkscreen inks on canvas",
     imageURL: "https://dazedimg-dazedgroup.netdna-ssl.com/900/azure/dazed-prod/1240/0/1240342.jpg",
-    caption: "Lacking a formal narrative, Warhol's art house classic follows various residents of the Chelsea Hotel in 1966 New York City, presented in a split screen with a single audio track in conjunction with one side of screen.",
+    description: "Lacking a formal narrative, Warhol's art house classic follows various residents of the Chelsea Hotel in 1966 New York City, presented in a split screen with a single audio track in conjunction with one side of screen.",
     favourite: false
   },
 

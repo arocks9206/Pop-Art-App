@@ -54,10 +54,10 @@ export default {
   },
   methods: {
     updateFavourite(){
-      const updatedArtwork = { favourite: null };
-      updatedArtwork.favourite = this.artwork.favourite ? false : true
-      ArtworksServices.updateArtwork(this.artwork._id, updatedArtwork)
-      .then(favourite => eventBus.$emit('favourite-added', favourite))
+      this.artwork.favourite = this.artwork.favourite ? false : true
+      const { _id, ...updatedArtwork } = this.artwork
+      ArtworksServices.updateArtwork(_id, updatedArtwork)
+      .then(favourite => eventBus.$emit('favourite-changed', favourite))
     }
   }
 }
