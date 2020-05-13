@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import {eventBus} from '@/main.js';
+
 import IntroHeader from '../headers/IntroHeader.vue'
 import KeyArtistsList from './KeyArtistsList.vue'
 import KeyArtistsServices from '@/services/KeyArtistsServices.js';
